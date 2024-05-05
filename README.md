@@ -1,2 +1,2 @@
-# Website
-Files from my website
+# Actual Website
+https://paraliyzed.net
