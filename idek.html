@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+		<link rel="shortcut icon" type="image/gif" href="https://media.giphy.com/media/LnKonfpQ44fNvuGLkA/giphy.gif">
+        <link rel="stylesheet" href="./style/css/styles.css">
+        
+    </head> 
+    <body>
+        <div class="container">
+            <div>
+                <h1 class="header_text">Bushido, do you wanna go out with me?</h1>
+            </div>
+            <div class="gif_container">
+                <img src="https://media.giphy.com/media/LnKonfpQ44fNvuGLkA/giphy.gif" alt="Cute animated illustration">
+            </div>
+            <div class="buttons">
+                <button class="btn" id="yesButton" onclick="nextYesPage()">Yes</button>
+                <button class="btn" id="noButton" onMouseOver="nextNoPage()">No</button>
+                <script>
+                    function nextYesPage() {
+                        window.location.href = "Yes.html";
+                    }
+                    function nextNoPage() {
+                var noButton = document.getElementById("noButton");
+                
+                // Get the dimensions of the viewport
+                var viewportWidth = window.innerWidth;
+                var viewportHeight = window.innerHeight;
+                
+                // Generate random positions within the viewport
+                var randomX = Math.floor(Math.random() * viewportWidth);
+                var randomY = Math.floor(Math.random() * viewportHeight);
+                
+                // Move the button to the random position
+                noButton.style.transform = "translate(" + randomX + "px, " + randomY + "px)";
+            }
+                </script>
+            </div>
+        </div>
+     
+</body></html>
