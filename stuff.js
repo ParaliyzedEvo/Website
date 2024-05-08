@@ -64,7 +64,7 @@ stuff = {
         },
     },
     'Soundcloud': {
-        class: "soundcloudpng",
+        class: "mailpng",
         link: "https://soundcloud.com/bestosuplayer",
         img: {
             base: "image/soundcloud.png",
