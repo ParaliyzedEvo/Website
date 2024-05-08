@@ -463,14 +463,14 @@ p {
 
 /*soundcloud----------------------------------*/
 .soundcloudpng {
-    width: 233px;
+    width: 100px;
     height: 100px;
     position: relative;
     margin: auto;
 }
 
 .soundcloudpng .img-nh {
-    width: 233px;
+    width: 100px;
     height: 100px;
     position: relative;    
     margin: auto;
