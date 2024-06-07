@@ -4,6 +4,9 @@ https://paraliyzed.net
 If there are any bugs/issues on my website, please open a new issue [here](https://github.com/ParaliyzedEvo/Website/issues) and I will help you a soon as I can.
 
 # Changelog
+### 6/6/2024
+- Changed line 31 in original.html and index.html to &lt;a href="https://linktr.ee/paraliyzed_evo" target="_blank">&lt;img src="https://media.tenor.com/pcH_znw3wBkAAAAM/%E9%B9%BF%E4%B9%83%E5%AD%90%E4%B9%83%E5%AD%90%E8%99%8E%E8%A6%96%E7%9C%88%E7%9C%88-shikanoko-nokonoko-koshitantan.gif" style="height:256px; width:256px;">&lt;/a> from &lt;a href="https://linktr.ee/paraliyzed_evo" target="_blank">&lt;img src="image/happybirthdaydumbass.png" style="height:256px; width:256px;">&lt;/a>
+
 ### 5/30/2024
 - Added line 29 in osu-skin/other-skins.html &lt;p style="font-size:80px; margin-bottom:4px; color:rgb(200, 200, 200)">&lt;a class="dl" href="https://www.reddit.com/r/CalliopeMori/comments/lj33w7/calli_osu_skin_in_case_you_play_osu/" target="_blank">[Hololive EN] Mori Calliope 森美声&lt;/a>&lt;/p>
 ### 5/13/2024
