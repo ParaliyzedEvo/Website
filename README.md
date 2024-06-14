@@ -5,6 +5,8 @@ If there are any bugs/issues on my website, please open a new issue [here](https
 
 # Changelog
 ### 6/13/2024
+- Added links.html in Misc folder
+- Added this &lt;a href="Misc/link.html">The 5 Stack GC Archive&lt;/a> on line 138
 - Created a new folder called Misc and moved files boppin.css , hushhush.html , idek.html , May 7th only.html , no.html , original.html , yes.html
 - In May 7th only.html , I changed line 25 from &lt;script src="stuff.js">&lt;/script> to &lt;script src="/stuff.js">&lt;/script> , line 5 from href="index-style.css"> to href="/index-style.css"> , and line 4 from href="image/logo.jpg"> to href="/image/logo.jpg">
 - In hushhush.html , I changed line 3 from href="image/logo.jpg"> to href="/image/logo.jpg">
