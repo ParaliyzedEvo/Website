@@ -6,7 +6,10 @@ If there are any bugs/issues on my website, please open a new issue [here](https
 # Changelog
 ### 6/13/2024
 - Created a new folder called Misc and moved files boppin.css , hushhush.html , idek.html , May 7th only.html , no.html , original.html , yes.html
-- 
+- In May 7th only.html , I changed line 25 from &lt;script src="stuff.js">&lt;/script> to &lt;script src="/stuff.js">&lt;/script> , line 5 from href="index-style.css"> to href="/index-style.css"> , and line 4 from href="image/logo.jpg"> to href="/image/logo.jpg">
+- In hushhush.html , I changed line 3 from href="image/logo.jpg"> to href="/image/logo.jpg">
+- In original.html , I changed line 25 from &lt;script src="stuff.js">&lt;/script> to &lt;script src="/stuff.js">&lt;/script> , line 5 from href="index-style.css"> to href="/index-style.css"> , and line 4 from href="image/logo.jpg"> to href="/image/logo.jpg">
+- In stuff.js I replace everything that said image to /image as I had to move files into the misc folder which broke the html. I also changed line 44 from link: "osu-skin/HOME.html" to link: "/osu-skin/HOME.html" and line 76 from link: "stuff.html" to link: "/stuff.html"
 
 ### 6/6/2024
 - Changed line 31 in original.html and index.html to &lt;a href="https://linktr.ee/paraliyzed_evo" target="_blank">&lt;img src="https://media.tenor.com/pcH_znw3wBkAAAAM/%E9%B9%BF%E4%B9%83%E5%AD%90%E4%B9%83%E5%AD%90%E8%99%8E%E8%A6%96%E7%9C%88%E7%9C%88-shikanoko-nokonoko-koshitantan.gif" style="height:256px; width:256px;">&lt;/a> from &lt;a href="https://linktr.ee/paraliyzed_evo" target="_blank">&lt;img src="image/happybirthdaydumbass.png" style="height:256px; width:256px;">&lt;/a>
