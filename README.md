@@ -4,6 +4,10 @@ https://paraliyzed.net
 If there are any bugs/issues on my website, please open a new issue [here](https://github.com/ParaliyzedEvo/Website/issues) and I will help you a soon as I can.
 
 # Changelog
+### 6/13/2024
+- Created a new folder called Misc and moved files boppin.css , hushhush.html , idek.html , May 7th only.html , no.html , original.html , yes.html
+- 
+
 ### 6/6/2024
 - Changed line 31 in original.html and index.html to &lt;a href="https://linktr.ee/paraliyzed_evo" target="_blank">&lt;img src="https://media.tenor.com/pcH_znw3wBkAAAAM/%E9%B9%BF%E4%B9%83%E5%AD%90%E4%B9%83%E5%AD%90%E8%99%8E%E8%A6%96%E7%9C%88%E7%9C%88-shikanoko-nokonoko-koshitantan.gif" style="height:256px; width:256px;">&lt;/a> from &lt;a href="https://linktr.ee/paraliyzed_evo" target="_blank">&lt;img src="image/happybirthdaydumbass.png" style="height:256px; width:256px;">&lt;/a>
 
