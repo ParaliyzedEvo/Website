@@ -4,11 +4,30 @@ https://paraliyzed.net
 If there are any bugs/issues on my website, please open a new issue [here](https://github.com/ParaliyzedEvo/Website/issues) and I will help you a soon as I can.
 
 # Changelog
+### 7/02/2024
+- Renamed May 7th Only.html to Birthdays.html in the misc folder
+- Changed line 21 of Birthday.html from "poggers" as &lt;a href="https://twitter.com/bushidontdothat">Bushido&lt;/a> would &lt;a href="hushhush.html">say&lt;/a> to "India is in Asia" as &lt;a href="hushhush.html">Alayna&lt;/a> would say (me personally ion think that's true)
+- Changed line 211 of Birthday.html from &lt;source src="image/Temptation.mp3" type="audio/mpeg"> to &lt;source src="image/Backstabber - Kesha (speed up and nightcore).mp3" type="audio/mpeg">
+- Changed the index.html to match Birthday.html
+- Changed line 3 of hushhush.html from &lt;link rel="shortcut icon" type="image/jpg" href="/image/logo.jpg"> to &lt;link rel="shortcut icon" type="image/jpg" href="image/logo.jpg">
+- Changed line 4 of hushhush.html from &lt;link rel="stylesheet" href="boppin.css"> to &lt;link rel="stylesheet" href="index-style.css">
+- Changed line 11 of hushhush.html from &lt;meta property="og:description" content="Boppin's birthday"> to &lt;meta property="og:description" content="Alayna's birthday">
+- Changed line 16 of hushhush.html from &lt;center>&lt;h3>HAPPY BIRTHDAY BUSHIDO!!!!!&lt;/h3> to &lt;center>&lt;h3>HAPPY BIRTHDAY ALAYNA!!!!!&lt;/h3>
+- Changed line 17 of hushhush.html from &lt;p>05/07 is Bushido's Birthday&lt;/p> to &lt;p>07/02 is Alayna's Birthday!&lt;/p>
+- Changed line 22 of hushhush.html from &lt;center>&lt;pre>Bushido is a to &lt;center>&lt;pre>Alayna is a
+- Changed line 27 of hushhush.html from Filipino to Indian
+- Changed line 28 of hushhush.html from Swimmer to Water Polo Player
+- Changed line 29 of hushhush.html from PJSK Player to Kind
+- Changed line 30 of hushhush.html from Val Player to Helpful
+- Changed line 31 of hushhush.html from Petty (Understandable) to Non-dyslexic (somehow???)
+- Changed line 36 of hushhush.html from "Pog" - As &lt;a href = "https://twitter.com/bushidontdothat">Bushido&lt;/a> would say back in the old days to "India is in Asia" as &lt;a href="hushhush.html">Alayna&lt;/a> would say (me personally ion think that's true)
+- Removed line 37 of hushhush.html
+
 ### 6/25/2024
 - Changed line 211 in index.html and original.html from &lt;source src="image/Netaminity Theatre 666.mp3" type="audio/mpeg"> to &lt;source src="image/Backstabber - Kesha (speed up and nightcore).mp3" type="audio/mpeg">
 - Removed Netaminity Theatre 666.mp3 and added Backstabber - Kesha (speed up and nightcore).mp3
 - Added &lt;p style="font-size:80px; margin-bottom:4px; color:rgb(200, 200, 200)">&lt;a class="dl" href="https://osu.ppy.sh/community/forums/topics/1672096?n=1" target="_blank">-#KW-! If there was an endpoint.&lt;/a>&lt;/p> at line 30 of osu-skin/other-skins.html
-- Added &lt;a href="https://paraliyzedevo.github.io/Random/Minecraft 1.8.8">Minecraft 1.8.8</a> at line 39 in stuff.html 
+- Added &lt;a href="https://paraliyzedevo.github.io/Random/Minecraft 1.8.8">Minecraft 1.8.8&lt;/a> at line 39 in stuff.html 
 
 ### 6/13/2024
 - Added this &lt;a href="Misc/link.html">The 5 Stack GC Archive&lt;/a> on line 138
@@ -26,5 +45,5 @@ If there are any bugs/issues on my website, please open a new issue [here](https
 ### 5/13/2024
 - Updated Readme to add a changelog
 - Replacing Temptation.mp3 with Netaminity Theatre 666.mp3
-- Changing index.html line 211 from source &lt;src="image/Temptation.mp3" type="audio/mpeg"> to <source src="image/Netaminity Theatre 666.mp3" type="audio/mpeg"&gt;
-- Changing original.html line 211 from source &lt;src="image/Temptation.mp3" type="audio/mpeg"> to <source src="image/Netaminity Theatre 666.mp3" type="audio/mpeg"&gt;
+- Changing index.html line 211 from source &lt;src="image/Temptation.mp3" type="audio/mpeg"> to &lt;source src="image/Netaminity Theatre 666.mp3" type="audio/mpeg"&gt;
+- Changing original.html line 211 from source &lt;src="image/Temptation.mp3" type="audio/mpeg"> to &lt;source src="image/Netaminity Theatre 666.mp3" type="audio/mpeg"&gt;
