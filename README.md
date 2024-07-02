@@ -22,6 +22,7 @@ If there are any bugs/issues on my website, please open a new issue [here](https
 - Changed line 31 of hushhush.html from Petty (Understandable) to Non-dyslexic (somehow???)
 - Changed line 36 of hushhush.html from "Pog" - As &lt;a href = "https://twitter.com/bushidontdothat">Bushido&lt;/a> would say back in the old days to "India is in Asia" as &lt;a href="hushhush.html">Alayna&lt;/a> would say (me personally ion think that's true)
 - Removed line 37 of hushhush.html
+- Deleted boppin.css from the misc folder
 
 ### 6/25/2024
 - Changed line 211 in index.html and original.html from &lt;source src="image/Netaminity Theatre 666.mp3" type="audio/mpeg"> to &lt;source src="image/Backstabber - Kesha (speed up and nightcore).mp3" type="audio/mpeg">
