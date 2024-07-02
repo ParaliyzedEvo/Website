@@ -12,8 +12,30 @@ body {
     color: white;
 }
 
+h1 {
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+}
+
+h3 {
+    font-family: 'Russo One', sans-serif;
+    color: white;
+}
+
 p {
     font-family: 'Ubuntu', sans-serif;
+    color: white;
+    font-size: 24px;
+}
+
+pre {
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    font-size: 24px;
+}
+
+.idk {
+    font-family: 'Ubuntu', sans-serif !important;
     color: white;
     font-size: 24px;
 }
