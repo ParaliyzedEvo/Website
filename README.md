@@ -12,9 +12,10 @@ If there are any bugs/issues on my website, please open a new issue [here](https
 - Changed line 3 of hushhush.html from &lt;link rel="shortcut icon" type="image/jpg" href="/image/logo.jpg"> to &lt;link rel="shortcut icon" type="image/jpg" href="image/logo.jpg">
 - Changed line 4 of hushhush.html from &lt;link rel="stylesheet" href="boppin.css"> to &lt;link rel="stylesheet" href="index-style.css">
 - Changed line 11 of hushhush.html from &lt;meta property="og:description" content="Boppin's birthday"> to &lt;meta property="og:description" content="Alayna's birthday">
+- Changed line 13 of hushhush.html from &lt;meta property="og:image" content="image/zitron-diamond.jpg"> to &lt;meta property="og:image" content="/image/logo.jpg">
 - Changed line 16 of hushhush.html from &lt;center>&lt;h3>HAPPY BIRTHDAY BUSHIDO!!!!!&lt;/h3> to &lt;center>&lt;h3>HAPPY BIRTHDAY ALAYNA!!!!!&lt;/h3>
 - Changed line 17 of hushhush.html from &lt;p>05/07 is Bushido's Birthday&lt;/p> to &lt;p>07/02 is Alayna's Birthday!&lt;/p>
-- Changed line 22 of hushhush.html from &lt;center>&lt;pre>Bushido is a to &lt;center>&lt;pre>Alayna is a
+- Changed line 22 of hushhush.html from &lt;center>&lt;pre>Bushido is a to &lt;center>&lt;pre class="idk">Alayna is a
 - Changed line 27 of hushhush.html from Filipino to Indian
 - Changed line 28 of hushhush.html from Swimmer to Water Polo Player
 - Changed line 29 of hushhush.html from PJSK Player to Kind
@@ -22,7 +23,8 @@ If there are any bugs/issues on my website, please open a new issue [here](https
 - Changed line 31 of hushhush.html from Petty (Understandable) to Non-dyslexic (somehow???)
 - Changed line 36 of hushhush.html from "Pog" - As &lt;a href = "https://twitter.com/bushidontdothat">Bushido&lt;/a> would say back in the old days to "India is in Asia" as &lt;a href="hushhush.html">Alayna&lt;/a> would say (me personally ion think that's true)
 - Removed line 37 of hushhush.html
-- Deleted boppin.css from the misc folder
+- Deleted boppin.css from the misc folder and merged it with index-style.css
+- Added a idk class in index-style.css
 
 ### 6/25/2024
 - Changed line 211 in index.html and original.html from &lt;source src="image/Netaminity Theatre 666.mp3" type="audio/mpeg"> to &lt;source src="image/Backstabber - Kesha (speed up and nightcore).mp3" type="audio/mpeg">
