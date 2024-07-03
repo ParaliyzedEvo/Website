@@ -4,6 +4,9 @@ https://paraliyzed.net
 If there are any bugs/issues on my website, please open a new issue [here](https://github.com/ParaliyzedEvo/Website/issues) and I will help you a soon as I can.
 
 # Changelog
+### 7/3/2024
+- Reverted everything back before the 7/2/2024 change as their birthday is over
+
 ### 7/2/2024
 - Renamed May 7th Only.html to Birthdays.html in the misc folder
 - Changed line 21 of Birthday.html from "poggers" as &lt;a href="https://twitter.com/bushidontdothat">Bushido&lt;/a> would &lt;a href="hushhush.html">say&lt;/a> to "India is in Asia" as &lt;a href="hushhush.html">Alayna&lt;/a> would say (me personally ion think that's true)
