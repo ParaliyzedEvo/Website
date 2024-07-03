@@ -5,11 +5,11 @@ If there are any bugs/issues on my website, please open a new issue [here](https
 
 # Changelog
 ### 7/3/2024
-- Reverted everything back before the 7/2/2024 change as their birthday is over
+- Reverted everything back before the 7/2/2024 change as their birthday is over but kept Birthdays.html the same
 
 ### 7/2/2024
 - Renamed May 7th Only.html to Birthdays.html in the misc folder
-- Changed line 21 of Birthday.html from "poggers" as &lt;a href="https://twitter.com/bushidontdothat">Bushido&lt;/a> would &lt;a href="hushhush.html">say&lt;/a> to "India is in Asia" as &lt;a href="hushhush.html">Alayna&lt;/a> would say (me personally ion think that's true)
+- Changed line 21 of Birthday.html from "poggers" as &lt;a href="https://twitter.com/bushidontdothat" > Bushido &lt;/a> would &lt;a href="hushhush.html">say&lt;/a> to "India is in Asia" as &lt;a href="hushhush.html">Alayna&lt;/a> would say (me personally ion think that's true)
 - Changed line 211 of Birthday.html from &lt;source src="image/Temptation.mp3" type="audio/mpeg"> to &lt;source src="image/Backstabber - Kesha (speed up and nightcore).mp3" type="audio/mpeg">
 - Changed the index.html to match Birthday.html
 - Changed line 3 of hushhush.html from &lt;link rel="shortcut icon" type="image/jpg" href="/image/logo.jpg"> to &lt;link rel="shortcut icon" type="image/jpg" href="image/logo.jpg">
@@ -24,7 +24,7 @@ If there are any bugs/issues on my website, please open a new issue [here](https
 - Changed line 29 of hushhush.html from PJSK Player to Kind
 - Changed line 30 of hushhush.html from Val Player to Helpful
 - Changed line 31 of hushhush.html from Petty (Understandable) to Non-dyslexic (somehow???)
-- Changed line 36 of hushhush.html from "Pog" - As &lt;a href = "https://twitter.com/bushidontdothat">Bushido&lt;/a> would say back in the old days to "India is in Asia" as &lt;a href="hushhush.html">Alayna&lt;/a> would say (me personally ion think that's true)
+- Changed line 36 of hushhush.html from "Pog" - As &lt;a href = "https://twitter.com/bushidontdothat"> Bushido &lt;/a> would say back in the old days to "India is in Asia" as &lt;a href="hushhush.html">Alayna&lt;/a> would say (me personally ion think that's true)
 - Removed line 37 of hushhush.html
 - Deleted boppin.css from the misc folder and merged it with index-style.css
 - Added a idk class in index-style.css
