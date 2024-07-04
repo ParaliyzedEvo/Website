@@ -6,7 +6,7 @@ If there are any bugs/issues on my website, please open a new issue [here](https
 # Changelog
 ### 7/3/2024
 - Reverted everything back before the 7/2/2024 change as their birthday is over but kept Birthdays.html the same
-- Added a Misc.txt file in the misc folder
+- Added a Misc.html file in the misc folder
 
 ### 7/2/2024
 - Renamed May 7th Only.html to Birthdays.html in the misc folder
