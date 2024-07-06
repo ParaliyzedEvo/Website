@@ -4,6 +4,10 @@ https://paraliyzed.net
 If there are any bugs/issues on my website, please open a new issue [here](https://github.com/ParaliyzedEvo/Website/issues) and I will help you a soon as I can.
 
 # Changelog
+### 7/6/2024
+- Replaced Backstabber - Kesha (speed up and nightcore).mp3 with Rabbit Hole ⧸ Pure Pure ＂ラビットホール＂ 4K Edit Full Version feat. @channelcaststation [zVRDUtJXCrQ].mp3 in the image folder
+- Changed line 211 from &lt;source src="image/Backstabber - Kesha (speed up and nightcore).mp3" type="audio/mpeg"> to &lt;source src="/image/Rabbit Hole ⧸ Pure Pure ＂ラビットホール＂ 4K Edit Full Version feat. @channelcaststation [zVRDUtJXCrQ].mp3" type="audio/mpeg"> in index.html , Misc/original.html , and Misc/Birthday.html
+
 ### 7/3/2024
 - Reverted everything back before the 7/2/2024 change as their birthday is over but kept Birthdays.html the same
 - Added a Misc.html file in the misc folder
