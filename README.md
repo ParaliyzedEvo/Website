@@ -4,6 +4,11 @@ https://paraliyzed.net
 If there are any bugs/issues on my website, please open a new issue [here](https://github.com/ParaliyzedEvo/Website/issues) and I will help you a soon as I can.
 
 # Changelog
+### 7/7/2024
+- Replaced happybirthdaydumbass.png to GQ2bMi1bYAAarue.jpg in the image folder
+- Added GQ2bMi1bYAAarue.jpg in the image/old_pfp folder
+- Replaced line 31 of index.html , misc/original.html , and misc/birthdays.html from &lt;a href="https://linktr.ee/paraliyzed_evo" target="_blank">&lt;img src="https://media.tenor.com/pcH_znw3wBkAAAAM/%E9%B9%BF%E4%B9%83%E5%AD%90%E4%B9%83%E5%AD%90%E8%99%8E%E8%A6%96%E7%9C%88%E7%9C%88-shikanoko-nokonoko-koshitantan.gif" style="height:256px; width:256px;">&lt;/a> to &lt;a href="https://linktr.ee/paraliyzed_evo" target="_blank">&lt;img src="/image/GQ2bMi1bYAAarue.jpg" style="height:455px; width:256px;">&lt;/a>
+
 ### 7/6/2024
 - Replaced Backstabber - Kesha (speed up and nightcore).mp3 with Rabbit Hole ⧸ Pure Pure ＂ラビットホール＂ 4K Edit Full Version feat. @channelcaststation [zVRDUtJXCrQ].mp3 in the image folder
 - Changed line 211 from &lt;source src="image/Backstabber - Kesha (speed up and nightcore).mp3" type="audio/mpeg"> to &lt;source src="/image/Rabbit Hole ⧸ Pure Pure ＂ラビットホール＂ 4K Edit Full Version feat. @channelcaststation [zVRDUtJXCrQ].mp3" type="audio/mpeg"> in index.html , Misc/original.html , and Misc/Birthday.html
