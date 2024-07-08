@@ -4,6 +4,12 @@ https://paraliyzed.net
 If there are any bugs/issues on my website, please open a new issue [here](https://github.com/ParaliyzedEvo/Website/issues) and I will help you a soon as I can.
 
 # Changelog
+### 7/8/2024
+- Added DECO＊27 - 初嵐 feat. 初音ミク [L7BxD7HHWl4].mp3 and メズマライザー ⧸ 初音ミク・重音テトSV [19y8YTbvri8].mp3 in the image folder
+- Replaced Rabbit Hole ⧸ Pure Pure ＂ラビットホール＂ 4K Edit Full Version feat. @channelcaststation [zVRDUtJXCrQ].mp3
+- Changed line 209 of index.html , Birthdays.html , and original.html from Random osu! song to Random osu! songs
+- Added &lt;audio controls="">&lt;source src="/image/DECO＊27 - 初嵐 feat. 初音ミク [L7BxD7HHWl4].mp3" type="audio/mpeg">&lt;/audio> and 	&lt;audio controls="">&lt;source src="/image/メズマライザー ⧸ 初音ミク・重音テトSV [19y8YTbvri8].mp3" type="audio/mpeg">&lt;/audio> in index.html , Birthdays.html , and original.html
+
 ### 7/7/2024
 - Replaced happybirthdaydumbass.png to GQ2bMi1bYAAarue.jpg in the image folder
 - Added GQ2bMi1bYAAarue.jpg in the image/old_pfp folder
