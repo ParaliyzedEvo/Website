@@ -4,10 +4,14 @@ https://paraliyzed.net
 If there are any bugs/issues on my website, please open a new issue [here](https://github.com/ParaliyzedEvo/Website/issues) and I will help you a soon as I can.
 
 # Changelog
+### 7/14/2024
+- Added &lt;br> &lt;br> Random non-osu! songs&lt;br> &lt;iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0RYHqnmtNRfbYxP6Dn8Vse?utm_source=generator" width="300" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">&lt;/iframe>&lt;br> in index.html , Birthdays.html , and original.html
+- Replaced メズマライザー ⧸ 初音ミク・重音テトSV [19y8YTbvri8].mp3 in the image folder
+
 ### 7/8/2024
 - Added DECO＊27 - 初嵐 feat. 初音ミク [L7BxD7HHWl4].mp3 and メズマライザー ⧸ 初音ミク・重音テトSV [19y8YTbvri8].mp3 in the image folder
 - Replaced Rabbit Hole ⧸ Pure Pure ＂ラビットホール＂ 4K Edit Full Version feat. @channelcaststation [zVRDUtJXCrQ].mp3
-- Changed line 209 of index.html , Birthdays.html , and original.html from Random osu! song to Random osu! songs<br>
+- Changed line 209 of index.html , Birthdays.html , and original.html from Random osu! song to Random osu! songs&lt;br>
 - Added &lt;audio controls="">&lt;source src="/image/DECO＊27 - 初嵐 feat. 初音ミク [L7BxD7HHWl4].mp3" type="audio/mpeg">&lt;/audio>&lt;br> and &lt;audio controls="">&lt;source src="/image/メズマライザー ⧸ 初音ミク・重音テトSV [19y8YTbvri8].mp3" type="audio/mpeg">&lt;/audio>&lt;br> in index.html , Birthdays.html , and original.html
 
 ### 7/7/2024
