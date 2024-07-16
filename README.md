@@ -7,6 +7,7 @@ If there are any bugs/issues on my website, please open a new issue [here](https
 ### 7/16/2024
 - Added CTL-472 Cover.png in the image folder
 - Added Tablet Cover - &lt;a href="image/CTL-472 Cover.png" target="_blank">Image&lt;/a> I used &lt;a href="https://foxbox.io/collections/tablet-covers" target="_blank">Store&lt;/a> where I bought the cover in stuff.html
+- Replaced tablet.png in the image folder
 
 ### 7/14/2024
 - Added &lt;br> &lt;br> Random non-osu! songs&lt;br> &lt;iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0RYHqnmtNRfbYxP6Dn8Vse?utm_source=generator" width="300" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">&lt;/iframe>&lt;br> in index.html , Birthdays.html , and original.html
