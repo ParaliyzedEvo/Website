@@ -4,6 +4,13 @@ https://paraliyzed.net
 If there are any bugs/issues on my website, please open a new issue [here](https://github.com/ParaliyzedEvo/Website/issues) and I will help you a soon as I can.
 
 # Changelog
+### 8/4/2024
+Changed line 12 of stuff.js from link: "mailto:jamaljaqavion6969420@gmail.com", to link: "mailto:business@paraliyzed.com",
+Change line 140 of stuff.js from &lt;p>&lt;a href="${stuff[key].link}" target="_blank"> to &lt;p>&lt;a href="${stuff[key].link}">
+Replaced osuk.png and osuk-h.ong in image folder
+Replaced GQ2bMi1bYAAarue.jpg to russian.jpg image folder
+Changed line 31 of index.html , Birthdays.html , and original.html from &lt;a href="https://linktr.ee/paraliyzed_evo" target="_blank">&lt;img src="/image/GQ2bMi1bYAAarue.jpg" style="height:455px; width:256px;">&lt;/a> to &lt;a href="https://linktr.ee/paraliyzed_evo" target="_blank">&lt;img src="/image/russian.jpg" style="height:128px; width:256px;">&lt;/a>
+
 ### 7/16/2024
 - Added CTL-472 Cover.png in the image folder
 - Added Tablet Cover - &lt;a href="image/CTL-472 Cover.png" target="_blank">Image&lt;/a> I used &lt;a href="https://foxbox.io/collections/tablet-covers" target="_blank">Store&lt;/a> where I bought the cover in stuff.html
