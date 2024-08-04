@@ -8,7 +8,7 @@ If there are any bugs/issues on my website, please open a new issue [here](https
 Changed line 12 of stuff.js from link: "mailto:jamaljaqavion6969420@gmail.com", to link: "mailto:business@paraliyzed.com",
 Change line 140 of stuff.js from &lt;p>&lt;a href="${stuff[key].link}" target="_blank"> to &lt;p>&lt;a href="${stuff[key].link}">
 Replaced osuk.png and osuk-h.ong in image folder
-Replaced GQ2bMi1bYAAarue.jpg to russian.jpg image folder
+Replaced GQ2bMi1bYAAarue.jpg to russian.png image folder
 Changed line 31 of index.html , Birthdays.html , and original.html from &lt;a href="https://linktr.ee/paraliyzed_evo" target="_blank">&lt;img src="/image/GQ2bMi1bYAAarue.jpg" style="height:455px; width:256px;">&lt;/a> to &lt;a href="https://linktr.ee/paraliyzed_evo" target="_blank">&lt;img src="/image/russian.jpg" style="height:128px; width:256px;">&lt;/a>
 
 ### 7/16/2024
