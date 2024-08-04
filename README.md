@@ -5,11 +5,12 @@ If there are any bugs/issues on my website, please open a new issue [here](https
 
 # Changelog
 ### 8/4/2024
-Changed line 12 of stuff.js from link: "mailto:jamaljaqavion6969420@gmail.com", to link: "mailto:business@paraliyzed.com",
-Change line 140 of stuff.js from &lt;p>&lt;a href="${stuff[key].link}" target="_blank"> to &lt;p>&lt;a href="${stuff[key].link}">
-Replaced osuk.png and osuk-h.ong in image folder
-Replaced GQ2bMi1bYAAarue.jpg to russian.png image folder
-Changed line 31 of index.html , Birthdays.html , and original.html from &lt;a href="https://linktr.ee/paraliyzed_evo" target="_blank">&lt;img src="/image/GQ2bMi1bYAAarue.jpg" style="height:455px; width:256px;">&lt;/a> to &lt;a href="https://linktr.ee/paraliyzed_evo" target="_blank">&lt;img src="/image/russian.png" style="height:256px; width:256px;">&lt;/a>
+- Changed line 12 of stuff.js from link: "mailto:jamaljaqavion6969420@gmail.com", to link: "mailto:business@paraliyzed.com",
+- Change line 140 of stuff.js from &lt;p>&lt;a href="${stuff[key].link}" target="_blank"> to &lt;p>&lt;a href="${stuff[key].link}">
+- Replaced osuk.png and osuk-h.ong in image folder
+- Replaced GQ2bMi1bYAAarue.jpg to russian.png image folder
+- Changed line 31 of index.html , Birthdays.html , and original.html from &lt;a href="https://linktr.ee/paraliyzed_evo" target="_blank">&lt;img src="/image/GQ2bMi1bYAAarue.jpg" style="height:455px; width:256px;">&lt;/a> to &lt;a href="https://linktr.ee/paraliyzed_evo" target="_blank">&lt;img src="/image/russian.png" style="height:256px; width:256px;">&lt;/a>
+- Added Alya folder in image/old_pfp folder
 
 ### 7/16/2024
 - Added CTL-472 Cover.png in the image folder
