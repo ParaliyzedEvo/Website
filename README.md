@@ -7,6 +7,7 @@ If there are any bugs/issues on my website, please open a new issue [here](https
 ### 8/7/2024
 - Added steam class in index-style.css at line 517
 - Added a steam home link in stuff.js at line 82
+- Added steam.png and steam-h.png in the image folder
 - Added &lt;div style="display:inline-block">
             &lt;p style="margin-right:20px; margin-left:20px; font-size:20px; margin-bottom:4px; color:rgb(200, 200, 200)">
                 Steam&lt;/p>
