@@ -4,6 +4,20 @@ https://paraliyzed.net
 If there are any bugs/issues on my website, please open a new issue [here](https://github.com/ParaliyzedEvo/Website/issues) and I will help you a soon as I can.
 
 # Changelog
+### 8/7/2024
+- Added steam class in index-style.css at line 517
+- Added a steam home link in stuff.js at line 82
+- Added &lt;div style="display:inline-block">
+            &lt;p style="margin-right:20px; margin-left:20px; font-size:20px; margin-bottom:4px; color:rgb(200, 200, 200)">
+                Steam&lt;/p>
+            &lt;p>&lt;a href="https://steamcommunity.com/id/Paraliyzed_evo/">
+            &lt;/a>&lt;/p>&lt;div class="steampng">&lt;a href="https://steamcommunity.com/id/Paraliyzed_evo/">
+                &lt;img src="image/steam.png" class="img-nh" alt="png bottom">
+                &lt;img src="image/steam-h.png" class="img-h" alt="png top">
+            &lt;/a>&lt;/div>&lt;a href="https://steamcommunity.com/id/Paraliyzed_evo/">
+            &lt;/a>&lt;p>&lt;/p>
+        &lt;/div> in index.html , original.html , and birthdays.html at line 146
+
 ### 8/4/2024
 - Changed line 12 of stuff.js from link: "mailto:jamaljaqavion6969420@gmail.com", to link: "mailto:business@paraliyzed.com",
 - Change line 140 of stuff.js from &lt;p>&lt;a href="${stuff[key].link}" target="_blank"> to &lt;p>&lt;a href="${stuff[key].link}">
