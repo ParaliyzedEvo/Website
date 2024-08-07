@@ -513,3 +513,34 @@ pre {
 .soundcloudpng:hover .img-nh {
     opacity: 0%;
 }
+
+/*steam----------------------------------*/
+.steampng {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin: auto;
+}
+
+.steampng .img-nh {
+    width: 100px;
+    height: 100px;
+    position: relative;    
+    margin: auto;
+    }
+
+.steampng .img-h {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    }
+
+.steampng:hover .img-h {
+    display: inline;
+    }
+
+.steampng:hover .img-nh {
+    opacity: 0%;
+}
