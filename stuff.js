@@ -79,6 +79,14 @@ stuff = {
             hover: "image/stuff-h.png",
         },
     },
+    'Steam': {
+        class: "steampng",
+        link: "https://steamcommunity.com/id/Paraliyzed_evo/",
+        img: {
+            base: "image/steam.png",
+            hover: "image/steam-h.png",
+        },
+    },
     'Tips': {
         class: "tippng",
         link: "https://streamelements.com/paraliyzed_evo/tip",
