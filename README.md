@@ -4,6 +4,9 @@ https://paraliyzed.net
 If there are any bugs/issues on my website, please open a new issue [here](https://github.com/ParaliyzedEvo/Website/issues) and I will help you a soon as I can.
 
 # Changelog
+### 8/10/2024
+- Added <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/47lKHyMERKqbCwYVw4ytTz?utm_source=generator" width="300" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe><br> in index.html , original.html , and birthdays.html at line 230
+
 ### 8/7/2024
 - Added steam class in index-style.css at line 517
 - Added a steam home link in stuff.js at line 82
