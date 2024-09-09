@@ -336,6 +336,11 @@ const links = [
         other: '',
     },
 	{
+        name: 'Dream PC',
+        url: 'https://pcpartpicker.com/list/WX9qjH',
+        other: ' | PC I\'m wanting to upgrade too but I\'m broke (pls donate money by using the tip link at the homepage)',
+    },
+	{
         name: 'SAO Easter Egg Website',
         url: 'http://52689658.42web.io/',
         other: ' | Archive of the SAO 52.68.96.58 easter egg website',
