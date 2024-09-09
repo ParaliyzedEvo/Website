@@ -147,8 +147,8 @@ function setupHomeLinks() {
                 ${key}</p>
             <p><a href="${stuff[key].link}">
             <div class="${stuff[key].class}">
-                <img src="${stuff[key].img.base}" class=img-nh alt="png bottom" />
-                <img src="${stuff[key].img.hover}" class=img-h alt="png top" />
+                <img src="/${stuff[key].img.base}" class=img-nh alt="png bottom" />
+                <img src="/${stuff[key].img.hover}" class=img-h alt="png top" />
             </div>
             </a></p>
         </div>
