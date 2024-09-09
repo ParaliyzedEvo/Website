@@ -1,4 +1,8 @@
-html {
+* {
+    scrollbar-color: #808080 #15171B;
+    scrollbar-width: medium;
+    scroll-behavior: smooth;
+    font-family: 'Oxanium';
     scroll-behavior: smooth;
 }
 
@@ -62,24 +66,24 @@ pre {
     -webkit-background-clip: text;
 }
 
-#awwawa {
+#niger {
     font-family: 'Ubuntu', sans-serif;
     color: white;
-    font-size: 24px;
+    font-size: 12px;
 }
 
-#awwawa:link,
-#awwawa:visited {
+#niger:link,
+#niger:visited {
     font-family: 'Ubuntu', sans-serif;
     color: white;
-    font-size: 24px;
+    font-size: 12px;
 }
 
-#awwawa:hover,
-#awwawa:active {
+#niger:hover,
+#niger:active {
     font-family: 'Ubuntu', sans-serif;
     color: rgb(38, 150, 255);
-    font-size: 24px;
+    font-size: 12px;
 }
 
 /*menu back----------------------------*/
@@ -112,6 +116,8 @@ pre {
     opacity: 0%;
 }
 
+
+/* home links */
 /*osu----------------------------------*/
 .osupng {
     width: 100px;
@@ -543,4 +549,28 @@ pre {
 
 .steampng:hover .img-nh {
     opacity: 0%;
+}
+
+
+/* about me */
+#abt {}
+
+#abtMeTitle {
+    text-align: center;
+    font-size: 36px;
+}
+
+#aboutMeCard {
+    list-style-position: inside;
+    border-radius: 1rem;
+    border: 2px solid #8a8a8a;
+    min-width: min-content;
+    max-width: 900px;
+    padding: 15px;
+    margin: 15px;
+    display: inline-block;
+    column-gap: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #15171B88;
+    text-align: left;
 }
