@@ -4,6 +4,41 @@ https://paraliyzed.net
 If there are any bugs/issues on my website, please open a new issue [here](https://github.com/ParaliyzedEvo/Website/issues) and I will help you a soon as I can.
 
 # Changelog
+### 9/8/2024
+#### Extra notes
+Finally gonna organize how I write my change logs as this is a big revamp to my website as it took the whole day to rewrite everything, but I did it. I will start working on rewriting the osu skin pages and will probably launch it by tmw
+#### Files
+- Made a old_img folder in the image folder
+- Added a new mback.gif and a new setup pic and put the old ones into the old_img folder
+- Added a 404.css
+- Remade error1.html and error.html and renamed them to 403.html and 404.html
+- Added a index.js file
+- Added a nav.css file
+- Renamed style2w.css to stuff.css
+#### index.html , original.html , and birthdays.html
+- Changed line 4 from <link rel="shortcut icon" type="image/png" href="image/logo.jpg"> to <link rel="shortcut icon" type="image/jpg" href="image/logo.jpg">
+- Added <link rel="stylesheet" href="nav.css"> at line 6
+- Added a nav bar on top (Lines 18-41)
+- Replaced the js script to index.js
+- Added romanji lyrics in my about me (line 226-230)
+#### index-style.css
+- Added lines 1-5 to change scrollbar-color and some other stuff
+- Added a niger class, replacing the awwawa class
+- Added classes for my about me card that are displayed on index.html , original.html , and birthdays.html (lines 553-576)
+#### stuff.css
+- Added a sectionHeading heading class and an h3 class in stuff.css (previously named style2w.css)(lines 20-30)
+- Completely removed the sidebar class as the sidebar is no longer needed and is being replaced by the nav bar that is displayed in index.html , original.html , and birthdays.html
+- Added a header class (lines 39-40)
+- Replaced the a class with the itemLink class (lines 51-61)
+- added a img class (lines 64-66)
+- Changed the mback class so the back button displayed at the top left is now displayed at the bottom right
+- Removed useless comments
+#### .htaccess
+- Rewrote it to the new 404.html and 403.html files
+#### stuff.js
+- Everything in the stuff.js file has now moved to the index.js file making this a completely new file
+- In this new file, it's just a script that displays all of my peripherals and such to make it easier for me to add/replace and remove links if I need too
+
 ### 8/11/2024
 - Changed line 207 to Doing ap comp sci&lt;br> from In comp sci, doing ap next year&lt;br> in index.html , original.html , and birthdays.html
 
