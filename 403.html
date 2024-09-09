@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<html lang="en">
+<link rel="stylesheet" href="./404.css">
+<link rel="shortcut icon" type="image/jpg" href="./image/logo.jpg"
+
+<head>
+    <meta http-equiv="refresh" content="10; URL=./index.html" />
+</head>
+
+<body>
+    <center>
+        <p>The page you are looking for is forbidden</p>
+        <p>You will be redirected to the homepage shortly...</h2>
+        <p id="count">10</p>
+    </center>
+</body>
+<script>
+    const item = document.getElementById("count");
+    let time = 10
+    setInterval(() => {
+        time--
+        item.innerHTML = time;
+    }, 1000)
+</script>
+
+</html>
