@@ -18,8 +18,8 @@ Finally gonna organize how I write my change logs as this is a big revamp to my 
 - Added a nav.css file
 - Renamed style2w.css to stuff.css
 #### index.html , original.html , and birthdays.html
-- Changed line 4 from <link rel="shortcut icon" type="image/png" href="image/logo.jpg"> to <link rel="shortcut icon" type="image/jpg" href="image/logo.jpg">
-- Added <link rel="stylesheet" href="nav.css"> at line 6
+- Changed line 4 from &lt;link rel="shortcut icon" type="image/png" href="image/logo.jpg"> to &lt;link rel="shortcut icon" type="image/jpg" href="image/logo.jpg">
+- Added &lt;link rel="stylesheet" href="nav.css"> at line 6
 - Added a nav bar on top (Lines 18-41)
 - Replaced the js script to index.js
 - Added romanji lyrics in my about me (line 226-230)
@@ -37,6 +37,9 @@ Finally gonna organize how I write my change logs as this is a big revamp to my 
 - Removed useless comments
 #### .htaccess
 - Rewrote it to the new 404.html and 403.html files
+#### stuff.html
+- Replaced line 3 from &lt;link rel="shortcut icon" type="image/png" href="image/logo.jpg"> to &lt;link rel="shortcut icon" type="image/jpg" href="image/logo.jpg">
+- Added a nav bar on top, replacing the sidebar
 #### stuff.js
 - Everything in the stuff.js file has now moved to the index.js file making this a completely new file
 - In this new file, it's just a script that displays all of my peripherals and such to make it easier for me to add/replace and remove links if I need too
