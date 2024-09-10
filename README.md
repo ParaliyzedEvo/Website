@@ -13,6 +13,8 @@ Just a hotfix today, will be done writing the skin section oif my website by tmw
 - Changed the size oif all tablet.png and reduced it by 67px
 #### stuff.html
 - Fixed a thing where it would dupe the links and lists
+#### stuff.css
+- Specified a font under the itemLink class to fix bugs on mobile/tablet
 
 ### 9/8/2024
 #### Extra notes
