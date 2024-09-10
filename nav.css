@@ -102,10 +102,12 @@ nav ul li a:hover {
 
 nav ul li a.activeNavLink {
     color: #8000ff;
+	text-decoration: underline;
 }
 
 nav ul li a.subActiveNavLink {
     color: #8000ff;
+	text-decoration: underline;
 }
 
 #linkDiscord:hover {
@@ -114,6 +116,7 @@ nav ul li a.subActiveNavLink {
     text-decoration-color: #6d7bf8
 }
 #linkEmail:hover {
+	color: #fab7af;
 	text-decoration: underline;
     text-decoration-color: #fab7af
 }
