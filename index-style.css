@@ -68,22 +68,23 @@ pre {
 
 #niger {
     font-family: 'Ubuntu', sans-serif;
-    color: white;
+    color: rgb(38, 150, 255);
     font-size: 12px;
+	text-decoration: none
 }
 
 #niger:link,
 #niger:visited {
     font-family: 'Ubuntu', sans-serif;
-    color: white;
+    color: purple;
     font-size: 12px;
 }
 
 #niger:hover,
 #niger:active {
     font-family: 'Ubuntu', sans-serif;
-    color: rgb(38, 150, 255);
     font-size: 12px;
+	text-decoration: underline
 }
 
 /*menu back----------------------------*/
