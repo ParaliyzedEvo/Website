@@ -102,3 +102,34 @@ iframe {
     font-size: 24px;
     color: rgb(200, 200, 200)
 }
+
+/*menu back----------------------------*/
+.mback {
+    width: 240px;
+    height: 90px;
+    position: fixed;
+    display: table;
+    bottom: 0%;
+    right: 0%;
+	border-radius: 0;
+    overflow: hidden;
+}
+
+.mback .img-h {
+    width: 240px;
+    height: 90px;
+    display: table;
+    position: fixed;
+    z-index: -1;
+	border-radius: 0;
+    overflow: hidden;
+}
+
+.mback .img-nh {
+    width: 240px;
+    height: 90px;
+    position: fixed;
+    display: table;
+	border-radius: 0;
+    overflow: hidden;
+}
