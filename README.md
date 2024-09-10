@@ -6,6 +6,14 @@ If there are any bugs/issues on my website, please open a new issue [here](https
 (Note: If you want to open this file locally, you have to change things like /index.html to ./index.html for it to work)
 
 # Changelog
+### 9/9/2024
+#### Notes
+Just a hotfix today, will be done writing the skin section oif my website by tmw (hopefully).
+#### Files
+- Changed the size oif all tablet.png and reduced it by 67px
+#### stuff.html
+- Fixed a thing where it would dupe the links and lists
+
 ### 9/8/2024
 #### Extra notes
 Finally gonna organize how I write my change logs as this is a big revamp to my website as it took the whole day to rewrite everything, but I did it. I will start working on rewriting the osu skin pages and will probably launch it by tmw
