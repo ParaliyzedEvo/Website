@@ -3,18 +3,37 @@ https://paraliyzed.net
 
 If there are any bugs/issues on my website, please open a new issue [here](https://github.com/ParaliyzedEvo/Website/issues) and I will help you a soon as I can.
 
-(Note: If you want to open this file locally, you have to change things like /index.html to ./index.html for it to work)
+(Note: If you want to open this file locally, you have to change things like /index.html to ./index.html or ../index.html for it to work)
 
 # Changelog
 ### 9/9/2024
 #### Notes
-Just a hotfix today, will be done writing the skin section oif my website by tmw (hopefully).
+Just a hotfix today, will be done writing the skin section oif my website by tmw (hopefully). Edit: I did some things today like the home.html and skin-websites in the osu-skin folder and decided to launch them out early. I also did/add stuff today.
 #### Files
 - Changed the size oif all tablet.png and reduced it by 67px
+- Deleted style1.css and style4.css as it's getting replaced by the skinlayout.css in the osu-folder
 #### stuff.html
 - Fixed a thing where it would dupe the links and lists
 #### stuff.css
 - Specified a font under the itemLink class to fix bugs on mobile/tablet
+#### index-style.css
+- Changed line 71 from color: white; to color: rgb(38, 150, 255);
+- Added text-decoration: none on line 73
+- Changed line 79 from color: white; to color: purple;
+- Added text-decoration: underline on line 87
+#### index.html
+- Optimization
+#### nav.css
+- Added text-decoration: underline; on lines 105 and 110
+- Added color: #fab7af; on line 119
+#### osu-skin/HOME.html
+- Added a nav bar on top (lines 25-34)
+- Added header on top (lines 22-24)
+- Added a back button (lines 18-20)
+- Rewritten it instead of having links to click on and is now more modern/visually appealing
+#### osu-skin/skin-sites.html
+- Added a nav bar on top (lines 27-36)
+- Added header on top (lines 23-26)
 
 ### 9/8/2024
 #### Extra notes
