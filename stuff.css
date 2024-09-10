@@ -50,6 +50,7 @@ a {
 
 .itemLink:link,
 .itemLink:visited {
+    font-family: 'Ubuntu', sans-serif;
     color: rgb(103, 230, 198);
     text-align: center;
     text-decoration: none;
@@ -58,6 +59,7 @@ a {
 
 .itemLink:hover,
 .itemLink:active {
+    font-family: 'Ubuntu', sans-serif;
     color: rgb(38, 150, 255)
 }
 
