@@ -1,14 +1,7 @@
-* {
-    scrollbar-color: #808080 #15171B;
-    scrollbar-width: medium;
-    scroll-behavior: smooth;
-    font-family: 'Oxanium';
-    scroll-behavior: smooth;
-}
-
 body {
     /* background-color: #000000; */
-    background: linear-gradient(to right bottom, #320370, #15171B );
+    background: linear-gradient(to right bottom, #320370, #15171B);
+
     /*background-image: url(../image/bg.jpg);*/
     background-repeat: repeat;
     background-attachment: fixed;
@@ -16,20 +9,25 @@ body {
     color: white;
 }
 
+#content {
+    margin-left: 100px;
+}
+
 h1 {
-    font-family: 'Ubuntu', sans-serif;
     color: white;
+}
+
+.sectionHeading {
+    color: white;
+    padding-top: 30px;
+    font-size: 40px;
+    color: white
 }
 
 h3 {
-    font-family: 'Russo One', sans-serif;
-    color: white;
-}
-
-p {
-    font-family: 'Ubuntu', sans-serif;
-    color: white;
     font-size: 24px;
+    padding: 0;
+    padding-top: 15px
 }
 
 pre {
@@ -38,63 +36,46 @@ pre {
     font-size: 24px;
 }
 
-.idk {
-    font-family: 'Ubuntu', sans-serif !important;
-    color: white;
-    font-size: 24px;
+header {
+	background: linear-gradient(to right top, #320370, #15171B )
 }
 
-#mainName {
-    font-family: 'Russo One', sans-serif;
+.main {
+    height: 80%
 }
 
-#minor {
-    font-family: 'Ubuntu', sans-serif;
-
+a {
+    border-radius: 5px;
 }
 
-.grad {
-    background: linear-gradient(to bottom, #320370, #ff6b08,
-            #cf23cf, #eedd44);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+.itemLink:link,
+.itemLink:visited {
+	font-family: 'Ubuntu', sans-serif;
+    color: rgb(103, 230, 198);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }
 
-.gradDef {
-    background: linear-gradient(to right, #0000ff 45%, #7b00ff 55%);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+.itemLink:hover,
+.itemLink:active {
+	font-family: 'Ubuntu', sans-serif;
+    color: rgb(38, 150, 255)
 }
 
-#niger {
-    font-family: 'Ubuntu', sans-serif;
-    color: rgb(38, 150, 255);
-    font-size: 12px;
-	text-decoration: none
+img {
+    border-radius: 15px;
 }
-
-#niger:link,
-#niger:visited {
-    font-family: 'Ubuntu', sans-serif;
-    color: purple;
-    font-size: 12px;
-}
-
-#niger:hover,
-#niger:active {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 12px;
-	text-decoration: underline
-}
-
 /*menu back----------------------------*/
 .mback {
     width: 240px;
     height: 90px;
     position: fixed;
     display: table;
-    top: 0%;
-    left: 0%;
+    bottom: 0%;
+    right: 0%;
+	border-radius: 0;
+    overflow: hidden;
 }
 
 .mback .img-h {
@@ -103,6 +84,8 @@ pre {
     display: table;
     position: fixed;
     z-index: -1;
+	border-radius: 0;
+    overflow: hidden;
 }
 
 .mback .img-nh {
@@ -110,468 +93,6 @@ pre {
     height: 90px;
     position: fixed;
     display: table;
-
-}
-
-.mback:hover .img-nh {
-    opacity: 0%;
-}
-
-
-/* home links */
-/*osu----------------------------------*/
-.osupng {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    margin: auto;
-}
-
-.osupng .img-nh {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    margin: auto;
-}
-
-.osupng .img-h {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 99;
-}
-
-.osupng:hover .img-h {
-    display: inline;
-}
-
-.osupng:hover .img-nh {
-    opacity: 0%;
-}
-
-/*youtube----------------------------------*/
-.ytpng {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    margin: auto;
-}
-
-.ytpng .img-nh {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    margin: auto;
-}
-
-.ytpng .img-h {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 99;
-}
-
-.ytpng:hover .img-h {
-    display: inline;
-}
-
-.ytpng:hover .img-nh {
-    opacity: 0%;
-}
-
-/*twitter----------------------------------*/
-.twitpng {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    margin: auto;
-}
-
-.twitpng .img-nh {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    margin: auto;
-}
-
-.twitpng .img-h {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 99;
-}
-
-.twitpng:hover .img-h {
-    display: inline;
-}
-
-.twitpng:hover .img-nh {
-    opacity: 0%;
-}
-
-/*discord----------------------------------*/
-.discpng {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    margin: auto;
-}
-
-.discpng .img-nh {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    margin: auto;
-}
-
-.discpng .img-h {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 99;
-}
-
-.discpng:hover .img-h {
-    display: inline;
-}
-
-.discpng:hover .img-nh {
-    opacity: 0%;
-}
-
-/*twitch----------------------------------*/
-.twitchpng {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    margin: auto;
-}
-
-.twitchpng .img-nh {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    margin: auto;
-}
-
-.twitchpng .img-h {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 99;
-}
-
-.twitchpng:hover .img-h {
-    display: inline;
-}
-
-.twitchpng:hover .img-nh {
-    opacity: 0%;
-}
-
-/*osu skinning----------------------------------*/
-.osuskpng {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    margin: auto;
-}
-
-.osuskpng .img-nh {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    margin: auto;
-}
-
-.osuskpng .img-h {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 99;
-}
-
-.osuskpng:hover .img-h {
-    display: inline;
-}
-
-.osuskpng:hover .img-nh {
-    opacity: 0%;
-}
-
-/*github----------------------------------*/
-.gitpng {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    margin: auto;
-}
-
-.gitpng .img-nh {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    margin: auto;
-}
-
-.gitpng .img-h {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 99;
-}
-
-.gitpng:hover .img-h {
-    display: inline;
-}
-
-.gitpng:hover .img-nh {
-    opacity: 0%;
-}
-
-/*gmail----------------------------------*/
-.mailpng {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    margin: auto;
-}
-
-.mailpng .img-nh {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    margin: auto;
-}
-
-.mailpng .img-h {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 99;
-}
-
-.mailpng:hover .img-h {
-    display: inline;
-}
-
-.mailpng:hover .img-nh {
-    opacity: 0%;
-}
-
-/*streamelements tip----------------------------------*/
-.tippng {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    margin: auto;
-}
-
-.tippng .img-nh {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    margin: auto;
-}
-
-.tippng .img-h {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 99;
-}
-
-.tippng:hover .img-h {
-    display: inline;
-}
-
-.tippng:hover .img-nh {
-    opacity: 0%;
-}
-
-/*stuff----------------------------------*/
-.stuffpng {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    margin: auto;
-}
-
-.stuffpng .img-nh {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    margin: auto;
-}
-
-.stuffpng .img-h {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 99;
-}
-
-.stuffpng:hover .img-h {
-    display: inline;
-}
-
-.stuffpng:hover .img-nh {
-    opacity: 0%;
-}
-
-/*instagram----------------------------------*/
-.instagrampng {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    margin: auto;
-}
-.instagrampng .img-nh {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    margin: auto;
-}
-
-.instagrampng .img-h {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 99;
-}
-
-.instagrampng:hover .img-h {
-    display: inline;
-}
-
-.instagrampng:hover .img-nh {
-    opacity: 0%;
-}
-
-/*reddit----------------------------------*/
-.redditpng {
-    width: 119px;
-    height: 100px;
-    position: relative;
-    margin: auto;
-}
-
-.redditpng .img-nh {
-    width: 119px;
-    height: 100px;
-    position: relative;
-    margin: auto;
-}
-
-.redditpng .img-h {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 99;
-}
-
-.redditpng:hover .img-h {
-    display: inline;
-    }
-
-.redditpng:hover .img-nh {
-    opacity: 0%;
-    }
-
-/*soundcloud----------------------------------*/
-.soundcloudpng {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    margin: auto;
-}
-
-.soundcloudpng .img-nh {
-    width: 100px;
-    height: 100px;
-    position: relative;    
-    margin: auto;
-    }
-
-.soundcloudpng .img-h {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 99;
-    }
-
-.soundcloudpng:hover .img-h {
-    display: inline;
-    }
-
-.soundcloudpng:hover .img-nh {
-    opacity: 0%;
-}
-
-/*steam----------------------------------*/
-.steampng {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    margin: auto;
-}
-
-.steampng .img-nh {
-    width: 100px;
-    height: 100px;
-    position: relative;    
-    margin: auto;
-    }
-
-.steampng .img-h {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 99;
-    }
-
-.steampng:hover .img-h {
-    display: inline;
-    }
-
-.steampng:hover .img-nh {
-    opacity: 0%;
-}
-
-
-/* about me */
-#abt {}
-
-#abtMeTitle {
-    text-align: center;
-    font-size: 36px;
-}
-
-#aboutMeCard {
-    list-style-position: inside;
-    border-radius: 1rem;
-    border: 2px solid #8a8a8a;
-    min-width: min-content;
-    max-width: 900px;
-    padding: 15px;
-    margin: 15px;
-    display: inline-block;
-    column-gap: 50px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #15171B88;
-    text-align: left;
+	border-radius: 0;
+    overflow: hidden;
 }
