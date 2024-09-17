@@ -8,7 +8,7 @@ If there are any bugs/issues on my website, please open a new issue [here](https
 # Changelog
 ### 9/9/2024
 #### Notes
-Just a hotfix today, will be done writing the skin section oif my website by tmw (hopefully). Edit: I did some things today like the home.html and skin-websites in the osu-skin folder and decided to launch them out early. I also did/add stuff today.
+Just a hotfix today, will be done writing the skin section of my website by tmw (hopefully). Edit: I did some things today like the home.html and skin-websites in the osu-skin folder and decided to launch them out early. I also did/add stuff today.
 #### Files
 - Changed the size oif all tablet.png and reduced it by 67px
 - Deleted style1.css and style4.css as it's getting replaced by the skinlayout.css in the osu-folder
