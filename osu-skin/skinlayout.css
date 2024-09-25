@@ -50,9 +50,15 @@ body {
     width: 256px;
 }
 
-.dl,
+.dl {
+	color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
 .dl:visited {
-    color: #ffffff;
+    color: purple;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -61,6 +67,26 @@ body {
 .dl:hover,
 .dl:active {
     color: rgb(38, 150, 255)
+}
+
+#niger {
+	color: rgb(38, 150, 255);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#niger:visited {
+    color: purple;
+    text-align: center;
+    display: inline-block;
+	text-decoration: none;
+}
+
+#niger:hover,
+#niger:active {
+	color: white;
+	text-decoration: none
 }
 
 .itemName {
