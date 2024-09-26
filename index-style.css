@@ -67,24 +67,30 @@ pre {
 }
 
 #niger {
-    font-family: 'Ubuntu', sans-serif;
-    color: rgb(38, 150, 255);
+	font-family: 'Ubuntu', sans-serif;
+	color: rgb(38, 150, 255);
     font-size: 12px;
-	text-decoration: none
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }
 
 #niger:link,
 #niger:visited {
-    font-family: 'Ubuntu', sans-serif;
-    color: purple;
+	font-family: 'Ubuntu', sans-serif;
     font-size: 12px;
+    color: purple;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }
 
 #niger:hover,
 #niger:active {
-    font-family: 'Ubuntu', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
     font-size: 12px;
-	text-decoration: underline
+	color: white;
+	text-decoration: none
 }
 
 /*menu back----------------------------*/
@@ -549,6 +555,37 @@ pre {
     }
 
 .steampng:hover .img-nh {
+    opacity: 0%;
+}
+
+/*spotify----------------------------------*/
+.spotifypng {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin: auto;
+}
+
+.spotifypng .img-nh {
+    width: 100px;
+    height: 100px;
+    position: relative;    
+    margin: auto;
+    }
+
+.spotifypng .img-h {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    }
+
+.spotifypng:hover .img-h {
+    display: inline;
+    }
+
+.spotifypng:hover .img-nh {
     opacity: 0%;
 }
 
