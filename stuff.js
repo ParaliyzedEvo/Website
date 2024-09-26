@@ -331,14 +331,14 @@ const links = [
         other: '',
     },
 	{
+        name: 'My Youtube Playlist :)',
+        url: 'misc/link2.html',
+        other: ' | For me and for me only lol',
+    },
+	{
         name: 'Minecraft 1.8.8 Online',
         url: 'https://git.paraliyzed.net/Minecraft%201.8.8',
         other: '',
-    },
-	{
-        name: 'Dream PC',
-        url: 'https://pcpartpicker.com/list/WX9qjH',
-        other: ' | PC I\'m wanting to upgrade too but I\'m broke (pls donate money by using the tip link at the homepage)',
     },
 	{
         name: 'SAO Easter Egg Website',
@@ -354,7 +354,7 @@ const links = [
         name: 'Minecraft Texture Pack (Java) ',
         url: 'https://drive.google.com/file/d/1ZzVVVehxXOoEeZt9EZrQiTaiNMYB56Hr/view?usp=sharing',
         other: ' | (Updated every once in a blue moon)',
-    },
+    }
 ];
 const playstyle = {
     things: {
