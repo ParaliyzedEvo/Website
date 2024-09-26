@@ -184,3 +184,8 @@ nav ul li a.subActiveNavLink {
 	text-decoration: underline;
     text-decoration-color: #ff6666
 }
+#linkSpotify:hover {
+    color: #1ed760;
+	text-decoration: underline;
+    text-decoration-color: #1ed760
+}
