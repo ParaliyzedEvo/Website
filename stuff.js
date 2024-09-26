@@ -335,6 +335,11 @@ const links = [
         url: 'misc/link2.html',
         other: ' | For me and for me only lol',
     },
+    {
+        name: 'Dream PC',
+        url: 'https://pcpartpicker.com/list/WX9qjH',
+        other: ' | PC I\'m wanting to upgrade too but I\'m broke (pls donate money by using the tip link at the homepage)',
+    },
 	{
         name: 'Minecraft 1.8.8 Online',
         url: 'https://git.paraliyzed.net/Minecraft%201.8.8',
