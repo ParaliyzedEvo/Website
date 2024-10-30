@@ -1,2 +1,5 @@
 ErrorDocument 404 /404.html
 ErrorDocument 403 /403.html
+Options +Indexes
+IndexOptions FancyIndexing FoldersFirst NameWidth=*
+HeaderName /HEADER.html
