@@ -323,11 +323,11 @@ const socials = [
     },
     {
         icon: 'mail.png',
-        url: 'mailto:sbrstrkkdwmdr@gmail.com'
+        url: 'mailto:business@paraliyzed.com'
     },
     {
         icon: 'github.png',
-        url: 'https://github.com/sbrstrkkdwmdr',
+        url: 'https://github.com/Paraliyzedevo',
     },
 	{
         icon: 'instagram.png',
@@ -339,7 +339,7 @@ const socials = [
     },
 	{
         icon: 'osu.png',
-        url: 'https://osu.ppy.sh/u/15222484',
+        url: 'https://osu.ppy.sh/users/19637339',
     },
 	{
         icon: 'reddit.png',
@@ -375,7 +375,7 @@ const socials = [
     },
     {
         icon: 'youtube.png',
-        url: 'https://www.youtube.com/@sbrstrkkdwmdr',
+        url: 'https://www.youtube.com/@BestOsuPlayer',
     }
 ]
 
