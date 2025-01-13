@@ -1,27 +1,35 @@
 <!DOCTYPE html>
+<!--idk how to code-->
 <meta charset="utf-8" />
 <html lang="en">
-<link rel="stylesheet" href="styles/404.css">
-<link rel="shortcut icon" type="image/jpg" href="/image/logo.jpg"
 
 <head>
-    <meta http-equiv="refresh" content="10; URL=/index.html" />
+    <meta http-equiv="refresh" content="727; URL=index.html" />
+    <title>404</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="Paraliyzed_evo, Paraliyzed, paral, Evo">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Error 404" />
+    <meta property="og:url" content="https://paraliyzed.net" />
+    <meta property="og:image" content="https://paraliyzed.net/image/logo1.png" />
+    <link rel="icon" type="image/x-icon" href="img/logo.jpg" />
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/index-style.css">
 </head>
+<script src="rootnav.js"></script>
 
-<body>
-    <center>
-        <p>The page you are looking for does not exist</p>
-        <p>You will be redirected to the homepage shortly...</h2>
-        <p id="count">10</p>
-    </center>
+<body onload="genPage(0, null, 'err.html')">
+    <nav class="external" id="topbar">
+        <div id="socialLinks">
+        </div>
+        <div id="addressBar"></div>
+    </nav>
+    
+        <nav class="external" id="sidebar">
+        </nav>
+        <main id="content">
+            <h1 style="font-family: monospace; font-size: 48px;">ERROR 403 - The Requested page was not found</h1>
+            <h2 style="font-family: monospace; font-size: 36px;">Use the buttons on the left to find the page you were looking for</h2>
+        </main>
 </body>
-<script>
-    const item = document.getElementById("count");
-    let time = 10
-    setInterval(() => {
-        time--
-        item.innerHTML = time;
-    }, 1000)
-</script>
-
 </html>
