@@ -2,7 +2,17 @@ function generate() {
     const ctn = document.getElementById('content');
 	{
 		const textElement = document.createElement('div');
-		textElement.textContent = '(IMPORTANT) Any issues regarding on the pages content or things not loading in properly or the styling is js off, I already know as I\'m redoing my entire website. Please bear with me.';
+		textElement.innerHTML = '<span style="color: var(--clrs-red);">(IMPORTANT)</span>';
+		textElement.style.display = 'flex';
+		textElement.style.justifyContent = 'center';
+		textElement.style.alignItems = 'center';
+		textElement.style.fontSize = '25px';
+		textElement.style.fontFamily = 'Ubuntu, sans-serif';
+		ctn.append(textElement);
+	}
+	{
+		const textElement = document.createElement('div');
+		textElement.textContent = 'Any issues regarding on the pages content or things not loading in properly or the styling is js off, I already know as I\'m redoing my entire website. Please bear with me.';
 		textElement.style.display = 'flex';
 		textElement.style.justifyContent = 'center';
 		textElement.style.alignItems = 'center';
