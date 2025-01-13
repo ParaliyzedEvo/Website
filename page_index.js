@@ -76,6 +76,8 @@ function generate() {
 		textElement.appendChild(anchor);
 		
 		const templateText = document.createTextNode(' and I will reply as soon as I can');
+		textElement.style.marginTop = '15px';
+		textElement.style.marginBottom = '25px';
 		textElement.appendChild(templateText);
 		ctn.append(textElement);
 	}
