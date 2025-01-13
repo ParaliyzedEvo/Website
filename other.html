@@ -1,78 +1,75 @@
 <!DOCTYPE html>
-<html lang="en"><head><title>Stuff | Paraliyzed_evo</title>
-<link rel="shortcut icon" type="image/jpg" href="image/logo.jpg">
-<link rel="stylesheet" href="nav.css">
-<link rel="stylesheet" href="stuff.css">
-<link href="https://fonts.googleapis.com/css2?family=Russo+One&amp;family=Ubuntu&amp;display=swap" rel="stylesheet">
-<meta charset="utf-8">
+<!--idk how to code-->
+<meta charset="utf-8" />
+<html lang="en">
 
-
-
+<head>
+    <title>Other</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="Paraliyzed_evo, Paraliyzed, paral, Evo">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Stuff | Paraliyzed_evo">
-    <meta property="og:description" content="Paraliyzed_evo about me page">
-    <meta property="og:url" content="TEMP">
-    <meta property="og:image" content="image/logo.png">
+    <meta property="og:title" content="Other" />
+    <meta property="og:url" content="https://paraliyzed.net" />
+    <meta property="og:image" content="https://paraliyzed.net/image/logo1.png" />
+    <link rel="icon" type="image/x-icon" href="img/logo.jpg" />
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/page_other.css">
 </head>
+<script src="rootnav.js"></script>
+<script src="page_other.js"></script>
 
-<body class="main">
-    <header>
-        <h1>Stuff</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="#peripherals">Peripherals</a></li>
-            <li><a href="#pc">PC Parts</a></li>
-            <li><a href="#setup">Setup</a></li>
-            <li><a href="#software">Software</a></li>
-			<li><a href="#links">Other Links</a></li>
-            <li><a href="#playstyle">Playstyle</a></li>
-        </ul>
+<body>
+    <nav class="external" id="topbar">
+        <div id="socialLinks"></div>
+        <div id="addressBar"></div>
     </nav>
-	<a href="index.html">
-    <div class="mback">
-        <img src="image/mback.gif" class="img-nh" alt="png bottom">
-    </div>
-	</a>
-    <section id="content">
+    <nav class="external" id="sidebar">
+    </nav>
+    <main id="content">
+        <section id="centrePage">
 
-        <!--1Peripherals-->
-        <a id="peripherals"></a>
-        <h2 class="sectionHeading">Peripherals</h2>
-        <div id="periDiv">
-        </div>
+            <!--1Peripherals-->
+            <a id="peripherals"></a>
+            <h2 class="sectionHeading">Peripherals</h2>
+            <ul id="periDiv">
+            </ul>
 
-        <!--2PC-->
-        <a id="pc"></a>
-        <h2 class="sectionHeading">PC Parts</h2>
-        <div id="pcDiv">
-        </div>
+            <!--2PC-->
+            <a id="pc"></a>
+            <h2 class="sectionHeading">PC Parts</h2>
+            <ul id="pcDiv">
+            </ul>
 
-        <!--3Setup-->
-        <a id="setup"></a>
-        <h2 class="sectionHeading">Setup</h2>
-        <a href="image/20240908_211535.jpg" target="_blank"><img src="image/20240908_211535.jpg" style="width: 889px; height: 369px;"></a>
-        <!--4Software-->
-        <h2 class="sectionHeading"><a id="software"></a></h2>
-        <h2 class="sectionHeading">Software</h2>
-        <div id="sofDiv">
-        </div>
-		
-		<!--5Links-->
-		<h2 class="sectionHeading"><a id="links"></a></h2>
-        <h2 class="sectionHeading">Other Links</h2>
-        <div id="linkDiv">
-        </div>
+            <!--3Setup-->
+            <a id="setup"></a>
+            <h2 class="sectionHeading">Setup</h2>
+            <a href="img/stuff/20240908_211535.jpg" target="_blank">
+                <img src="img/stuff/20240908_211535.jpg">
+            </a>
 
-        <!--6Playstyle-->
-        <a id="playstyle"></a>
-        <h2 class="sectionHeading">Playstyle</h2>
-        <div id="playDiv">
-        </div>
-        <a id="Goals"></a>
-    </section>
-    <script src="stuff.js"></script>
+            <!--4Software-->
+            <h2 class="sectionHeading"><a id="software"></a></h2>
+            <h2 class="sectionHeading">Software</h2>
+            <ul id="sofDiv">
+            </ul>
+			
+			<!--5Links-->
+			<h2 class="sectionHeading"><a id="links"></a></h2>
+			<h2 class="sectionHeading">Other Links</h2>
+			<ul id="linkDiv">
+            </ul>
 
+            <!--6Playstyle-->
+            <a id="playstyle"></a>
+            <h2 class="sectionHeading">Playstyle</h2>
+            <ul id="playDiv">
+            </ul>
+        </section>
+    </main>
+</body>
+<script>
+    genPage(0, null, 'other.html');
+    generate();
+</script>
 
-</body></html>
+</html>

@@ -122,8 +122,8 @@ const peripherals = {
 const pcparts = {
     CPU: [
         {
-            name: 'Intel i5-10400',
-            url: 'https://www.amazon.com/Intel-i5-10400-2-90Ghz-Desktop-Processor/dp/B0883NPQST?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A23NVCSO4PYH3S',
+            name: 'AMD Ryzen 7 7700X',
+            url: 'https://www.amazon.com/AMD-7700X-16-Thread-Unlocked-Processor/dp/B0BBHHT8LY',
             other: '',
         },
     ],
@@ -136,20 +136,15 @@ const pcparts = {
     ],
     Motherboard: [
         {
-            name: 'ASUS TUF GAMING Z590-P',
-            url: 'https://www.asus.com/motherboards-components/motherboards/prime/prime-z590-p/',
+            name: 'Gigabyte B650 GAMING X AX V2',
+            url: 'https://www.amazon.com/GIGABYTE-B650-GAMING-AX-V2/dp/B0CTTY491F',
             other: '',
         },
     ],
     RAM: [
         {
-            name: 'VENGEANCE RGB PRO SL 16GB 3200MHz (2x8GB)',
-            url: 'https://www.corsair.com/us/en/p/memory/cmh16gx4m2e3200c16/vengeance-rgb-pro-sl-16gb-2x8gb-ddr4-dram-3200mhz-c16-memory-kit-a-black-cmh16gx4m2e3200c16',
-            other: '',
-        },
-		{
-            name: 'VENGEANCE RGB PRO SL 32GB 3200MHz (2x16GB)',
-            url: 'https://www.corsair.com/us/en/p/memory/cmh32gx4m2e3200c16/vengeance-rgb-pro-sl-32gb-2x16gb-ddr4-dram-3200mhz-c16-memory-kit-a-black-cmh32gx4m2e3200c16',
+            name: 'Corsair Vengeance RGB 32 GB (2x16 GB)',
+            url: 'https://www.amazon.com/CORSAIR-VENGEANCE-6000MHz-Compatible-Computer/dp/B0CJ8ZJPF3',
             other: '',
         },
     ],
@@ -184,15 +179,15 @@ const pcparts = {
     ],
     Cooler: [
         {
-            name: 'Stock Cooler',
-            url: '',
+            name: 'Lian Li Galahad II Trinity',
+            url: 'https://www.amazon.com/Lian-Li-GA2T36INB-Galahad-Trinity/dp/B0CDF2HZH4?th=1',
             other: '',
         },
     ],
     Case: [
         {		
-            name: 'IBUYPOWERCASE',
-            url: '',
+            name: 'Phanteks XT PRO ULTRA',
+            url: 'https://www.amazon.com/Phanteks-Mid-Tower-Included-Performance-Tempered/dp/B0CT5V2XJK',
             other: '',
         },
     ],
@@ -274,9 +269,14 @@ const software = {
             other: '',
         },
         {
+            name: 'Tosu',
+            url: 'https://tosu.app/',
+            other: '',
+        },
+        {
             name: 'StreamCompanion',
             url: 'https://github.com/Piotrekol/StreamCompanion',
-            other: '',
+            other: ' | (No longer using)',
         },
 		{
             name: 'gosumemory',
@@ -337,7 +337,7 @@ const links = [
     },
     {
         name: 'Dream PC',
-        url: 'https://pcpartpicker.com/list/WX9qjH',
+        url: 'https://pcpartpicker.com/list/LjBBv4',
         other: ' | PC I\'m wanting to upgrade too but I\'m broke (pls donate money by using the tip link at the homepage)',
     },
 	{
@@ -377,55 +377,48 @@ Single tapping plus alt tapping with bursts/streams.
 `,
     },
     image: [
-        'image/tablet.png',
-        'image/tablet2.png',
-		'image/tablet3.png',
-		'image/tablet4.png',
+        'img/stuff/tablet.png',
+        'img/stuff/tablet2.png',
+		'img/stuff/tablet3.png',
+		'img/stuff/tablet4.png',
     ]
 }
 
-function main() {
+function generate() {
     const periDiv = document.getElementById('periDiv');
     for (const [key, value] of Object.entries(peripherals)) {
-        itemsLink(key, periDiv, value);
+        itemsLink(key, periDiv, value)
     }
-    
     const pcDiv = document.getElementById('pcDiv');
     for (const [key, value] of Object.entries(pcparts)) {
-        itemsLink(key, pcDiv, value);
+        itemsLink(key, pcDiv, value)
     }
-    
     const sofDiv = document.getElementById('sofDiv');
     for (const [key, value] of Object.entries(software)) {
-        itemsLink(key, sofDiv, value);
+        itemsLink(key, sofDiv, value)
     }
-    
     const linkDiv = document.getElementById('linkDiv');
     if (linkDiv) {
         itemsLink('', linkDiv, links, false);
     }
-    
     const playDiv = document.getElementById('playDiv');
-    if (playDiv) {
-        for (const [key, value] of Object.entries(playstyle.things)) {
-            const title = document.createElement('h3');
-            title.innerHTML = key;
-            playDiv.append(title);
-            
-            const x = document.createElement('li');
-            x.innerHTML = value;
-            playDiv.append(x);
-        }
-        
-        const tabletTitle = document.createElement('h3');
-        tabletTitle.innerHTML = 'Tablet Settings';
-        playDiv.append(tabletTitle);
-        
-        for (const image of playstyle.image) {
-            const img = document.createElement('img');
-            img.src = image;
-            playDiv.append(img);
-        }
+    for (const [key, value] of Object.entries(playstyle.things)) {
+        const title = document.createElement('h3');
+        title.innerHTML = key;
+        playDiv.append(title);
+        const x = document.createElement('li');
+        x.innerHTML = value;
+        playDiv.append(x);
+    }
+    (() => {
+        const title = document.createElement('h3');
+        title.innerHTML = 'Tablet Settings';
+        playDiv.append(title);
+    })();
+    for (const image of playstyle.image) {
+        const imeji = document.createElement('img');
+        imeji.src = image;
+        playDiv.append(imeji);
     }
 }
 
@@ -438,37 +431,46 @@ function main() {
  * other: string,
  * }[]} items
  */
-function itemsLink(name, elem, items, addHeading = true) {
-    if (addHeading) {
-        const title = document.createElement('h3');
-        title.innerHTML = name;
-        elem.append(title);
-    }
-
-    const list = document.createElement('ul');
+function itemsLink(name, elem, items) {
+    const title = document.createElement('h3');
+    title.innerHTML = name;
+    elem.append(title);
 
     for (const item of items) {
-        const x = document.createElement('li');
+        const x = document.createElement('li')
         if (item.url.length > 2) {
             const url = document.createElement('a');
             url.innerHTML = item.name;
             url.href = item.url;
-            url.target = "_blank";
-            url.classList.add("itemLink");
-            x.appendChild(url);
+            url.classList.add("itemLink")
+            x.append(url);
         } else {
             x.innerHTML = item.name;
         }
-
-        if (item.other.length > 1) {
-            const additionalInfo = document.createTextNode(' ' + item.other);
-            x.appendChild(additionalInfo);
-        }
-        
-        list.appendChild(x);
+        x.innerHTML += item.other.length > 1 ? ' ' + item.other : '';
+        elem.append(x);
     }
-
-    elem.appendChild(list);
 }
 
-main();
+onavitems = [
+    {
+        name: 'Peripherals',
+        url: '#peripherals',
+    },
+    {
+        name: 'PC Parts',
+        url: '#pc',
+    },
+    {
+        name: 'Setup',
+        url: '#setup',
+    },
+    {
+        name: 'Software',
+        url: '#software',
+    },
+    {
+        name: 'Playstyle',
+        url: '#playstyle',
+    },
+]

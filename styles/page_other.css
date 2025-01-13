@@ -15,8 +15,8 @@
     --highlight: #1E212D;
     --highlightAlt: #313649;
     --sidebarAnim: 500ms ease-in-out;
-    --gradient: linear-gradient(rgb(65, 88, 132), rgb(113, 108, 121));
-    --linkHighlight: #fc6450;
+    --gradient: linear-gradient(to right bottom, #320370, #15171B);
+    --linkHighlight: rgb(38, 150, 255);
     --linkDefault: var(--clrs-magenta);
 }
 
@@ -47,11 +47,11 @@ h1 {
     padding-top: 30px;
     font-size: 3rem;
     margin-top: 0;
-    color: var(--clrs-yellow);
+    color: var(--clrs-blue);
 }
 
 h3 {
-    color: var(--clrs-green);
+    color: var(--clrs-cyan);
     font-size: 1.5rem;
     padding: 0;
     margin: 0;

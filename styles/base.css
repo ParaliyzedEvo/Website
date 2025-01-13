@@ -17,7 +17,7 @@
     --highlightAlt: #313649;
     --sidebarAnim: 500ms ease-in-out;
     --gradient: linear-gradient(to right bottom, #320370, #15171B);
-    --linkHighlight: #fc6450;
+    --linkHighlight: rgb(38, 150, 255);
     --linkDefault: var(--clrs-magenta);
 }
 
@@ -304,6 +304,6 @@ a {
 #niger:active {
 	font-family: 'Ubuntu', sans-serif;
     font-size: 12px;
-	color: var(--basic-text);
+	color: var(--linkHighlight);
 	text-decoration: none
 }
