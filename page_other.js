@@ -12,7 +12,7 @@ const peripherals = {
         },
 		{
             name: 'Image',
-            url: 'image/CTL-472 Cover.png',
+            url: 'img/CTL-472 Cover.png',
             other: 'I used',
         },
 		{
