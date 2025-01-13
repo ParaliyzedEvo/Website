@@ -12,7 +12,7 @@ function generate() {
 	}
 	{
 		const textElement = document.createElement('div');
-		textElement.textContent = 'Any issues regarding on the pages content or things not loading in properly or the styling is js off, I already know as I\'m redoing my entire website. Please bear with me.';
+		textElement.innerHTML = 'Any issues regarding on the pages content or things not loading in properly or the styling is js off, I already know as I\'m redoing my entire website. Please bear with me.';
 		textElement.style.display = 'flex';
 		textElement.style.justifyContent = 'center';
 		textElement.style.alignItems = 'center';
@@ -37,6 +37,7 @@ function generate() {
 		textElement.appendChild(anchor);
 		
 		const templateText = document.createTextNode(' as a template for mine');
+		textElement.style.marginTop = '23px';
 		textElement.appendChild(templateText);
 		ctn.append(textElement);
 	}
