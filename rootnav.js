@@ -2,7 +2,7 @@
 const defpages = [
     {
         name: 'Home',
-        url: 'index.html',
+        url: '/index.html',
         icon: 'dir.png',
     },
     {
@@ -193,11 +193,15 @@ function genSideNav(level, cd, cur) {
     const sidenav = document.getElementById('sidebar');
     const list = document.createElement('ul');
     list.id = 'sidenavList';
-    sidenav.append(list)
+    sidenav.append(list);
+
+    const normalizePath = (path) => (path && !path.startsWith('/') ? '/' + path : path);
+
     let subs = '';
     for (let i = 0; i < level; i++) {
         subs += '../';
     }
+
     let pages = defpages;
     if (cd) {
         pages = defpages.slice().filter(x => x.url.startsWith(cd)
@@ -210,45 +214,49 @@ function genSideNav(level, cd, cur) {
             || (x.url.includes('/') && x.url.split('/').length <= 2 && x.url.includes('index.html'))
         );
     }
+
     if (level > 0) {
         const aWrap = document.createElement('a');
         const item = document.createElement('li');
         item.className = 'sidebarItem';
-        aWrap.href = '../';
         const img = document.createElement('img');
-        img.src = subs + './img/icons/exit.png'
+        img.src = '/img/icons/exit.png';
         const text = document.createElement('span');
         text.innerText = '';
         item.append(img, text);
         aWrap.append(item);
         list.append(aWrap);
     }
+
     pages.forEach(page => {
         const aWrap = document.createElement('a');
         const item = document.createElement('li');
         item.classList.add('sidebarItem');
-        aWrap.href = subs + page.url;
-        if (page.url == cur) {
+        aWrap.href = normalizePath(subs + page.url);
+
+        if (page.url === cur) {
             page.icon = page.icon.includes('dir') ? 'dir_current.png' : 'page_current.png';
             item.classList.add('sidebarItemActive');
-        } else if (page.url == cd + '/index.html' || page.url == 'index.html' || page.url == cd) {
+        } else if (page.url === `${cd}/index.html` || page.url === '/index.html' || page.url === cd) {
             page.icon = page.icon.includes('dir') ? 'dir_index.png' : 'page_index.png';
         }
+
         const img = document.createElement('img');
-        img.src = subs + './img/icons/' + page.icon;
+        img.src = '/img/icons/' + page.icon;
         const text = document.createElement('span');
         text.innerText = page.name;
-        console.log(page.url)
-        console.log(level)
-        if (page.url.split('/').length > level && !(page.url == cd + '/index.html' || page.url == 'index.html')) {
-            item.classList.add('sidebarChildItem')
+
+        if (page.url.split('/').length > level && !(page.url === `${cd}/index.html` || page.url === '/index.html')) {
+            item.classList.add('sidebarChildItem');
         }
+
         text.classList.add('mono');
         item.append(img, text);
         aWrap.append(item);
         list.append(aWrap);
     });
 }
+
 
 function genSideButton(level) {
     let show = true;
@@ -270,7 +278,7 @@ function genSideButton(level) {
         const sideButtonImgOffset = document.createElement('span');
         sideButtonImgOffset.id = 'sideButtonImgOffset'
         const sideButtonImg = document.createElement('img');
-        sideButtonImg.src = subs + './img/icons/sidebarButton.png';
+        sideButtonImg.src = '/img/icons/sidebarButton.png';
         sideButtonImg.id = 'sideButtonImg';
         sideButton.append(sideButtonImgOffset, sideButtonImg);
         sidenav.append(sideButton);
@@ -393,7 +401,7 @@ function genSocials(level) {
         item.className = 'socialItem';
         item.href = social.url;
         const img = document.createElement('img');
-        img.src = subs + './img/social/' + social.icon;
+        img.src = '/img/social/' + social.icon;
         img.className = 'socialItemImg';
         item.append(img)
         section.append(item);
@@ -434,7 +442,7 @@ function genTitle(level, cur) {
     arr.forEach(url => {
         if (url.text != 'HOME') {
             const slash = document.createElement('span');
-            slash.innerText = '';
+            slash.innerText = '/';
             slash.classList.add('mono');
             main.append(slash)
         }

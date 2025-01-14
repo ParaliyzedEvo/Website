@@ -42,12 +42,9 @@ function generate() {
 		ctn.append(textElement);
 	}
     {
-        // const h1 = document.createElement('h1');
-        // h1.innerText = 'SaberStrike';
         const img = document.createElement('img')
-        img.src = 'img/logo_text.svg'
+        img.src = '/img/logo_text.svg'
         img.id = 'mainTitle'
-        // img.classList.add('pageTitle');
         img.classList.add('mainObject');
         ctn.append(img);
     }
@@ -55,7 +52,7 @@ function generate() {
         const img = document.createElement('img');
         img.width = 256;
         img.height = 256;
-        img.src = 'img/russian.png'
+        img.src = '/img/russian.png'
         img.classList.add('mainObject')
         ctn.append(img);
     }
@@ -89,14 +86,14 @@ function generate() {
             item.className = 'indexSocialItem';
             item.href = social.url;
             const img = document.createElement('img');
-            img.src = './img/social/' + social.icon;
+            img.src = '/img/social/' + social.icon;
             item.append(img)
             socialSection.append(item);
             item.addEventListener('mouseover', e => {
-                img.src = './img/social/white/' + social.icon;
+                img.src = '/img/social/white/' + social.icon;
             });
             item.addEventListener('mouseout', e => {
-                img.src = './img/social/' + social.icon;
+                img.src = '/img/social/' + social.icon;
             });
         })
         ctn.append(socialSection)
@@ -111,9 +108,9 @@ function generate() {
 		container.appendChild(osuHeading);
 		
 		const osuSongs = [
-			{ src: 'img/DECO＊27 - 初嵐 feat. 初音ミク [L7BxD7HHWl4].mp3', type: 'audio/mpeg' },
-			{ src: 'img/Rabbit Hole ⧸ Pure Pure ＂ラビットホール＂ 4K Edit Full Version feat. @channelcaststation [zVRDUtJXCrQ].mp3', type: 'audio/mpeg' },
-			{ src: 'img/mesmerizer 25 people.mp3', type: 'audio/mpeg' },
+			{ src: '/img/DECO＊27 - 初嵐 feat. 初音ミク [L7BxD7HHWl4].mp3', type: 'audio/mpeg' },
+			{ src: '/img/Rabbit Hole ⧸ Pure Pure ＂ラビットホール＂ 4K Edit Full Version feat. @channelcaststation [zVRDUtJXCrQ].mp3', type: 'audio/mpeg' },
+			{ src: '/img/mesmerizer 25 people.mp3', type: 'audio/mpeg' },
 		];
 
 		osuSongs.forEach(song => {
