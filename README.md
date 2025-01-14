@@ -5,4 +5,6 @@ If there are any bugs/issues on my website, please open a new issue [here](https
 
 If you want to download the files and open them, open the directory in VSCode and open it with live server (install it if you dont have it).
 
+If you have docker installed on your OS, consider running either build_docker.bat (windows) or build_docker.sh (linux/macos)
+
 **As of 1/12/2025, I'm not going to update the changelog anymore. Read the commits cause I actually put stuff in there now.**
