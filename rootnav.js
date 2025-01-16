@@ -421,7 +421,7 @@ function genTitle(level, cur) {
     let arr = [
         {
             text: 'HOME',
-            url: subs
+            url: '/index.html',
         }
     ];
     if (cur.includes('/')) {
