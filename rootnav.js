@@ -418,6 +418,9 @@ function genTitle(level, cur) {
     for (let i = 0; i < level; i++) {
         subs += '../';
     }
+    if (subs == ''){
+        subs = './'
+    }
     let arr = [
         {
             text: 'HOME',
