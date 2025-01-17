@@ -33,6 +33,7 @@ function generate() {
 		const anchor = document.createElement('a');
 		anchor.href = 'https://sbrstrkkdwmdr.github.io';
 		anchor.textContent = "Saberstrike's website";
+		anchor.style.fontSize = "12px"
 		anchor.id = 'niger';
 		textElement.appendChild(anchor);
 		
@@ -60,7 +61,7 @@ function generate() {
 		const textElement = document.createElement('div');
 		textElement.style.justifyContent = 'center';
 		textElement.style.alignItems = 'center';
-		textElement.style.fontSize = '12px';
+		textElement.style.fontSize = '14px';
 		textElement.style.fontFamily = 'Ubuntu, sans-serif';
 		
 		const usedText = document.createTextNode('If you have encounter any bugs/issues on my wesbite please open a new issue ');
@@ -69,6 +70,7 @@ function generate() {
 		const anchor = document.createElement('a');
 		anchor.href = 'https://github.com/ParaliyzedEvo/Website/issues';
 		anchor.textContent = "here";
+		anchor.style.fontSize = "14px"
 		anchor.id = 'niger';
 		textElement.appendChild(anchor);
 		
