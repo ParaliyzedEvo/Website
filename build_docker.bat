@@ -1,11 +1,12 @@
 @echo off
-docker build -t website .
+docker build --no-cache -t website .
 
-docker ps -q -f name=website-container > nul
-if %errorlevel% equ 0 (
-    echo "Container 'website-container' is already running. Stopping and removing it..."
-    docker stop website-container
-    docker rm website-container
+REM Stop and remove the container if it exists
+docker ps -a -q --filter "name=website-container" >nul 2>&1
+if not errorlevel 1 (
+    echo "Stopping and removing 'website-container'..."
+    docker stop website-container >nul 2>&1
+    docker rm website-container >nul 2>&1
 )
 
 echo "Running the container..."
