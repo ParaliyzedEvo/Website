@@ -294,7 +294,7 @@ a {
 #niger {
 	font-family: 'Ubuntu', sans-serif;
 	color: var(--linkDefault);
-    font-size: 12px;
+    font-size: 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -303,7 +303,7 @@ a {
 #niger:hover,
 #niger:active {
 	font-family: 'Ubuntu', sans-serif;
-    font-size: 12px;
+    font-size: 20px;
 	color: var(--linkHighlight);
 	text-decoration: none
 }
