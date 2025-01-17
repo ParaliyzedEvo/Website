@@ -448,6 +448,7 @@ function itemsLink(name, elem, items) {
             x.innerHTML = item.name;
         }
         x.innerHTML += item.other.length > 1 ? ' ' + item.other : '';
+        x.style.fontSize = '16px'
         elem.append(x);
     }
 }
