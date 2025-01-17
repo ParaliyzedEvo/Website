@@ -2,7 +2,7 @@
 const defpages = [
     {
         name: 'Home',
-        url: '/index.html',
+        url: 'index.html',
         icon: 'dir.png',
     },
     {
@@ -22,138 +22,58 @@ const defpages = [
         icon: 'dir.png',
     },
     {
-        name: 'Main skins',
+        name: 'Paraliyzed Skins',
         url: 'skins/main',
         icon: 'dir.png',
     },
     {
-        name: 'Custom',
+        name: 'Paraliyzed V24',
         url: 'skins/main/01.html',
         icon: 'page.png',
     },
     {
-        name: 'Custom v2',
+        name: 'Paraliyzed DT v2',
         url: 'skins/main/02.html',
         icon: 'page.png',
     },
     {
-        name: 'Type X',
+        name: 'Paraliyzed Instafade V5',
         url: 'skins/main/03.html',
         icon: 'page.png',
     },
     {
-        name: 'Type Y',
+        name: 'Paraliyzed with Reedkussy Cursor V7',
         url: 'skins/main/04.html',
         icon: 'page.png',
     },
     {
-        name: 'Type Z',
+        name: 'Paraliyzed with Whitecat Cursor V7',
         url: 'skins/main/05.html',
         icon: 'page.png',
     },
     {
-        name: 'SaberStrike 0',
-        url: 'skins/main/06.html',
-        icon: 'page.png',
-    },
-    {
-        name: 'SaberStrike 1',
-        url: 'skins/main/07.html',
-        icon: 'page.png',
-    },
-    {
-        name: 'sbr',
-        url: 'skins/main/08.html',
-        icon: 'page.png',
-    },
-    {
-        name: 'prjct. sbr',
-        url: 'skins/main/09.html',
-        icon: 'page.png',
-    },
-    {
-        name: 'SBR UD',
-        url: 'skins/main/10.html',
-        icon: 'page.png',
-    },
-    {
-        name: 'SBR v11',
-        url: 'skins/main/11.html',
-        icon: 'page.png',
-    },
-    {
-        name: 'sbrstrkkdwmdr v12',
-        url: 'skins/main/12.html',
-        icon: 'page.png',
-    },
-    {
-        name: 'sbrstrkkdw v13',
-        url: 'skins/main/13.html',
-        icon: 'page.png',
-    },
-    {
-        name: 'sbrstrkkdw v14',
-        url: 'skins/main/14.html',
-        icon: 'page.png',
-    },
-    {
-        name: 'sbrstrkkdw v15',
-        url: 'skins/main/15.html',
-        icon: 'page.png',
-    },
-    {
-        name: 'sbrstrk-r skins',
-        url: 'skins/sbrstrk-r',
+        name: 'Tuyu Skins',
+        url: 'skins/tuyu',
         icon: 'dir.png',
     },
     {
-        name: 'BlueBudgie',
-        url: 'skins/sbrstrk-r/bluebudgie.html',
+        name: 'Tuyu V2',
+        url: 'skins/tuyu/01.html',
         icon: 'page.png',
     },
     {
-        name: 'Bluegamingftw',
-        url: 'skins/sbrstrk-r/bluegamingftw.html',
+        name: 'Tuyu Instafade V2',
+        url: 'skins/tuyu/02.html',
         icon: 'page.png',
     },
     {
-        name: 'Byonick',
-        url: 'skins/sbrstrk-r/byonick.html',
-        icon: 'page.png',
-    },
-    {
-        name: 'Duckyboi',
-        url: 'skins/sbrstrk-r/duckyboi.html',
-        icon: 'page.png',
-    },
-    {
-        name: 'Hanoji',
-        url: 'skins/sbrstrk-r/hanoji.html',
-        icon: 'page.png',
-    },
-    {
-        name: 'ikugoi',
-        url: 'skins/sbrstrk-r/ikugoi.html',
-        icon: 'page.png',
-    },
-    {
-        name: 'OniisanBaka',
-        url: 'skins/sbrstrk-r/oniisanbaka.html',
-        icon: 'page.png',
-    },
-    {
-        name: 'radiite',
-        url: 'skins/sbrstrk-r/radiite.html',
-        icon: 'page.png',
-    },
-    {
-        name: 'Soragaton',
-        url: 'skins/sbrstrk-r/soragaton.html',
-        icon: 'page.png',
-    },
-    {
-        name: 'Other skins',
+        name: 'Other Skins',
         url: 'skins/other.html',
+        icon: 'page.png',
+    },
+    {
+        name: 'Skin Websites',
+        url: 'skins/skin-sites.html',
         icon: 'page.png',
     },
     // projects
@@ -217,6 +137,7 @@ function genSideNav(level, cd, cur) {
 
     if (level > 0) {
         const aWrap = document.createElement('a');
+        aWrap.href = '/index.html';
         const item = document.createElement('li');
         item.className = 'sidebarItem';
         const img = document.createElement('img');

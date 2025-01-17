@@ -18,8 +18,8 @@
     --highlight: #1E212D;
     --highlightAlt: #313649;
     --sidebarAnim: 500ms ease-in-out;
-    --gradient: linear-gradient(rgb(65, 88, 132), rgb(113, 108, 121));
-    --linkHighlight: #fc6450;
+    --gradient: linear-gradient(to right bottom, #320370, #15171B);
+    --linkHighlight: rgb(38, 150, 255);
     --linkDefault: var(--clrs-magenta);
 }
 
@@ -137,7 +137,7 @@
 .itemName {
     text-align: center;
     margin: 0 auto;
-    color: var(--clrs-yellow);
+    color: var(--clrs-blue);
     background-color: var(--bg-main);
     margin-right: 2vw;
     padding-right: 5px;
@@ -154,7 +154,7 @@
     font-size: 30px;
 }
 
-.itemAsLink {}
+/* .itemAsLink {} */
 
 /* doesnt work :( */
 .itemAsLink:hover {
@@ -210,7 +210,7 @@ iframe {
     padding: 5px;
 }
 
-#dlButton {}
+/* #dlButton {} */
 
 .imageSwitcher {
     a {
