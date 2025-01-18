@@ -12,4 +12,4 @@ fi
 
 # Run the container
 echo "Running the container..."
-docker run -d -p 8080:80 --name website-container website
+docker run -d -p 8080:80 --name website-container -v %cd%:/usr/local/apache2/htdocs website
