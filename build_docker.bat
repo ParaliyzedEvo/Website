@@ -10,4 +10,5 @@ if not errorlevel 1 (
 )
 
 echo "Running the container..."
-docker run -d -p 8080:80 --name website-container -v %cd%:/usr/local/apache2/htdocs website
+docker run -d -p 8080:80 --name website-container -v "%cd%:/usr/local/apache2/htdocs" website:latest
+pause
