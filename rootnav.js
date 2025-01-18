@@ -377,7 +377,5 @@ function genTitle(level, cur) {
 
         main.append(item);
     });
-    main.style.marginLeft =
-        'calc(' +
-        document.getElementById('sidebar').offsetWidth + 'px - ' + document.getElementById('socialLinks').clientWidth + 'px + 640px)'
+    main.style.marginLeft = '-20px'
 }
