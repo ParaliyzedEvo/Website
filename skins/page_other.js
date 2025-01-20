@@ -1,38 +1,28 @@
 const skins = [
     {
-        name: 'sbr『-hANOJI』',
-        url: 'https://drive.google.com/file/d/171NdVkA-tmm43n8iqsRJeNQ0QCffj6ab/view?usp=sharing',
-        img: 'sbr-hanoji.jpg'
+        name: 'WhiteCat (1.0)',
+        url: 'https://osu.ppy.sh/community/forums/topics/986201?n=1',
+        img: 'https://i.ppy.sh/cdf26d9fdc38d5dd5ba1c8fdfb8bed19fb26f03d/68747470733a2f2f696d6775722d617263686976652e7070792e73682f695065336d33532e6a7067'
     },
     {
-        name: 'SaberStrike『Soragaton』',
-        url: 'https://drive.google.com/file/d/1-pRLecUTaoUNXpHj1TLSMBayvWC09CT2/view?usp=sharing',
-        img: 'sbr-sora.jpg'
+        name: 'Lycoris Recoil - Kurumi',
+        url: 'https://www.reddit.com/r/OsuSkins/comments/wn2fbw/std_only_lycoris_recoil_kurumi_osuskin/',
+        img: 'https://i.postimg.cc/02RBhcwv/N6rDs8s.jpg'
     },
     {
-        name: 'SaberStrike『0』 _-Levi-_ edit',
-        url: 'https://drive.google.com/file/d/1Jomy1k00Q6VLqOQgq_ifgDy5MV_nMZje/view?usp=sharing',
-        img: 'sbr-levi.jpg'
+        name: '[Hololive EN] Mori Calliope 森美声',
+        url: 'https://www.reddit.com/r/CalliopeMori/comments/lj33w7/calli_osu_skin_in_case_you_play_osu/',
+        img: 'https://i.postimg.cc/mhWTPq4Z/B1n0N96.jpg'
     },
     {
-        name: 'Saber\'s AMOGUS',
-        url: 'https://www.reddit.com/r/OsuSkins/comments/m9vcti/amogus_skin/',
-        img: 'amogus.jpg'
-    },
-    {
-        name: 'Kanojo Mizuhara',
-        url: 'https://mega.nz/file/PVFgBbYB#LVnrsI1leThv8f35PDM7kt3yHgcwhD9WB2Wkq696aEQ',
-        img: 'kanojo.jpg'
+        name: '-#KW-! If there was an endpoint.',
+        url: 'https://osu.ppy.sh/community/forums/topics/1672096?n=1',
+        img: 'https://i.postimg.cc/3xDbSR2q/bP17ks9.png'
     },
     {
         name: 'Koifish',
         url: 'https://drive.google.com/drive/u/1/folders/18t7KxG2scQgm43DW930cSmaUXbYEpCdK',
-        img: 'koi.jpg'
-    },
-    {
-        name: 'Cark',
-        url: 'https://drive.google.com/drive/u/1/folders/1OexvvV4Zshw3P3R1N0bS3sQD_WEhlQKv',
-        img: 'cark.jpg'
+        img: 'https://i.postimg.cc/W3QnxRg7/koi.jpg'
     },
 ]
 
@@ -50,7 +40,7 @@ function generate() {
         h2.className = 'itemName';
         h2.innerText = skin.name;
         const img = document.createElement('img');
-        img.src = 'img/extra/' + skin.img.replace('.jpg', '_preview.jpg');
+        img.src = skin.img.replace('.jpg', '_preview.jpg');
         img.width = '400';
         img.height = '225';
 
