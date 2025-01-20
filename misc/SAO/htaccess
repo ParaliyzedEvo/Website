@@ -1,0 +1,5 @@
+ErrorDocument 404 https://paraliyzed.net/404.html
+ErrorDocument 403 https://paraliyzed.net/403.html
+Options +Indexes
+IndexOptions FancyIndexing FoldersFirst NameWidth=*
+HeaderName https://paraliyzed.net/HEADER.html
