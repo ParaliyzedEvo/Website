@@ -347,7 +347,7 @@ const links = [
     },
 	{
         name: 'SAO Easter Egg Website',
-        url: 'http://52689658.42web.io/',
+        url: 'http://sao.paraliyzed.net/',
         other: ' | Archive of the SAO 52.68.96.58 easter egg website',
     },
 	{
