@@ -156,11 +156,28 @@ function generate() {
 		nonOsuHeading.style.textAlign = 'left';
 		container.appendChild(nonOsuHeading);
 
+		const nonOsuSongs = [
+			{ src: '/img/CRAZY (feat. PinkPantheress) English Ver.).mp3', type: 'audio/mpeg' },
+		];
+
+		nonOsuSongs.forEach(song => {
+			const audioElement = document.createElement('audio');
+			audioElement.controls = true;
+
+			const sourceElement = document.createElement('source');
+			sourceElement.src = song.src;
+			sourceElement.type = song.type;
+
+			audioElement.appendChild(sourceElement);
+			audioElement.style.display = 'block';
+			audioElement.style.marginLeft = '0';
+			container.appendChild(audioElement);
+		});
+
 		const nonOsuSpotifyTracks = [
 			'https://open.spotify.com/embed/track/0RYHqnmtNRfbYxP6Dn8Vse?utm_source=generator',
 			'https://open.spotify.com/embed/track/1M6VHCglQ2PLWeAsyhgEUH?utm_source=generator',
 			'https://open.spotify.com/embed/track/3lLH0FlC2pYCeZEf05zKQn?utm_source=generator',
-			'https://open.spotify.com/embed/track/6SjxVgMjH3b3AI4wVviZfi?utm_source=generator',
 		];
 
 		nonOsuSpotifyTracks.forEach(src => {
