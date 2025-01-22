@@ -61,6 +61,7 @@ function generate() {
 		lottiePlayer.setAttribute('direction', "1");
 		lottiePlayer.setAttribute('playMode', "normal");
 		lottiePlayer.setAttribute('autoplay', "");
+		lottiePlayer.setAttribute('controls', "");
 		contentWrapper.appendChild(lottiePlayer);
 
 		const logoImg = document.createElement('img');
@@ -83,11 +84,11 @@ function generate() {
 		});
 		contentWrapper.appendChild(skipButton);
 
-		lottiePlayer.addEventListener('complete', () => {
-			lottiePlayer.style.display = 'none';
-			logoImg.style.display = 'block';
-			skipButton.remove();
-		});
+		//lottiePlayer.addEventListener('complete', () => {
+		//	lottiePlayer.style.display = 'none';
+		//	logoImg.style.display = 'block';
+		//	skipButton.remove();
+		//});
 	}
 	{
         const img = document.createElement('img');
