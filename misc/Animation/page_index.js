@@ -53,7 +53,7 @@ function generate() {
 		ctn.appendChild(contentWrapper);
 
 		const lottiePlayer = document.createElement('dotlottie-player');
-		lottiePlayer.src = "logo.json";
+		lottiePlayer.src = "https://git.paraliyzed.net/logo.json";
 		lottiePlayer.style.width = "auto";
 		lottiePlayer.style.height = "auto";
 		lottiePlayer.style.background = "transparent";
