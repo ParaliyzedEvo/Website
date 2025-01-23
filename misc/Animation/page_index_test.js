@@ -78,7 +78,7 @@ function generate() {
 		lottietxtPlayer.setAttribute('speed', "1");
 		lottietxtPlayer.setAttribute('direction', "1");
 		lottietxtPlayer.setAttribute('playMode', "normal");
-		//lottietxtPlayer.setAttribute('controls', "");
+		lottietxtPlayer.setAttribute('controls', "");
 		lottietxtPlayer.style.opacity = '0';
 		lottietxtPlayer.style.zIndex = '20';
 		contentWrapper.appendChild(lottietxtPlayer);
@@ -93,7 +93,7 @@ function generate() {
 		lottiePlayer.setAttribute('direction', "1");
 		lottiePlayer.setAttribute('playMode', "normal");
 		lottiePlayer.setAttribute('autoplay', "");
-		//lottiePlayer.setAttribute('controls', "");
+		lottiePlayer.setAttribute('controls', "");
 		contentWrapper.appendChild(lottiePlayer);
 	
 		const logotxtImg = document.createElement('img');
@@ -112,37 +112,13 @@ function generate() {
 		logoImg.style.display = 'none';
 		contentWrapper.appendChild(logoImg);
 	
-		//const skipButton = document.createElement('button');
-		//skipButton.textContent = "Skip Animation";
-		//skipButton.style.position = "absolute";
-		//skipButton.style.top = "10px";
-		//skipButton.style.right = "10px";
-		//skipButton.style.zIndex = "1000";
-		//skipButton.addEventListener('click', () => {
-		//	lottiePlayer.style.display = 'none';
-		//	lottietxtPlayer.play()
-		//	lottietxtPlayer.style.display = 'block';
-		//	logoImg.style.display = 'block';
-		//	skiptxtButton.style.display = 'block';
-		//	skipButton.remove();
-		//});
-		//contentWrapper.appendChild(skipButton);
-	
-		//const skiptxtButton = document.createElement('button');
-		//skiptxtButton.textContent = "Skip Animation";
-		//skiptxtButton.style.position = "absolute";
-		//skiptxtButton.style.top = "10px";
-		//skiptxtButton.style.right = "10px";
-		//skiptxtButton.style.zIndex = "1000";
-		//skiptxtButton.style.display = 'none';
-		//skiptxtButton.addEventListener('click', () => {
-		//	lottietxtPlayer.style.display = 'none';
-		//	logotxtImg.style.display = 'block';
-		//	skiptxtButton.remove();
-		//});
-		//contentWrapper.appendChild(skiptxtButton);
-	
-		lottiePlayer.addEventListener('complete', () => {
+		const skipButton = document.createElement('button');
+		skipButton.textContent = "Next Animation";
+		skipButton.style.position = "absolute";
+		skipButton.style.top = "10px";
+		skipButton.style.right = "10px";
+		skipButton.style.zIndex = "20";
+		skipButton.addEventListener('click', () => {
 			fadeOut(lottiePlayer, 500);
 			setTimeout(() => {
 				fadeIn(logoImg, 500);
@@ -154,16 +130,61 @@ function generate() {
 				lottietxtPlayer.play();
 			}, 1200);
 			skiptxtButton.style.display = 'block';
-			//skipButton.remove();
+			skipButton.remove();
 		});
+		contentWrapper.appendChild(skipButton);
 	
-		lottietxtPlayer.addEventListener('complete', () => {
+		const skiptxtButton = document.createElement('button');
+		skiptxtButton.textContent = "Next Animation";
+		skiptxtButton.style.position = "absolute";
+		skiptxtButton.style.top = "10px";
+		skiptxtButton.style.right = "10px";
+		skiptxtButton.style.zIndex = "20";
+		skiptxtButton.style.display = 'none';
+		skiptxtButton.addEventListener('click', () => {
 			fadeOut(lottietxtPlayer, 500)
 			setTimeout(() => {
 				fadeIn(logotxtImg, 500)
 			  }, 500);
-			//skiptxtButton.remove();
+			reloadButton.style.display = 'block';
+			skiptxtButton.remove();
 		});
+		contentWrapper.appendChild(skiptxtButton);
+
+		const reloadButton = document.createElement('button');
+		reloadButton.textContent = "Reload Animations";
+		reloadButton.style.position = "absolute";
+		reloadButton.style.top = "10px";
+		reloadButton.style.right = "10px";
+		reloadButton.style.zIndex = "20";
+		reloadButton.style.display = 'none';
+		reloadButton.addEventListener('click', () => {
+			location.reload();
+		});
+		contentWrapper.appendChild(reloadButton);
+	
+		//lottiePlayer.addEventListener('complete', () => {
+			//fadeOut(lottiePlayer, 500);
+			//setTimeout(() => {
+			//	fadeIn(logoImg, 500);
+			//  }, 500);
+			//setTimeout(() => {
+			//	fadeIn(lottietxtPlayer, 1000);
+			//}, 1500);
+			//setTimeout(() => {
+			//	lottietxtPlayer.play();
+			//}, 1200);
+			//skiptxtButton.style.display = 'block';
+			//skipButton.remove();
+		//});
+	
+		//lottietxtPlayer.addEventListener('complete', () => {
+			//fadeOut(lottietxtPlayer, 500)
+			//setTimeout(() => {
+			//	fadeIn(logotxtImg, 500)
+			//  }, 500);
+			//skiptxtButton.remove();
+		//});
 	}	
 	{
 		const textElement = document.createElement('div');
