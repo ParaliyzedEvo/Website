@@ -292,7 +292,7 @@ const socials = [
     },
 	{
         icon: 'tip.png',
-        url: 'https://www.reddit.com/user/Paraliyzed_evo/',
+        url: 'https://streamelements.com/paraliyzed_evo/tip',
     },
 	{
         icon: 'twitch.png',
