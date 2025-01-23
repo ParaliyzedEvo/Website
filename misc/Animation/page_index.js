@@ -71,7 +71,7 @@ function generate() {
 	
 		const lottietxtPlayer = document.createElement('dotlottie-player');
 		lottietxtPlayer.id = 'lottietxtPlayer';
-		lottietxtPlayer.src = "logotxt.json";
+		lottietxtPlayer.src = "https://git.paraliyzed.net/logotxt.json";
 		lottietxtPlayer.style.width = "auto";
 		lottietxtPlayer.style.height = "auto";
 		lottietxtPlayer.style.background = "transparent";
