@@ -1,12 +1,12 @@
 const skins = [
     {
-        id: '15',
-        name: 'sbrstrkkdw v15',
-        date_start: '2024-11-18',
-        date_end: 'present',
-        description: 'non-gameplay still WIP',
-        url: 'https://www.mediafire.com/folder/za6emwzaaawqo/15',
-        video_url: 'https://www.youtube.com/embed/ASn1_QNc0_0',
+        id: '01',
+        name: 'Paraliyzed V24',
+        date_start: '01-15-2025',
+        date_end: 'Present',
+        description: 'Skin that I made and main',
+        url: 'https://www.mediafire.com/folder/dfeh43vx3job3/Paraliyzed+Skins',
+        video_url: 'https://www.youtube.com/embed/_T48G0_fRmk',
         images: [
             // {
             //     name: 'Song select',
@@ -27,28 +27,70 @@ const skins = [
             //     isGameplay: false,
             // },
             {
-                name: '- h',
-                url: 'https://www.mediafire.com/file/cd8esbc9zkcbza3/-_sbrstrkkdw_v15_%255B-_h%255D.osk/file',
-                image_url: '15/game-h.jpg',
+                name: 'Gameplay',
+                url: 'https://www.mediafire.com/file/0onab773qi0u6ox/Paraliyzed.osk/file',
+                image_url: '../img/01.png',
                 isGameplay: true,
             },
             {
-                name: 'banana',
-                url: 'https://www.mediafire.com/file/zeutacnwy4tt9ch/-_sbrstrkkdw_v15_%255Bbanana%255D.osk/file',
-                image_url: '15/game-banana.jpg',
-                isGameplay: true,
+                name: 'Song select',
+                url: 'url',
+                image_url: '../img/main/menu.png',
+                isGameplay: false,
             },
             {
-                name: 'citrus',
-                url: 'https://www.mediafire.com/file/zeutacnwy4tt9ch/-_sbrstrkkdw_v15_%255Bcitrus%255D.osk/file',
-                image_url: '15/game-citrus.jpg',
-                isGameplay: true,
+                name: 'Mod select',
+                url: 'url',
+                image_url: '../img/main/mods.png',
+                isGameplay: false,
             },
             {
-                name: 'apple',
-                url: 'https://www.mediafire.com/file/zeutacnwy4tt9ch/-_sbrstrkkdw_v15_%255Bapple%255D.osk/file',
-                image_url: '15/game-apple.jpg',
-                isGameplay: true,
+                name: 'Ranking panel',
+                url: 'url',
+                image_url: '../img/main/ranking.png',
+                isGameplay: false,
+            },
+			{
+                name: 'Pass',
+                url: 'url',
+                image_url: '../img/main/pass.jpg',
+                isGameplay: false,
+            },
+			{
+                name: 'Fail',
+                url: 'url',
+                image_url: '../img/main/fail.jpg',
+                isGameplay: false,
+            },
+			{
+                name: 'Spinner',
+                url: 'url',
+                image_url: '../img/main/spinner.png',
+                isGameplay: false,
+            },
+			{
+                name: 'Skip',
+                url: 'url',
+                image_url: '../img/main/skip.png',
+                isGameplay: false,
+            },
+			{
+                name: 'Catch',
+                url: 'url',
+                image_url: '../img/main/catch.png',
+                isGameplay: false,
+            },
+			{
+                name: 'Mania',
+                url: 'url',
+                image_url: '../img/main/mania.png',
+                isGameplay: false,
+            },
+			{
+                name: 'Takio',
+                url: 'url',
+                image_url: '../img/main/takio.png',
+                isGameplay: false,
             },
         ],
         sources: [
@@ -56,32 +98,76 @@ const skins = [
                 name: 'Images',
                 items: [
                     {
-                        name: 'fail background',
-                        desc: 'Guardian Tales fail screen world 11 female knight with witch skin',
+                        name: 'Arrow warning',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
                     },
                     {
-                        name: 'scorebar',
-                        desc: 'saber (by banban)',
+                        name: 'Mania Mods',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
                     },
                     {
-                        name: 'scorebar (banana ver.)',
-                        desc: 'saber x banban (by axololtle)',
+                        name: 'Cursor',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
                     },
                     {
-                        name: 'selection-mode',
-                        desc: 'saber (by axololtle)',
+                        name: 'Catch Textures',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
                     },
                     {
-                        name: 'taiko pippidon',
-                        desc: 'saber (own drawing)',
+                        name: 'Spinner Textures',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
                     },
                     {
-                        name: 'fruits catcher',
-                        desc: 'saber (own drawing)',
+                        name: 'Sliderscorepoint',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
                     },
                     {
-                        name: 'mode-fruits-med mode backgrounds',
-                        desc: 'screenshots of the skin\'s gameplay',
+                        name: 'Menu Snow',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
+                    },
+                    {
+                        name: 'Reverse Arrow Texture',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
+                    },
+                    {
+                        name: 'Buttons',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
+                    },
+                    {
+                        name: 'Fail Overlay',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
+                    },
+                    {
+                        name: 'Pause Overlay',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
+                    },
+                    {
+                        name: 'Menu Textures (I recolored them in my skin)',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Cherry Corolla</a>',
+                    },
+                    {
+                        name: 'Mod Textures (that are not covered by the tuyu ones)',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Cherry Corolla</a>',
+                    },
+                    {
+                        name: 'Star Texture',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Cherry Corolla</a>',
+                    },
+                    {
+                        name: 'Ranking Panel',
+                        desc: 'From the skin <a class="highlightLink" href="https://github.com/Bjonk1911/Xootynator/blob/main/xooter-skins.md">Bloomoon</a>',
+                    },
+                    {
+                        name: 'Takio Textures',
+                        desc: 'From the skin <a class="highlightLink" href="https://github.com/Bjonk1911/Xootynator/blob/main/xooter-skins.md">Bloomoon</a>',
+                    },
+                    {
+                        name: 'Count Textures (count1-3.png)',
+                        desc: 'From the skin <a class="highlightLink" href="https://www.reddit.com/r/OsuSkins/comments/wn2fbw/std_only_lycoris_recoil_kurumi_osuskin/">Lycoris Recoil - Kurumi Skin</a>',
+                    },
+                    {
+                        name: 'I forgot V1',
+                        desc: 'Idk, I js forgot💀💀💀 V1 (I made the original like 3 years ago)',
                     },
                 ]
             },
@@ -89,20 +175,32 @@ const skins = [
                 name: 'Audio',
                 items: [
                     {
-                        name: 'combobreak.wav',
-                        desc: 'Halo: Reach shield break sound',
+                        name: 'Spinner Sounds (osu!standard)',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
                     },
                     {
-                        name: 'failsound.mp3',
-                        desc: 'halo 2 elite death sound',
+                        name: 'scrolltotop-select.mp3',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Cherry Corolla</a>',
                     },
                     {
-                        name: 'hitsounds',
-                        desc: '<a class="highlightLink" href="http://bit.ly/2P4P6qm">Seoul v9</a>',
+                        name: 'Menu/Multi Sounds',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Cherry Corolla</a>',
                     },
                     {
-                        name: 'menu sounds',
-                        desc: '<a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1628514?n=1">霜滅 SOUMETSU</a>',
+                        name: 'pause-loop.mp3',
+                        desc: 'From the song <a class="highlightLink" href="https://www.youtube.com/watch?v=AVK0BIVqLLc">First Date</a>',
+                    },
+                    {
+                        name: 'failsound.ogg',
+                        desc: 'From the skin <a class="highlightLink" href="https://www.reddit.com/r/CalliopeMori/comments/lj33w7/calli_osu_skin_in_case_you_play_osu/">[Hololive EN] Mori Calliope 森美声</a>',
+                    },
+                    {
+                        name: 'applause.mp3',
+                        desc: 'From the song <a class="highlightLink" href="https://www.youtube.com/watch?v=JS9Lh1NUAF4">If There Was an Endpoint./TUYU [Music Box]</a>',
+                    },
+                    {
+                        name: 'I forgot V2',
+                        desc: 'Idk, I js forgot💀💀💀 V2 (I made the original like 3 years ago)',
                     },
                 ]
             },
@@ -110,49 +208,25 @@ const skins = [
                 name: 'Fonts',
                 items: [
                     {
-                        name: '<a class="highlightLink" href="https://www.dafont.com/bebas.font">Bebas</a>',
-                        desc: 'scoreentry numbers',
+                        name: '<a class="highlightLink" href="https://www.fontsquirrel.com/fonts/jellee">Jelle</a>',
+                        desc: 'Used for hitcircles',
                     },
                     {
-                        name: '<a class="highlightLink" href="#">Calibri</a>',
-                        desc: 'Mod icons',
-                    },
-                    {
-                        name: 'Consolas',
-                        desc: 'mode-fruits-med, ranking-panel (scroll to the very bottom)',
-                    },
-                    {
-                        name: '<a class="highlightLink" href="https://www.freejapanesefont.com/kei-font-download/">Keifont</a>',
-                        desc: 'scorebar-bg (jp text)',
-                    },
-                    {
-                        name: '<a class=\'highlightLink\' href="https://fontmeme.com/fonts/minecraft-enchantment-font/" class="highlightLink">Minecraft Enchantment</a>',
-                        desc: 'combo numbers',
-                    },
-                    {
-                        name: '<a class="highlightLink" href="https://www.dafont.com/road-rage.font">Road Rage</a>',
-                        desc: 'Ranking letters',
-                    },
-                    {
-                        name: '<a class="highlightLink" href="https://www.fontspace.com/octapost-nbp-font-f17102">Octapost NBP</a>',
-                        desc: 'ranking-panel, scorebar-bg, score numbers',
-                    },
-                    {
-                        name: '<a class="highlightLink" href="https://www.dafont.com/oxanium.font">Oxanium Medium</a>',
-                        desc: 'default numbers, ranking-panel',
+                        name: 'I forgot V3',
+                        desc: 'Idk, I js forgot💀💀💀 V3 (I made the original like 3 years ago)',
                     },
                 ]
             }
         ]
     },
     {
-        id: '15',
-        name: 'sbrstrkkdw v15',
-        date_start: '2024-11-18',
-        date_end: 'present',
-        description: 'non-gameplay still WIP',
-        url: 'https://www.mediafire.com/folder/za6emwzaaawqo/15',
-        video_url: 'https://www.youtube.com/embed/ASn1_QNc0_0',
+        id: '02',
+        name: 'Paraliyzed DT V2',
+        date_start: '01-15-2025',
+        date_end: 'Present',
+        description: 'Same as the main skin but it\'s for dt',
+        url: 'https://www.mediafire.com/folder/dfeh43vx3job3/Paraliyzed+Skins',
+        video_url: 'https://www.youtube.com/embed/SLLNzzLqhdY',
         images: [
             // {
             //     name: 'Song select',
@@ -173,28 +247,70 @@ const skins = [
             //     isGameplay: false,
             // },
             {
-                name: '- h',
-                url: 'https://www.mediafire.com/file/cd8esbc9zkcbza3/-_sbrstrkkdw_v15_%255B-_h%255D.osk/file',
-                image_url: '15/game-h.jpg',
+                name: 'Gameplay',
+                url: 'https://www.mediafire.com/file/4cc4b02wdlm7bbl/Paraliyzed_DT.osk/file',
+                image_url: '../img/02.png',
                 isGameplay: true,
             },
             {
-                name: 'banana',
-                url: 'https://www.mediafire.com/file/zeutacnwy4tt9ch/-_sbrstrkkdw_v15_%255Bbanana%255D.osk/file',
-                image_url: '15/game-banana.jpg',
-                isGameplay: true,
+                name: 'Song select',
+                url: 'url',
+                image_url: '../img/main/menu.png',
+                isGameplay: false,
             },
             {
-                name: 'citrus',
-                url: 'https://www.mediafire.com/file/zeutacnwy4tt9ch/-_sbrstrkkdw_v15_%255Bcitrus%255D.osk/file',
-                image_url: '15/game-citrus.jpg',
-                isGameplay: true,
+                name: 'Mod select',
+                url: 'url',
+                image_url: '../img/main/mods.png',
+                isGameplay: false,
             },
             {
-                name: 'apple',
-                url: 'https://www.mediafire.com/file/zeutacnwy4tt9ch/-_sbrstrkkdw_v15_%255Bapple%255D.osk/file',
-                image_url: '15/game-apple.jpg',
-                isGameplay: true,
+                name: 'Ranking panel',
+                url: 'url',
+                image_url: '../img/main/ranking.png',
+                isGameplay: false,
+            },
+			{
+                name: 'Pass',
+                url: 'url',
+                image_url: '../img/main/pass.jpg',
+                isGameplay: false,
+            },
+			{
+                name: 'Fail',
+                url: 'url',
+                image_url: '../img/main/fail.jpg',
+                isGameplay: false,
+            },
+			{
+                name: 'Spinner',
+                url: 'url',
+                image_url: '../img/main/spinner.png',
+                isGameplay: false,
+            },
+			{
+                name: 'Skip',
+                url: 'url',
+                image_url: '../img/main/skip.png',
+                isGameplay: false,
+            },
+			{
+                name: 'Catch',
+                url: 'url',
+                image_url: '../img/main/catch.png',
+                isGameplay: false,
+            },
+			{
+                name: 'Mania',
+                url: 'url',
+                image_url: '../img/main/mania.png',
+                isGameplay: false,
+            },
+			{
+                name: 'Takio',
+                url: 'url',
+                image_url: '../img/main/takio.png',
+                isGameplay: false,
             },
         ],
         sources: [
@@ -202,32 +318,84 @@ const skins = [
                 name: 'Images',
                 items: [
                     {
-                        name: 'fail background',
-                        desc: 'Guardian Tales fail screen world 11 female knight with witch skin',
+                        name: 'Arrow warning',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
                     },
                     {
-                        name: 'scorebar',
-                        desc: 'saber (by banban)',
+                        name: 'Mania Mods',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
                     },
                     {
-                        name: 'scorebar (banana ver.)',
-                        desc: 'saber x banban (by axololtle)',
+                        name: 'Cursor',
+                        desc: 'From the skin <a class="highlightLink" href="https://skins.osuck.net/skins/166?v=0">Rafis 2018-03-26 HDDT v1 osu skin</a>',
                     },
                     {
-                        name: 'selection-mode',
-                        desc: 'saber (by axololtle)',
+                        name: 'Hitcircles',
+                        desc: 'From the skin <a class="highlightLink" href="https://skins.osuck.net/skins/166?v=0">Rafis 2018-03-26 HDDT v1 osu skin</a>',
                     },
                     {
-                        name: 'taiko pippidon',
-                        desc: 'saber (own drawing)',
+                        name: 'Slider Textures',
+                        desc: 'From the skin <a class="highlightLink" href="https://skins.osuck.net/skins/166?v=0">Rafis 2018-03-26 HDDT v1 osu skin</a>',
                     },
                     {
-                        name: 'fruits catcher',
-                        desc: 'saber (own drawing)',
+                        name: 'Catch Textures',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
                     },
                     {
-                        name: 'mode-fruits-med mode backgrounds',
-                        desc: 'screenshots of the skin\'s gameplay',
+                        name: 'Spinner Textures',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
+                    },
+                    {
+                        name: 'Sliderscorepoint',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
+                    },
+                    {
+                        name: 'Menu Snow',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
+                    },
+                    {
+                        name: 'Reverse Arrow Texture',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
+                    },
+                    {
+                        name: 'Buttons',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
+                    },
+                    {
+                        name: 'Fail Overlay',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
+                    },
+                    {
+                        name: 'Pause Overlay',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
+                    },
+                    {
+                        name: 'Menu Textures (I recolored them in my skin)',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Cherry Corolla</a>',
+                    },
+                    {
+                        name: 'Mod Textures (that are not covered by the tuyu ones)',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Cherry Corolla</a>',
+                    },
+                    {
+                        name: 'Star Texture',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Cherry Corolla</a>',
+                    },
+                    {
+                        name: 'Ranking Panel',
+                        desc: 'From the skin <a class="highlightLink" href="https://github.com/Bjonk1911/Xootynator/blob/main/xooter-skins.md">Bloomoon</a>',
+                    },
+                    {
+                        name: 'Takio Textures',
+                        desc: 'From the skin <a class="highlightLink" href="https://github.com/Bjonk1911/Xootynator/blob/main/xooter-skins.md">Bloomoon</a>',
+                    },
+                    {
+                        name: 'Count Textures (count1-3.png)',
+                        desc: 'From the skin <a class="highlightLink" href="https://www.reddit.com/r/OsuSkins/comments/wn2fbw/std_only_lycoris_recoil_kurumi_osuskin/">Lycoris Recoil - Kurumi Skin</a>',
+                    },
+                    {
+                        name: 'I forgot V1',
+                        desc: 'Idk, I js forgot💀💀💀 V1 (I made the original like 3 years ago)',
                     },
                 ]
             },
@@ -235,20 +403,32 @@ const skins = [
                 name: 'Audio',
                 items: [
                     {
-                        name: 'combobreak.wav',
-                        desc: 'Halo: Reach shield break sound',
+                        name: 'Spinner Sounds (osu!standard)',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
                     },
                     {
-                        name: 'failsound.mp3',
-                        desc: 'halo 2 elite death sound',
+                        name: 'scrolltotop-select.mp3',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Cherry Corolla</a>',
                     },
                     {
-                        name: 'hitsounds',
-                        desc: '<a class="highlightLink" href="http://bit.ly/2P4P6qm">Seoul v9</a>',
+                        name: 'Menu/Multi Sounds',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Cherry Corolla</a>',
                     },
                     {
-                        name: 'menu sounds',
-                        desc: '<a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1628514?n=1">霜滅 SOUMETSU</a>',
+                        name: 'pause-loop.mp3',
+                        desc: 'From the song <a class="highlightLink" href="https://www.youtube.com/watch?v=AVK0BIVqLLc">First Date</a>',
+                    },
+                    {
+                        name: 'failsound.ogg',
+                        desc: 'From the skin <a class="highlightLink" href="https://www.reddit.com/r/CalliopeMori/comments/lj33w7/calli_osu_skin_in_case_you_play_osu/">[Hololive EN] Mori Calliope 森美声</a>',
+                    },
+                    {
+                        name: 'applause.mp3',
+                        desc: 'From the song <a class="highlightLink" href="https://www.youtube.com/watch?v=JS9Lh1NUAF4">If There Was an Endpoint./TUYU [Music Box]</a>',
+                    },
+                    {
+                        name: 'I forgot V2',
+                        desc: 'Idk, I js forgot💀💀💀 V2 (I made the original like 3 years ago)',
                     },
                 ]
             },
@@ -256,49 +436,25 @@ const skins = [
                 name: 'Fonts',
                 items: [
                     {
-                        name: '<a class="highlightLink" href="https://www.dafont.com/bebas.font">Bebas</a>',
-                        desc: 'scoreentry numbers',
+                        name: '<a class="highlightLink" href="https://www.fontsquirrel.com/fonts/jellee">Jelle</a>',
+                        desc: 'Used for hitcircles',
                     },
                     {
-                        name: '<a class="highlightLink" href="#">Calibri</a>',
-                        desc: 'Mod icons',
-                    },
-                    {
-                        name: 'Consolas',
-                        desc: 'mode-fruits-med, ranking-panel (scroll to the very bottom)',
-                    },
-                    {
-                        name: '<a class="highlightLink" href="https://www.freejapanesefont.com/kei-font-download/">Keifont</a>',
-                        desc: 'scorebar-bg (jp text)',
-                    },
-                    {
-                        name: '<a class=\'highlightLink\' href="https://fontmeme.com/fonts/minecraft-enchantment-font/" class="highlightLink">Minecraft Enchantment</a>',
-                        desc: 'combo numbers',
-                    },
-                    {
-                        name: '<a class="highlightLink" href="https://www.dafont.com/road-rage.font">Road Rage</a>',
-                        desc: 'Ranking letters',
-                    },
-                    {
-                        name: '<a class="highlightLink" href="https://www.fontspace.com/octapost-nbp-font-f17102">Octapost NBP</a>',
-                        desc: 'ranking-panel, scorebar-bg, score numbers',
-                    },
-                    {
-                        name: '<a class="highlightLink" href="https://www.dafont.com/oxanium.font">Oxanium Medium</a>',
-                        desc: 'default numbers, ranking-panel',
+                        name: 'I forgot V3',
+                        desc: 'Idk, I js forgot💀💀💀 V3 (I made the original like 3 years ago)',
                     },
                 ]
             }
         ]
     },
     {
-        id: '15',
-        name: 'sbrstrkkdw v15',
-        date_start: '2024-11-18',
-        date_end: 'present',
-        description: 'non-gameplay still WIP',
-        url: 'https://www.mediafire.com/folder/za6emwzaaawqo/15',
-        video_url: 'https://www.youtube.com/embed/ASn1_QNc0_0',
+        id: '03',
+        name: 'Paraliyzed Instafade V5',
+        date_start: '01-15-2025',
+        date_end: 'Present',
+        description: 'Same as the main skin but it\'s instafade',
+        url: 'https://www.mediafire.com/folder/dfeh43vx3job3/Paraliyzed+Skins',
+        video_url: 'https://www.youtube.com/embed/uyrZDezfoRE',
         images: [
             // {
             //     name: 'Song select',
@@ -319,28 +475,70 @@ const skins = [
             //     isGameplay: false,
             // },
             {
-                name: '- h',
-                url: 'https://www.mediafire.com/file/cd8esbc9zkcbza3/-_sbrstrkkdw_v15_%255B-_h%255D.osk/file',
-                image_url: '15/game-h.jpg',
+                name: 'Gameplay',
+                url: 'https://www.mediafire.com/file/cfnelqzyrknntgn/Paraliyzed_Instafade.osk/file',
+                image_url: '../img/03.png',
                 isGameplay: true,
             },
             {
-                name: 'banana',
-                url: 'https://www.mediafire.com/file/zeutacnwy4tt9ch/-_sbrstrkkdw_v15_%255Bbanana%255D.osk/file',
-                image_url: '15/game-banana.jpg',
-                isGameplay: true,
+                name: 'Song select',
+                url: 'url',
+                image_url: '../img/main/menu.png',
+                isGameplay: false,
             },
             {
-                name: 'citrus',
-                url: 'https://www.mediafire.com/file/zeutacnwy4tt9ch/-_sbrstrkkdw_v15_%255Bcitrus%255D.osk/file',
-                image_url: '15/game-citrus.jpg',
-                isGameplay: true,
+                name: 'Mod select',
+                url: 'url',
+                image_url: '../img/main/mods.png',
+                isGameplay: false,
             },
             {
-                name: 'apple',
-                url: 'https://www.mediafire.com/file/zeutacnwy4tt9ch/-_sbrstrkkdw_v15_%255Bapple%255D.osk/file',
-                image_url: '15/game-apple.jpg',
-                isGameplay: true,
+                name: 'Ranking panel',
+                url: 'url',
+                image_url: '../img/main/ranking.png',
+                isGameplay: false,
+            },
+			{
+                name: 'Pass',
+                url: 'url',
+                image_url: '../img/main/pass.jpg',
+                isGameplay: false,
+            },
+			{
+                name: 'Fail',
+                url: 'url',
+                image_url: '../img/main/fail.jpg',
+                isGameplay: false,
+            },
+			{
+                name: 'Spinner',
+                url: 'url',
+                image_url: '../img/main/spinner.png',
+                isGameplay: false,
+            },
+			{
+                name: 'Skip',
+                url: 'url',
+                image_url: '../img/main/skip.png',
+                isGameplay: false,
+            },
+			{
+                name: 'Catch',
+                url: 'url',
+                image_url: '../img/main/catch.png',
+                isGameplay: false,
+            },
+			{
+                name: 'Mania',
+                url: 'url',
+                image_url: '../img/main/mania.png',
+                isGameplay: false,
+            },
+			{
+                name: 'Takio',
+                url: 'url',
+                image_url: '../img/main/takio.png',
+                isGameplay: false,
             },
         ],
         sources: [
@@ -348,32 +546,76 @@ const skins = [
                 name: 'Images',
                 items: [
                     {
-                        name: 'fail background',
-                        desc: 'Guardian Tales fail screen world 11 female knight with witch skin',
+                        name: 'Arrow warning',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
                     },
                     {
-                        name: 'scorebar',
-                        desc: 'saber (by banban)',
+                        name: 'Mania Mods',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
                     },
                     {
-                        name: 'scorebar (banana ver.)',
-                        desc: 'saber x banban (by axololtle)',
+                        name: 'Cursor',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
                     },
                     {
-                        name: 'selection-mode',
-                        desc: 'saber (by axololtle)',
+                        name: 'Catch Textures',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
                     },
                     {
-                        name: 'taiko pippidon',
-                        desc: 'saber (own drawing)',
+                        name: 'Spinner Textures',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
                     },
                     {
-                        name: 'fruits catcher',
-                        desc: 'saber (own drawing)',
+                        name: 'Sliderscorepoint',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
                     },
                     {
-                        name: 'mode-fruits-med mode backgrounds',
-                        desc: 'screenshots of the skin\'s gameplay',
+                        name: 'Menu Snow',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
+                    },
+                    {
+                        name: 'Reverse Arrow Texture',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
+                    },
+                    {
+                        name: 'Buttons',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
+                    },
+                    {
+                        name: 'Fail Overlay',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
+                    },
+                    {
+                        name: 'Pause Overlay',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
+                    },
+                    {
+                        name: 'Menu Textures (I recolored them in my skin)',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Cherry Corolla</a>',
+                    },
+                    {
+                        name: 'Mod Textures (that are not covered by the tuyu ones)',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Cherry Corolla</a>',
+                    },
+                    {
+                        name: 'Star Texture',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Cherry Corolla</a>',
+                    },
+                    {
+                        name: 'Ranking Panel',
+                        desc: 'From the skin <a class="highlightLink" href="https://github.com/Bjonk1911/Xootynator/blob/main/xooter-skins.md">Bloomoon</a>',
+                    },
+                    {
+                        name: 'Takio Textures',
+                        desc: 'From the skin <a class="highlightLink" href="https://github.com/Bjonk1911/Xootynator/blob/main/xooter-skins.md">Bloomoon</a>',
+                    },
+                    {
+                        name: 'Count Textures (count1-3.png)',
+                        desc: 'From the skin <a class="highlightLink" href="https://www.reddit.com/r/OsuSkins/comments/wn2fbw/std_only_lycoris_recoil_kurumi_osuskin/">Lycoris Recoil - Kurumi Skin</a>',
+                    },
+                    {
+                        name: 'I forgot V1',
+                        desc: 'Idk, I js forgot💀💀💀 V1 (I made the original like 3 years ago)',
                     },
                 ]
             },
@@ -381,20 +623,32 @@ const skins = [
                 name: 'Audio',
                 items: [
                     {
-                        name: 'combobreak.wav',
-                        desc: 'Halo: Reach shield break sound',
+                        name: 'Spinner Sounds (osu!standard)',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
                     },
                     {
-                        name: 'failsound.mp3',
-                        desc: 'halo 2 elite death sound',
+                        name: 'scrolltotop-select.mp3',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Cherry Corolla</a>',
                     },
                     {
-                        name: 'hitsounds',
-                        desc: '<a class="highlightLink" href="http://bit.ly/2P4P6qm">Seoul v9</a>',
+                        name: 'Menu/Multi Sounds',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Cherry Corolla</a>',
                     },
                     {
-                        name: 'menu sounds',
-                        desc: '<a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1628514?n=1">霜滅 SOUMETSU</a>',
+                        name: 'pause-loop.mp3',
+                        desc: 'From the song <a class="highlightLink" href="https://www.youtube.com/watch?v=AVK0BIVqLLc">First Date</a>',
+                    },
+                    {
+                        name: 'failsound.ogg',
+                        desc: 'From the skin <a class="highlightLink" href="https://www.reddit.com/r/CalliopeMori/comments/lj33w7/calli_osu_skin_in_case_you_play_osu/">[Hololive EN] Mori Calliope 森美声</a>',
+                    },
+                    {
+                        name: 'applause.mp3',
+                        desc: 'From the song <a class="highlightLink" href="https://www.youtube.com/watch?v=JS9Lh1NUAF4">If There Was an Endpoint./TUYU [Music Box]</a>',
+                    },
+                    {
+                        name: 'I forgot V2',
+                        desc: 'Idk, I js forgot💀💀💀 V2 (I made the original like 3 years ago)',
                     },
                 ]
             },
@@ -402,49 +656,25 @@ const skins = [
                 name: 'Fonts',
                 items: [
                     {
-                        name: '<a class="highlightLink" href="https://www.dafont.com/bebas.font">Bebas</a>',
-                        desc: 'scoreentry numbers',
+                        name: '<a class="highlightLink" href="https://www.fontsquirrel.com/fonts/jellee">Jelle</a>',
+                        desc: 'Used for hitcircles',
                     },
                     {
-                        name: '<a class="highlightLink" href="#">Calibri</a>',
-                        desc: 'Mod icons',
-                    },
-                    {
-                        name: 'Consolas',
-                        desc: 'mode-fruits-med, ranking-panel (scroll to the very bottom)',
-                    },
-                    {
-                        name: '<a class="highlightLink" href="https://www.freejapanesefont.com/kei-font-download/">Keifont</a>',
-                        desc: 'scorebar-bg (jp text)',
-                    },
-                    {
-                        name: '<a class=\'highlightLink\' href="https://fontmeme.com/fonts/minecraft-enchantment-font/" class="highlightLink">Minecraft Enchantment</a>',
-                        desc: 'combo numbers',
-                    },
-                    {
-                        name: '<a class="highlightLink" href="https://www.dafont.com/road-rage.font">Road Rage</a>',
-                        desc: 'Ranking letters',
-                    },
-                    {
-                        name: '<a class="highlightLink" href="https://www.fontspace.com/octapost-nbp-font-f17102">Octapost NBP</a>',
-                        desc: 'ranking-panel, scorebar-bg, score numbers',
-                    },
-                    {
-                        name: '<a class="highlightLink" href="https://www.dafont.com/oxanium.font">Oxanium Medium</a>',
-                        desc: 'default numbers, ranking-panel',
+                        name: 'I forgot V3',
+                        desc: 'Idk, I js forgot💀💀💀 V3 (I made the original like 3 years ago)',
                     },
                 ]
             }
         ]
     },
     {
-        id: '15',
-        name: 'sbrstrkkdw v15',
-        date_start: '2024-11-18',
-        date_end: 'present',
-        description: 'non-gameplay still WIP',
-        url: 'https://www.mediafire.com/folder/za6emwzaaawqo/15',
-        video_url: 'https://www.youtube.com/embed/ASn1_QNc0_0',
+        id: '04',
+        name: 'Paraliyzed with Reedkussy Cursor V7',
+        date_start: '01-15-2025',
+        date_end: 'Present',
+        description: 'Same as the main skin but it has the Reedkussy Cursor',
+        url: 'https://www.mediafire.com/folder/dfeh43vx3job3/Paraliyzed+Skins',
+        video_url: 'https://www.youtube.com/embed/m-ju5rFqcyg',
         images: [
             // {
             //     name: 'Song select',
@@ -465,28 +695,70 @@ const skins = [
             //     isGameplay: false,
             // },
             {
-                name: '- h',
-                url: 'https://www.mediafire.com/file/cd8esbc9zkcbza3/-_sbrstrkkdw_v15_%255B-_h%255D.osk/file',
-                image_url: '15/game-h.jpg',
+                name: 'Gameplay',
+                url: 'https://www.mediafire.com/file/v8ee5pcq7airsja/Paraliyzed_with_the_Reedkussyy_Cursor.osk/file',
+                image_url: '../img/04.png',
                 isGameplay: true,
             },
             {
-                name: 'banana',
-                url: 'https://www.mediafire.com/file/zeutacnwy4tt9ch/-_sbrstrkkdw_v15_%255Bbanana%255D.osk/file',
-                image_url: '15/game-banana.jpg',
-                isGameplay: true,
+                name: 'Song select',
+                url: 'url',
+                image_url: '../img/main/menu.png',
+                isGameplay: false,
             },
             {
-                name: 'citrus',
-                url: 'https://www.mediafire.com/file/zeutacnwy4tt9ch/-_sbrstrkkdw_v15_%255Bcitrus%255D.osk/file',
-                image_url: '15/game-citrus.jpg',
-                isGameplay: true,
+                name: 'Mod select',
+                url: 'url',
+                image_url: '../img/main/mods.png',
+                isGameplay: false,
             },
             {
-                name: 'apple',
-                url: 'https://www.mediafire.com/file/zeutacnwy4tt9ch/-_sbrstrkkdw_v15_%255Bapple%255D.osk/file',
-                image_url: '15/game-apple.jpg',
-                isGameplay: true,
+                name: 'Ranking panel',
+                url: 'url',
+                image_url: '../img/main/ranking.png',
+                isGameplay: false,
+            },
+			{
+                name: 'Pass',
+                url: 'url',
+                image_url: '../img/main/pass.jpg',
+                isGameplay: false,
+            },
+			{
+                name: 'Fail',
+                url: 'url',
+                image_url: '../img/main/fail.jpg',
+                isGameplay: false,
+            },
+			{
+                name: 'Spinner',
+                url: 'url',
+                image_url: '../img/main/spinner.png',
+                isGameplay: false,
+            },
+			{
+                name: 'Skip',
+                url: 'url',
+                image_url: '../img/main/skip.png',
+                isGameplay: false,
+            },
+			{
+                name: 'Catch',
+                url: 'url',
+                image_url: '../img/main/catch.png',
+                isGameplay: false,
+            },
+			{
+                name: 'Mania',
+                url: 'url',
+                image_url: '../img/main/mania.png',
+                isGameplay: false,
+            },
+			{
+                name: 'Takio',
+                url: 'url',
+                image_url: '../img/main/takio.png',
+                isGameplay: false,
             },
         ],
         sources: [
@@ -494,32 +766,76 @@ const skins = [
                 name: 'Images',
                 items: [
                     {
-                        name: 'fail background',
-                        desc: 'Guardian Tales fail screen world 11 female knight with witch skin',
+                        name: 'Arrow warning',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
                     },
                     {
-                        name: 'scorebar',
-                        desc: 'saber (by banban)',
+                        name: 'Mania Mods',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
                     },
                     {
-                        name: 'scorebar (banana ver.)',
-                        desc: 'saber x banban (by axololtle)',
+                        name: 'Cursor',
+                        desc: 'From the skin <a class="highlightLink" href="https://github.com/Bjonk1911/Xootynator/blob/main/xooter-skins.md">Bloomoon</a>',
                     },
                     {
-                        name: 'selection-mode',
-                        desc: 'saber (by axololtle)',
+                        name: 'Catch Textures',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
                     },
                     {
-                        name: 'taiko pippidon',
-                        desc: 'saber (own drawing)',
+                        name: 'Spinner Textures',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
                     },
                     {
-                        name: 'fruits catcher',
-                        desc: 'saber (own drawing)',
+                        name: 'Sliderscorepoint',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
                     },
                     {
-                        name: 'mode-fruits-med mode backgrounds',
-                        desc: 'screenshots of the skin\'s gameplay',
+                        name: 'Menu Snow',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
+                    },
+                    {
+                        name: 'Reverse Arrow Texture',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
+                    },
+                    {
+                        name: 'Buttons',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
+                    },
+                    {
+                        name: 'Fail Overlay',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
+                    },
+                    {
+                        name: 'Pause Overlay',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
+                    },
+                    {
+                        name: 'Menu Textures (I recolored them in my skin)',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Cherry Corolla</a>',
+                    },
+                    {
+                        name: 'Mod Textures (that are not covered by the tuyu ones)',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Cherry Corolla</a>',
+                    },
+                    {
+                        name: 'Star Texture',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Cherry Corolla</a>',
+                    },
+                    {
+                        name: 'Ranking Panel',
+                        desc: 'From the skin <a class="highlightLink" href="https://github.com/Bjonk1911/Xootynator/blob/main/xooter-skins.md">Bloomoon</a>',
+                    },
+                    {
+                        name: 'Takio Textures',
+                        desc: 'From the skin <a class="highlightLink" href="https://github.com/Bjonk1911/Xootynator/blob/main/xooter-skins.md">Bloomoon</a>',
+                    },
+                    {
+                        name: 'Count Textures (count1-3.png)',
+                        desc: 'From the skin <a class="highlightLink" href="https://www.reddit.com/r/OsuSkins/comments/wn2fbw/std_only_lycoris_recoil_kurumi_osuskin/">Lycoris Recoil - Kurumi Skin</a>',
+                    },
+                    {
+                        name: 'I forgot V1',
+                        desc: 'Idk, I js forgot💀💀💀 V1 (I made the original like 3 years ago)',
                     },
                 ]
             },
@@ -527,20 +843,32 @@ const skins = [
                 name: 'Audio',
                 items: [
                     {
-                        name: 'combobreak.wav',
-                        desc: 'Halo: Reach shield break sound',
+                        name: 'Spinner Sounds (osu!standard)',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
                     },
                     {
-                        name: 'failsound.mp3',
-                        desc: 'halo 2 elite death sound',
+                        name: 'scrolltotop-select.mp3',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Cherry Corolla</a>',
                     },
                     {
-                        name: 'hitsounds',
-                        desc: '<a class="highlightLink" href="http://bit.ly/2P4P6qm">Seoul v9</a>',
+                        name: 'Menu/Multi Sounds',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Cherry Corolla</a>',
                     },
                     {
-                        name: 'menu sounds',
-                        desc: '<a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1628514?n=1">霜滅 SOUMETSU</a>',
+                        name: 'pause-loop.mp3',
+                        desc: 'From the song <a class="highlightLink" href="https://www.youtube.com/watch?v=AVK0BIVqLLc">First Date</a>',
+                    },
+                    {
+                        name: 'failsound.ogg',
+                        desc: 'From the skin <a class="highlightLink" href="https://www.reddit.com/r/CalliopeMori/comments/lj33w7/calli_osu_skin_in_case_you_play_osu/">[Hololive EN] Mori Calliope 森美声</a>',
+                    },
+                    {
+                        name: 'applause.mp3',
+                        desc: 'From the song <a class="highlightLink" href="https://www.youtube.com/watch?v=JS9Lh1NUAF4">If There Was an Endpoint./TUYU [Music Box]</a>',
+                    },
+                    {
+                        name: 'I forgot V2',
+                        desc: 'Idk, I js forgot💀💀💀 V2 (I made the original like 3 years ago)',
                     },
                 ]
             },
@@ -548,49 +876,25 @@ const skins = [
                 name: 'Fonts',
                 items: [
                     {
-                        name: '<a class="highlightLink" href="https://www.dafont.com/bebas.font">Bebas</a>',
-                        desc: 'scoreentry numbers',
+                        name: '<a class="highlightLink" href="https://www.fontsquirrel.com/fonts/jellee">Jelle</a>',
+                        desc: 'Used for hitcircles',
                     },
                     {
-                        name: '<a class="highlightLink" href="#">Calibri</a>',
-                        desc: 'Mod icons',
-                    },
-                    {
-                        name: 'Consolas',
-                        desc: 'mode-fruits-med, ranking-panel (scroll to the very bottom)',
-                    },
-                    {
-                        name: '<a class="highlightLink" href="https://www.freejapanesefont.com/kei-font-download/">Keifont</a>',
-                        desc: 'scorebar-bg (jp text)',
-                    },
-                    {
-                        name: '<a class=\'highlightLink\' href="https://fontmeme.com/fonts/minecraft-enchantment-font/" class="highlightLink">Minecraft Enchantment</a>',
-                        desc: 'combo numbers',
-                    },
-                    {
-                        name: '<a class="highlightLink" href="https://www.dafont.com/road-rage.font">Road Rage</a>',
-                        desc: 'Ranking letters',
-                    },
-                    {
-                        name: '<a class="highlightLink" href="https://www.fontspace.com/octapost-nbp-font-f17102">Octapost NBP</a>',
-                        desc: 'ranking-panel, scorebar-bg, score numbers',
-                    },
-                    {
-                        name: '<a class="highlightLink" href="https://www.dafont.com/oxanium.font">Oxanium Medium</a>',
-                        desc: 'default numbers, ranking-panel',
+                        name: 'I forgot V3',
+                        desc: 'Idk, I js forgot💀💀💀 V3 (I made the original like 3 years ago)',
                     },
                 ]
             }
         ]
     },
     {
-        id: '15',
-        name: 'sbrstrkkdw v15',
-        date_start: '2024-11-18',
-        date_end: 'present',
-        description: 'non-gameplay still WIP',
-        url: 'https://www.mediafire.com/folder/za6emwzaaawqo/15',
-        video_url: 'https://www.youtube.com/embed/ASn1_QNc0_0',
+        id: '05',
+        name: 'Paraliyzed with Whitecat Cursor V7',
+        date_start: '01-15-2025',
+        date_end: 'Present',
+        description: 'Same as the main skin but it has the Whitecat Cursor',
+        url: 'https://www.mediafire.com/folder/dfeh43vx3job3/Paraliyzed+Skins',
+        video_url: 'https://www.youtube.com/embed/AvO4o5qIzMA',
         images: [
             // {
             //     name: 'Song select',
@@ -611,28 +915,70 @@ const skins = [
             //     isGameplay: false,
             // },
             {
-                name: '- h',
-                url: 'https://www.mediafire.com/file/cd8esbc9zkcbza3/-_sbrstrkkdw_v15_%255B-_h%255D.osk/file',
-                image_url: '15/game-h.jpg',
+                name: 'Gameplay',
+                url: 'https://www.mediafire.com/file/11sq12ql8i2x3nk/Paraliyzed_with_the_Whitecat_Cursor.osk/file',
+                image_url: '../img/05.png',
                 isGameplay: true,
             },
             {
-                name: 'banana',
-                url: 'https://www.mediafire.com/file/zeutacnwy4tt9ch/-_sbrstrkkdw_v15_%255Bbanana%255D.osk/file',
-                image_url: '15/game-banana.jpg',
-                isGameplay: true,
+                name: 'Song select',
+                url: 'url',
+                image_url: '../img/main/menu.png',
+                isGameplay: false,
             },
             {
-                name: 'citrus',
-                url: 'https://www.mediafire.com/file/zeutacnwy4tt9ch/-_sbrstrkkdw_v15_%255Bcitrus%255D.osk/file',
-                image_url: '15/game-citrus.jpg',
-                isGameplay: true,
+                name: 'Mod select',
+                url: 'url',
+                image_url: '../img/main/mods.png',
+                isGameplay: false,
             },
             {
-                name: 'apple',
-                url: 'https://www.mediafire.com/file/zeutacnwy4tt9ch/-_sbrstrkkdw_v15_%255Bapple%255D.osk/file',
-                image_url: '15/game-apple.jpg',
-                isGameplay: true,
+                name: 'Ranking panel',
+                url: 'url',
+                image_url: '../img/main/ranking.png',
+                isGameplay: false,
+            },
+			{
+                name: 'Pass',
+                url: 'url',
+                image_url: '../img/main/pass.jpg',
+                isGameplay: false,
+            },
+			{
+                name: 'Fail',
+                url: 'url',
+                image_url: '../img/main/fail.jpg',
+                isGameplay: false,
+            },
+			{
+                name: 'Spinner',
+                url: 'url',
+                image_url: '../img/main/spinner.png',
+                isGameplay: false,
+            },
+			{
+                name: 'Skip',
+                url: 'url',
+                image_url: '../img/main/skip.png',
+                isGameplay: false,
+            },
+			{
+                name: 'Catch',
+                url: 'url',
+                image_url: '../img/main/catch.png',
+                isGameplay: false,
+            },
+			{
+                name: 'Mania',
+                url: 'url',
+                image_url: '../img/main/mania.png',
+                isGameplay: false,
+            },
+			{
+                name: 'Takio',
+                url: 'url',
+                image_url: '../img/main/takio.png',
+                isGameplay: false,
             },
         ],
         sources: [
@@ -640,32 +986,76 @@ const skins = [
                 name: 'Images',
                 items: [
                     {
-                        name: 'fail background',
-                        desc: 'Guardian Tales fail screen world 11 female knight with witch skin',
+                        name: 'Arrow warning',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
                     },
                     {
-                        name: 'scorebar',
-                        desc: 'saber (by banban)',
+                        name: 'Mania Mods',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
                     },
                     {
-                        name: 'scorebar (banana ver.)',
-                        desc: 'saber x banban (by axololtle)',
+                        name: 'Cursor',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/986201?n=1">Echoing Inside</a>',
                     },
                     {
-                        name: 'selection-mode',
-                        desc: 'saber (by axololtle)',
+                        name: 'Catch Textures',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">WhiteCat (1.0)</a>',
                     },
                     {
-                        name: 'taiko pippidon',
-                        desc: 'saber (own drawing)',
+                        name: 'Spinner Textures',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
                     },
                     {
-                        name: 'fruits catcher',
-                        desc: 'saber (own drawing)',
+                        name: 'Sliderscorepoint',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
                     },
                     {
-                        name: 'mode-fruits-med mode backgrounds',
-                        desc: 'screenshots of the skin\'s gameplay',
+                        name: 'Menu Snow',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
+                    },
+                    {
+                        name: 'Reverse Arrow Texture',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
+                    },
+                    {
+                        name: 'Buttons',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
+                    },
+                    {
+                        name: 'Fail Overlay',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
+                    },
+                    {
+                        name: 'Pause Overlay',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
+                    },
+                    {
+                        name: 'Menu Textures (I recolored them in my skin)',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Cherry Corolla</a>',
+                    },
+                    {
+                        name: 'Mod Textures (that are not covered by the tuyu ones)',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Cherry Corolla</a>',
+                    },
+                    {
+                        name: 'Star Texture',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Cherry Corolla</a>',
+                    },
+                    {
+                        name: 'Ranking Panel',
+                        desc: 'From the skin <a class="highlightLink" href="https://github.com/Bjonk1911/Xootynator/blob/main/xooter-skins.md">Bloomoon</a>',
+                    },
+                    {
+                        name: 'Takio Textures',
+                        desc: 'From the skin <a class="highlightLink" href="https://github.com/Bjonk1911/Xootynator/blob/main/xooter-skins.md">Bloomoon</a>',
+                    },
+                    {
+                        name: 'Count Textures (count1-3.png)',
+                        desc: 'From the skin <a class="highlightLink" href="https://www.reddit.com/r/OsuSkins/comments/wn2fbw/std_only_lycoris_recoil_kurumi_osuskin/">Lycoris Recoil - Kurumi Skin</a>',
+                    },
+                    {
+                        name: 'I forgot V1',
+                        desc: 'Idk, I js forgot💀💀💀 V1 (I made the original like 3 years ago)',
                     },
                 ]
             },
@@ -673,20 +1063,32 @@ const skins = [
                 name: 'Audio',
                 items: [
                     {
-                        name: 'combobreak.wav',
-                        desc: 'Halo: Reach shield break sound',
+                        name: 'Spinner Sounds (osu!standard)',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Echoing Inside</a>',
                     },
                     {
-                        name: 'failsound.mp3',
-                        desc: 'halo 2 elite death sound',
+                        name: 'scrolltotop-select.mp3',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Cherry Corolla</a>',
                     },
                     {
-                        name: 'hitsounds',
-                        desc: '<a class="highlightLink" href="http://bit.ly/2P4P6qm">Seoul v9</a>',
+                        name: 'Menu/Multi Sounds',
+                        desc: 'From the skin <a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1925867?n=1">Cherry Corolla</a>',
                     },
                     {
-                        name: 'menu sounds',
-                        desc: '<a class="highlightLink" href="https://osu.ppy.sh/community/forums/topics/1628514?n=1">霜滅 SOUMETSU</a>',
+                        name: 'pause-loop.mp3',
+                        desc: 'From the song <a class="highlightLink" href="https://www.youtube.com/watch?v=AVK0BIVqLLc">First Date</a>',
+                    },
+                    {
+                        name: 'failsound.ogg',
+                        desc: 'From the skin <a class="highlightLink" href="https://www.reddit.com/r/CalliopeMori/comments/lj33w7/calli_osu_skin_in_case_you_play_osu/">[Hololive EN] Mori Calliope 森美声</a>',
+                    },
+                    {
+                        name: 'applause.mp3',
+                        desc: 'From the song <a class="highlightLink" href="https://www.youtube.com/watch?v=JS9Lh1NUAF4">If There Was an Endpoint./TUYU [Music Box]</a>',
+                    },
+                    {
+                        name: 'I forgot V2',
+                        desc: 'Idk, I js forgot💀💀💀 V2 (I made the original like 3 years ago)',
                     },
                 ]
             },
@@ -694,41 +1096,17 @@ const skins = [
                 name: 'Fonts',
                 items: [
                     {
-                        name: '<a class="highlightLink" href="https://www.dafont.com/bebas.font">Bebas</a>',
-                        desc: 'scoreentry numbers',
+                        name: '<a class="highlightLink" href="https://www.fontsquirrel.com/fonts/jellee">Jelle</a>',
+                        desc: 'Used for hitcircles',
                     },
                     {
-                        name: '<a class="highlightLink" href="#">Calibri</a>',
-                        desc: 'Mod icons',
-                    },
-                    {
-                        name: 'Consolas',
-                        desc: 'mode-fruits-med, ranking-panel (scroll to the very bottom)',
-                    },
-                    {
-                        name: '<a class="highlightLink" href="https://www.freejapanesefont.com/kei-font-download/">Keifont</a>',
-                        desc: 'scorebar-bg (jp text)',
-                    },
-                    {
-                        name: '<a class=\'highlightLink\' href="https://fontmeme.com/fonts/minecraft-enchantment-font/" class="highlightLink">Minecraft Enchantment</a>',
-                        desc: 'combo numbers',
-                    },
-                    {
-                        name: '<a class="highlightLink" href="https://www.dafont.com/road-rage.font">Road Rage</a>',
-                        desc: 'Ranking letters',
-                    },
-                    {
-                        name: '<a class="highlightLink" href="https://www.fontspace.com/octapost-nbp-font-f17102">Octapost NBP</a>',
-                        desc: 'ranking-panel, scorebar-bg, score numbers',
-                    },
-                    {
-                        name: '<a class="highlightLink" href="https://www.dafont.com/oxanium.font">Oxanium Medium</a>',
-                        desc: 'default numbers, ranking-panel',
+                        name: 'I forgot V3',
+                        desc: 'Idk, I js forgot💀💀💀 V3 (I made the original like 3 years ago)',
                     },
                 ]
             }
         ]
-    }
+    },
 ]
 
 const whFactor = 25
@@ -769,7 +1147,7 @@ function showSkin(id) {
         a1.rel = "noopener noreferrer";
         a1.className = "dl mainDownload";
         a1.href = skin.url;
-        a1.innerText = "download link";
+        a1.innerText = "Download Link";
         p1.appendChild(a1);
         doc.appendChild(p1);
     }
@@ -809,7 +1187,7 @@ function showSkin(id) {
         p1.className = "itemName";
         p1.innerText = image.name;
         const img1 = document.createElement('img');
-        img1.src = `./img/${image.image_url.replace('.jpg', '_preview.jpg')}`;
+        img1.src = `${image.image_url}`;
         img1.alt = "Skin screenshot - " + image.name;
         img1.width = width;
         img1.height = height;
@@ -883,15 +1261,15 @@ function showSkin(id) {
         window.open(curprevimg, '_blank')
     });
     function createPreview(image) {
-        curprevimg = `./img/${image.image_url}`
+        curprevimg = `../img/${image.image_url}`
         previewimg.src = curprevimg;
 
         if (image.isGameplay) {
             previewerButtonLink.href = image.url;
-            previewerButtonLink.innerText = "download \"" + image.name + '"';
+            previewerButtonLink.innerText = "Download \"" + image.name + '"';
         } else {
             previewerButtonLink.href = skin.url;
-            previewerButtonLink.innerText = "download skin";
+            previewerButtonLink.innerText = "Download Skin";
         }
         previewer.style.display = 'block';
         previewbg.style.display = 'block';
@@ -925,10 +1303,8 @@ function showSkin(id) {
 
 function genList() {
     let grid = document.getElementsByClassName("itemGrid")[0];
-    let sk = skins.slice().reverse();
-    console.log('ha')
+    let sk = skins
     sk.forEach(skin => {
-        console.log(skin.id)
         if (skin.ignore) {
 
         } else {
@@ -947,7 +1323,7 @@ function genList() {
             dl.className = 'dl'
             dl.href = skin.url;
             dl.target = '_blank';
-            dl.innerText = 'download';
+            dl.innerText = 'Download';
             const div = document.createElement('div');
             div.style.display = 'inline-block';
             const skPage = document.createElement('a');
@@ -957,7 +1333,7 @@ function genList() {
                     skin.url;
             skPage.target = '_self';
             const previewImg = document.createElement('img');
-            previewImg.src = './img/' + skin.images[0].image_url;
+            previewImg.src = '../img/' + skin.images[0].image_url;
             previewImg.alt = skin.name + ': ' + skin.images[0].name;
             previewImg.width = width;
             previewImg.height = height;
