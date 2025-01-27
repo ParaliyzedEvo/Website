@@ -72,6 +72,16 @@ const defpages = [
         icon: 'page.png',
     },
     {
+        name: 'Old Skin Versions',
+        url: 'https://mega.nz/folder/C90EBYwQ#h06SCVZD9D2SnmYnrjjYjQ',
+        icon: 'page.png',
+    },
+    {
+        name: 'Misc.zip',
+        url: 'https://www.mediafire.com/file/xtbawklwnemgq2f/Misc.zip/file',
+        icon: 'page.png',
+    },
+    {
         name: 'Skin Websites',
         url: 'skins/skin-sites.html',
         icon: 'page.png',
