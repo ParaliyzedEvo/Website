@@ -48,6 +48,7 @@ function generate() {
         img.id = 'mainTitle'
         img.classList.add('mainObject');
         ctn.append(img);
+		img.draggable = false;
     }
 	{
         const img = document.createElement('img');
@@ -56,6 +57,7 @@ function generate() {
         img.src = '/img/russian.png'
         img.classList.add('mainObject')
         ctn.append(img);
+		img.draggable = false;
     }
 	{
 		const textElement = document.createElement('div');
@@ -97,6 +99,8 @@ function generate() {
             item.addEventListener('mouseout', e => {
                 img.src = '/img/social/' + social.icon;
             });
+			item.draggable = false;
+            img.draggable = false;
         })
         ctn.append(socialSection)
     }
