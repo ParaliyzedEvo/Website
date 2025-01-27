@@ -103,6 +103,7 @@ function generate() {
 		logotxtImg.style.display = 'none';
 		logotxtImg.style.zIndex = '20';
 		contentWrapper.appendChild(logotxtImg);
+		logotxtImg.draggable = false;
 	
 		const logoImg = document.createElement('img');
 		logoImg.src = '/img/russian.png';
@@ -111,6 +112,7 @@ function generate() {
 		logoImg.classList.add('mainObject');
 		logoImg.style.display = 'none';
 		contentWrapper.appendChild(logoImg);
+		logoImg.draggable = false;
 	
 		const skipButton = document.createElement('button');
 		skipButton.textContent = "Next Animation";

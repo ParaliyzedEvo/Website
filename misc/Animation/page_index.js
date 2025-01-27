@@ -103,6 +103,7 @@ function generate() {
 		logotxtImg.style.display = 'none';
 		logotxtImg.style.zIndex = '20';
 		contentWrapper.appendChild(logotxtImg);
+		logotxtImg.draggable = false;
 	
 		const logoImg = document.createElement('img');
 		logoImg.src = '/img/russian.png';
@@ -111,6 +112,7 @@ function generate() {
 		logoImg.classList.add('mainObject');
 		logoImg.style.display = 'none';
 		contentWrapper.appendChild(logoImg);
+		logoImg.draggable = false;
 	
 		//const skipButton = document.createElement('button');
 		//skipButton.textContent = "Skip Animation";
@@ -205,6 +207,8 @@ function generate() {
             item.addEventListener('mouseout', e => {
                 img.src = '/img/social/' + social.icon;
             });
+			item.draggable = false;
+            img.draggable = false;
         })
         ctn.append(socialSection)
     }
@@ -285,7 +289,8 @@ function generate() {
 		const nonOsuSpotifyTracks = [
 			'https://open.spotify.com/embed/track/0RYHqnmtNRfbYxP6Dn8Vse?utm_source=generator',
 			'https://open.spotify.com/embed/track/1M6VHCglQ2PLWeAsyhgEUH?utm_source=generator',
-			'https://open.spotify.com/embed/track/3lLH0FlC2pYCeZEf05zKQn?utm_source=generator',
+			'https://open.spotify.com/embed/track/6SjxVgMjH3b3AI4wVviZfi?utm_source=generator',
+			'https://open.spotify.com/embed/track/3PM4cZMctdMliKHEFLXgLH?utm_source=generator'
 		];
 
 		nonOsuSpotifyTracks.forEach(src => {
