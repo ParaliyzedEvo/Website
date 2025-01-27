@@ -115,7 +115,11 @@ function genSideNav(level, cd, cur) {
     list.id = 'sidenavList';
     sidenav.append(list);
 
-    const normalizePath = (path) => (path && !path.startsWith('/') ? '/' + path : path);
+    const normalizePath = (path) => {
+        if (!path) return '/';
+        const normalized = path.startsWith('/') ? path : '/' + path;
+        return normalized.replace(/\/+/g, '/');
+    };
 
     let subs = '';
     for (let i = 0; i < level; i++) {
@@ -136,8 +140,11 @@ function genSideNav(level, cd, cur) {
     }
 
     if (level > 0) {
+        let parentDir = cur && cur.endsWith('/') ? cur.slice(0, -1) : cur;
+        parentDir = parentDir ? parentDir.split('/').slice(0, -1).join('/') + '/' : '/';
+
         const aWrap = document.createElement('a');
-        aWrap.href = '/index.html';
+        aWrap.href = normalizePath(parentDir);
         const item = document.createElement('li');
         item.className = 'sidebarItem';
         const img = document.createElement('img');
@@ -179,7 +186,6 @@ function genSideNav(level, cd, cur) {
         list.append(aWrap);
     });
 }
-
 
 function genSideButton(level) {
     let show = true;
