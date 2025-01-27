@@ -81,7 +81,7 @@ const skins = [
                 items: [
                     {
                         name: 'Idk V1',
-                        desc: 'I forgot💀💀💀 V1 (I made the original like 3 years ago',
+                        desc: 'I forgot💀💀💀 V1 (I made the original like 3 years ago)',
                     },
                 ]
             },
@@ -90,7 +90,7 @@ const skins = [
                 items: [
                     {
                         name: 'Idk V2',
-                        desc: 'I forgot💀💀💀 V2 (I made the original like 3 years ago',
+                        desc: 'I forgot💀💀💀 V2 (I made the original like 3 years ago)',
                     },
                 ]
             },
@@ -99,7 +99,7 @@ const skins = [
                 items: [
                     {
                         name: 'Idk V3',
-                        desc: 'I forgot💀💀💀 V3 (I made the original like 3 years ago',
+                        desc: 'I forgot💀💀💀 V3 (I made the original like 3 years ago)',
                     },
                 ]
             }
@@ -187,7 +187,7 @@ const skins = [
                 items: [
                     {
                         name: 'Idk V1',
-                        desc: 'I forgot💀💀💀 V1 (I made the original like 3 years ago',
+                        desc: 'I forgot💀💀💀 V1 (I made the original like 3 years ago)',
                     },
                 ]
             },
@@ -196,7 +196,7 @@ const skins = [
                 items: [
                     {
                         name: 'Idk V2',
-                        desc: 'I forgot💀💀💀 V2 (I made the original like 3 years ago',
+                        desc: 'I forgot💀💀💀 V2 (I made the original like 3 years ago)',
                     },
                 ]
             },
@@ -205,7 +205,7 @@ const skins = [
                 items: [
                     {
                         name: 'Idk V3',
-                        desc: 'I forgot💀💀💀 V3 (I made the original like 3 years ago',
+                        desc: 'I forgot💀💀💀 V3 (I made the original like 3 years ago)',
                     },
                 ]
             }
@@ -407,7 +407,7 @@ function showSkin(id) {
 
 function genList() {
     let grid = document.getElementsByClassName("itemGrid")[0];
-    let sk = skins.slice().reverse();
+    let sk = skins
     sk.forEach(skin => {
         if (skin.ignore) {
 
