@@ -160,11 +160,7 @@ function generate() {
 		});
 	
 		lottietxtPlayer.addEventListener('complete', () => {
-			fadeOut(lottietxtPlayer, 500)
-			setTimeout(() => {
-				fadeIn(logotxtImg, 500)
-			  }, 500);
-			//skiptxtButton.remove();
+			lottietxtPlayer.freeze();
 		});
 	}	
 	{

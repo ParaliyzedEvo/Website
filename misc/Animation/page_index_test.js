@@ -131,27 +131,10 @@ function generate() {
 			setTimeout(() => {
 				lottietxtPlayer.play();
 			}, 1200);
-			skiptxtButton.style.display = 'block';
+			reloadButton.style.display = 'block';
 			skipButton.remove();
 		});
 		contentWrapper.appendChild(skipButton);
-	
-		const skiptxtButton = document.createElement('button');
-		skiptxtButton.textContent = "Next Animation";
-		skiptxtButton.style.position = "absolute";
-		skiptxtButton.style.top = "10px";
-		skiptxtButton.style.right = "10px";
-		skiptxtButton.style.zIndex = "20";
-		skiptxtButton.style.display = 'none';
-		skiptxtButton.addEventListener('click', () => {
-			fadeOut(lottietxtPlayer, 500)
-			setTimeout(() => {
-				fadeIn(logotxtImg, 500)
-			  }, 500);
-			reloadButton.style.display = 'block';
-			skiptxtButton.remove();
-		});
-		contentWrapper.appendChild(skiptxtButton);
 
 		const reloadButton = document.createElement('button');
 		reloadButton.textContent = "Reload Animations";
