@@ -291,7 +291,11 @@ function generate() {
 		const nonOsuSpotifyTracks = [
 			'https://open.spotify.com/embed/track/0RYHqnmtNRfbYxP6Dn8Vse?utm_source=generator',
 			'https://open.spotify.com/embed/track/1M6VHCglQ2PLWeAsyhgEUH?utm_source=generator',
-			'https://open.spotify.com/embed/track/3lLH0FlC2pYCeZEf05zKQn?utm_source=generator',
+			'https://open.spotify.com/embed/track/6SjxVgMjH3b3AI4wVviZfi?utm_source=generator',
+			'https://open.spotify.com/embed/track/3PM4cZMctdMliKHEFLXgLH?utm_source=generator',
+			'https://open.spotify.com/embed/track/7GX5flRQZVHRAGd6B4TmDO?utm_source=generator',
+			'https://open.spotify.com/embed/track/3WattXYKPa1N4sDqTvSrLS?utm_source=generator'
+
 		];
 
 		nonOsuSpotifyTracks.forEach(src => {
