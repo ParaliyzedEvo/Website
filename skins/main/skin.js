@@ -2,6 +2,7 @@ const skins = [
     {
         id: '01',
         name: 'Paraliyzed V24',
+        modes: ['osu', 'fruits', 'mania', 'takio'],
         date_start: '01-15-2025',
         date_end: 'Present',
         description: 'Skin that I made and main',
@@ -28,69 +29,69 @@ const skins = [
             // },
             {
                 name: 'Gameplay',
-                url: 'https://www.mediafire.com/file/0onab773qi0u6ox/Paraliyzed.osk/file',
+                url: 'https://www.mediafire.com/file/0onab773qi0u6ox/Paraliyzed.osk/file', // url to specific skin version
                 image_url: '../img/01.png',
-                isGameplay: true,
+                isGameplayVariant: false, // if true, previewer download button will say "download \"<name>\"" instead of "download skin"
             },
             {
                 name: 'Song select',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/menu.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
             {
                 name: 'Mod select',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/mods.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
             {
                 name: 'Ranking panel',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/ranking.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Pass',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/pass.jpg',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Fail',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/fail.jpg',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Spinner',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/spinner.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Skip',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/skip.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Catch',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/catch.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Mania',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/mania.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Takio',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/takio.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
         ],
         sources: [
@@ -222,6 +223,7 @@ const skins = [
     {
         id: '02',
         name: 'Paraliyzed DT V2',
+        modes: ['osu', 'fruits', 'mania', 'takio'],
         date_start: '01-15-2025',
         date_end: 'Present',
         description: 'Same as the main skin but it\'s for dt',
@@ -250,67 +252,67 @@ const skins = [
                 name: 'Gameplay',
                 url: 'https://www.mediafire.com/file/4cc4b02wdlm7bbl/Paraliyzed_DT.osk/file',
                 image_url: '../img/02.png',
-                isGameplay: true,
+                isGameplayVariant: false,
             },
             {
                 name: 'Song select',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/menu.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
             {
                 name: 'Mod select',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/mods.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
             {
                 name: 'Ranking panel',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/ranking.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Pass',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/pass.jpg',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Fail',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/fail.jpg',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Spinner',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/spinner.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Skip',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/skip.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Catch',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/catch.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Mania',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/mania.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Takio',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/takio.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
         ],
         sources: [
@@ -450,6 +452,7 @@ const skins = [
     {
         id: '03',
         name: 'Paraliyzed Instafade V5',
+        modes: ['osu', 'fruits', 'mania', 'takio'],
         date_start: '01-15-2025',
         date_end: 'Present',
         description: 'Same as the main skin but it\'s instafade',
@@ -478,67 +481,67 @@ const skins = [
                 name: 'Gameplay',
                 url: 'https://www.mediafire.com/file/cfnelqzyrknntgn/Paraliyzed_Instafade.osk/file',
                 image_url: '../img/03.png',
-                isGameplay: true,
+                isGameplayVariant: false,
             },
             {
                 name: 'Song select',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/menu.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
             {
                 name: 'Mod select',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/mods.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
             {
                 name: 'Ranking panel',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/ranking.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Pass',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/pass.jpg',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Fail',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/fail.jpg',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Spinner',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/spinner.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Skip',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/skip.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Catch',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/catch.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Mania',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/mania.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Takio',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/takio.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
         ],
         sources: [
@@ -670,6 +673,7 @@ const skins = [
     {
         id: '04',
         name: 'Paraliyzed with Reedkussy Cursor V7',
+        modes: ['osu', 'fruits', 'mania', 'takio'],
         date_start: '01-15-2025',
         date_end: 'Present',
         description: 'Same as the main skin but it has the Reedkussy Cursor',
@@ -698,67 +702,67 @@ const skins = [
                 name: 'Gameplay',
                 url: 'https://www.mediafire.com/file/v8ee5pcq7airsja/Paraliyzed_with_the_Reedkussyy_Cursor.osk/file',
                 image_url: '../img/04.png',
-                isGameplay: true,
+                isGameplayVariant: false,
             },
             {
                 name: 'Song select',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/menu.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
             {
                 name: 'Mod select',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/mods.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
             {
                 name: 'Ranking panel',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/ranking.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Pass',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/pass.jpg',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Fail',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/fail.jpg',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Spinner',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/spinner.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Skip',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/skip.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Catch',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/catch.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Mania',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/mania.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Takio',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/takio.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
         ],
         sources: [
@@ -890,6 +894,7 @@ const skins = [
     {
         id: '05',
         name: 'Paraliyzed with Whitecat Cursor V7',
+        modes: ['osu', 'fruits', 'mania', 'takio'],
         date_start: '01-15-2025',
         date_end: 'Present',
         description: 'Same as the main skin but it has the Whitecat Cursor',
@@ -918,67 +923,67 @@ const skins = [
                 name: 'Gameplay',
                 url: 'https://www.mediafire.com/file/11sq12ql8i2x3nk/Paraliyzed_with_the_Whitecat_Cursor.osk/file',
                 image_url: '../img/05.png',
-                isGameplay: true,
+                isGameplayVariant: false,
             },
             {
                 name: 'Song select',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/menu.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
             {
                 name: 'Mod select',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/mods.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
             {
                 name: 'Ranking panel',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/ranking.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Pass',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/pass.jpg',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Fail',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/fail.jpg',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Spinner',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/spinner.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Skip',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/skip.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Catch',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/catch.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Mania',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/mania.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Takio',
-                url: 'url',
+                url: 'null',
                 image_url: '../img/main/takio.png',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
         ],
         sources: [
@@ -1129,6 +1134,14 @@ function showSkin(id) {
         const h1 = document.createElement('h1');
         h1.innerText = skin.name;
         h1.className = 'pageTitle'
+        const modeIcons = document.createElement('div');
+        modeIcons.className = 'itemModes'
+        for (const mode of skin.modes) {
+            const img = document.createElement('img');
+            img.src = '/img/modes/' + mode + '.png'
+            img.className = 'itemMode'
+            modeIcons.append(img);
+        }
         const subtxt = document.createElement('p');
         subtxt.innerText = skin.date_start + ' --- ' + skin.date_end;
         if (skin.description) {
@@ -1138,7 +1151,7 @@ function showSkin(id) {
         const titleDiv = document.createElement('div');
         titleDiv.id = 'skinName';
         titleDiv.className = 'pageTitle'
-        titleDiv.append(h1, subtxt);
+        titleDiv.append(h1, modeIcons, subtxt);
         doc.append(titleDiv);
 
         const p1 = document.createElement("p");
@@ -1264,11 +1277,11 @@ function showSkin(id) {
         curprevimg = `../img/${image.image_url}`
         previewimg.src = curprevimg;
 
-        if (image.isGameplay) {
+        if (image.isGameplayVariant) {
             previewerButtonLink.href = image.url;
             previewerButtonLink.innerText = "Download \"" + image.name + '"';
         } else {
-            previewerButtonLink.href = skin.url;
+            previewerButtonLink.href = image.url ?? skin.url;
             previewerButtonLink.innerText = "Download Skin";
         }
         previewer.style.display = 'block';
@@ -1313,6 +1326,14 @@ function genList() {
             const name = document.createElement('h2');
             name.className = 'itemName';
             name.innerText = skin.name
+            const modeIcons = document.createElement('div');
+            modeIcons.className = 'itemModes'
+            for (const mode of skin.modes) {
+                const img = document.createElement('img');
+                img.src = '/img/modes/' + mode + '.png'
+                img.className = 'itemMode'
+                modeIcons.append(img);
+            }
             const desc = document.createElement('p');
             desc.className = 'itemDescription'
             desc.innerText = skin.date_start + ' --- ' + skin.date_end;
@@ -1341,7 +1362,7 @@ function genList() {
             skPage.append(previewImg)
             div.append(skPage)
 
-            section.append(name, desc, dl, div);
+            section.append(name, desc, dl, div, modeIcons);
             grid.append(section);
         }
     })

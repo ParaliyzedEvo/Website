@@ -82,6 +82,11 @@ const defpages = [
         icon: 'page.png',
     },
     {
+        name: 'Skin Dump',
+        url: 'skins/dump.html',
+        icon: 'page.png',
+    },
+    {
         name: 'Skin Websites',
         url: 'skins/skin-sites.html',
         icon: 'page.png',
@@ -226,7 +231,7 @@ function genSideButton(level) {
     }
     let ctn = document.getElementById('content');
     ctn.style.left = sidenav.offsetWidth + 'px';
-    show = displaySide(show, list, sidenav);
+    show = displaySide(show, list, sidenav, true);
     const section = document.getElementById('hamburger');
 
     // set up hamburger
@@ -249,12 +254,19 @@ function genSideButton(level) {
  * @param {boolean} show 
  * @param {HTMLULElement} list 
  * @param {HTMLDivElement} sidebar
+ * @param {boolean} isStart - if is when page first loads
  * @returns 
  */
-function displaySide(show, list, sidebar) {
+function displaySide(show, list, sidebar, isStart) {
     let ctn = document.getElementById('content');
     let button = document.getElementById('sidebarButton');
     let big = sidebar.offsetWidth + 3;
+    let r = document.querySelector(':root');
+    if(isStart){
+        r.style.setProperty('--sidebarAnim', '0ms ease-in-out');
+    } else {
+        r.style.setProperty('--sidebarAnim', '500ms ease-in-out');
+    }
     if (show) {
         sidebar.style.transform = `translateX(0)`
         ctn.style.transform = `translateX(0)`
@@ -415,5 +427,5 @@ function genTitle(level, cur) {
         item.draggable = false;
         main.append(item);
     });
-    main.style.marginLeft = '-20px'
+    //main.style.marginLeft = '-20px'
 }

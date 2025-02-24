@@ -2,6 +2,7 @@ const skins = [
     {
         id: '01',
         name: 'TUYU V2',
+        modes: ['osu'],
         date_start: '10-19-2022',
         date_end: 'Present',
         description: 'My tuyu skin I made for myself :p',
@@ -28,51 +29,51 @@ const skins = [
             // },
             {
                 name: 'Gameplay',
-                url: 'https://www.mediafire.com/file/nnq7lb5g295a6a1/-_%2523_TUYU_%2523_-.osk/file',
+                url: 'https://www.mediafire.com/file/nnq7lb5g295a6a1/-_%2523_TUYU_%2523_-.osk/file', // url to specific skin version
                 image_url: '../img/06.jpg',
-                isGameplay: true,
+                isGameplayVariant: false, // if true, previewer download button will say "download \"<name>\"" instead of "download skin"
             },
             {
                 name: 'Song select',
-                url: '',
+                url: 'null',
                 image_url: '../img/06/3 - T1JamCd.jpg',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
             {
                 name: 'Mod select',
-                url: '',
+                url: 'null',
                 image_url: '../img/06/2 - kQ6uUz7.jpg',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
             {
                 name: 'Ranking panel',
-                url: '',
+                url: 'null',
                 image_url: '../img/06/5 - JXg00Xs.jpg',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Pass',
-                url: '',
+                url: 'null',
                 image_url: '../img/06/1 - nbQGwiY.jpg',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Fail',
-                url: '',
+                url: 'null',
                 image_url: '../img/06/4 - oV1XqFg.jpg',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Spinner',
-                url: '',
+                url: 'null',
                 image_url: '../img/06/6 - CVFVzjI.jpg',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Skip',
-                url: '',
+                url: 'null',
                 image_url: '../img/06/7 - X5bITvk.jpg',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
         ],
         sources: [
@@ -108,6 +109,7 @@ const skins = [
     {
         id: '02',
         name: 'TUYU Instafade V2',
+        modes: ['osu'],
         date_start: '10-19-2022',
         date_end: 'Present',
         description: 'My tuyu skin I made for myself :p',
@@ -136,49 +138,49 @@ const skins = [
                 name: 'Gameplay',
                 url: 'https://www.mediafire.com/file/4grb7htryywi2n6/-_%2523_TUYU_Instafade_%2523_-.osk/file',
                 image_url: '../img/07.jpg',
-                isGameplay: true,
+                isGameplayVariant: false,
             },
             {
                 name: 'Song select',
-                url: '',
+                url: 'null',
                 image_url: '../img/07/2 - qww0QNU.jpg',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
             {
                 name: 'Mod select',
-                url: '',
+                url: 'null',
                 image_url: '../img/07/1 - MiMPSx6.jpg',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
             {
                 name: 'Ranking panel',
-                url: '',
+                url: 'null',
                 image_url: '../img/07/3 - n6LHbP6.jpg',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Pass',
-                url: '',
+                url: 'null',
                 image_url: '../img/07/7 - UWzVVSa.jpg',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Fail',
-                url: '',
+                url: 'null',
                 image_url: '../img/07/8 - oV1XqFg.jpg',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Spinner',
-                url: '',
+                url: 'null',
                 image_url: '../img/07/4 - hG9WKIm.jpg',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
 			{
                 name: 'Skip',
-                url: '',
+                url: 'null',
                 image_url: '../img/07/5 - RNo0LNr.jpg',
-                isGameplay: false,
+                isGameplayVariant: false,
             },
         ],
         sources: [
@@ -233,6 +235,14 @@ function showSkin(id) {
         const h1 = document.createElement('h1');
         h1.innerText = skin.name;
         h1.className = 'pageTitle'
+        const modeIcons = document.createElement('div');
+        modeIcons.className = 'itemModes'
+        for (const mode of skin.modes) {
+            const img = document.createElement('img');
+            img.src = '/img/modes/' + mode + '.png'
+            img.className = 'itemMode'
+            modeIcons.append(img);
+        }
         const subtxt = document.createElement('p');
         subtxt.innerText = skin.date_start + ' --- ' + skin.date_end;
         if (skin.description) {
@@ -242,7 +252,7 @@ function showSkin(id) {
         const titleDiv = document.createElement('div');
         titleDiv.id = 'skinName';
         titleDiv.className = 'pageTitle'
-        titleDiv.append(h1, subtxt);
+        titleDiv.append(h1, modeIcons, subtxt);
         doc.append(titleDiv);
 
         const p1 = document.createElement("p");
@@ -368,11 +378,11 @@ function showSkin(id) {
         curprevimg = `../img/${image.image_url}`
         previewimg.src = curprevimg;
 
-        if (image.isGameplay) {
+        if (image.isGameplayVariant) {
             previewerButtonLink.href = image.url;
             previewerButtonLink.innerText = "Download \"" + image.name + '"';
         } else {
-            previewerButtonLink.href = skin.url;
+            previewerButtonLink.href = image.url ?? skin.url;
             previewerButtonLink.innerText = "Download Skin";
         }
         previewer.style.display = 'block';
@@ -417,6 +427,14 @@ function genList() {
             const name = document.createElement('h2');
             name.className = 'itemName';
             name.innerText = skin.name
+            const modeIcons = document.createElement('div');
+            modeIcons.className = 'itemModes'
+            for (const mode of skin.modes) {
+                const img = document.createElement('img');
+                img.src = '/img/modes/' + mode + '.png'
+                img.className = 'itemMode'
+                modeIcons.append(img);
+            }
             const desc = document.createElement('p');
             desc.className = 'itemDescription'
             desc.innerText = skin.date_start + ' --- ' + skin.date_end;
@@ -445,7 +463,7 @@ function genList() {
             skPage.append(previewImg)
             div.append(skPage)
 
-            section.append(name, desc, dl, div);
+            section.append(name, desc, dl, div, modeIcons);
             grid.append(section);
         }
     })
