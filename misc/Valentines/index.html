@@ -48,7 +48,7 @@
                             var yesButtonRect = yesButton.getBoundingClientRect();
 
                             // Apply the same Y-position to the "No" button
-                            noButton.style.position = "fixed";
+                            noButton.style.position = "absolute";
                             noButton.style.left = "calc(50% + 82px)";  // Offset right
                             noButton.style.top = `${yesButtonRect.top}px - 4px`; // Perfect match to "Yes" button's Y-position
                             noButton.style.transform = "translate(-50%, 0)";  
