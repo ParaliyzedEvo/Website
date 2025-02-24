@@ -8,8 +8,7 @@ body {
 
 /* Position the "No" button absolutely within body */
 #noButton {
-    position: absolute;
-    margin-left: 150px;
+    position: fixed;
     transition: 0.5s;
     /* Smooth movement */
 }

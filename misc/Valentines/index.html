@@ -19,20 +19,33 @@
                     function nextYesPage() {
                         window.location.href = "yes.html";
                     }
+
                     function nextNoPage() {
-                var noButton = document.getElementById("noButton");
-                
-                // Get the dimensions of the viewport
-                var viewportWidth = window.innerWidth;
-                var viewportHeight = window.innerHeight;
-                
-                // Generate random positions within the viewport
-                var randomX = Math.floor(Math.random() * viewportWidth);
-                var randomY = Math.floor(Math.random() * viewportHeight);
-                
-                // Move the button to the random position
-                noButton.style.transform = "translate(" + randomX + "px, " + randomY + "px)";
-            }
+                        var noButton = document.getElementById("noButton");
+
+                        // Get viewport dimensions while considering button size
+                        var viewportWidth = window.innerWidth - noButton.offsetWidth;
+                        var viewportHeight = window.innerHeight - noButton.offsetHeight;
+
+                        // Generate random positions while ensuring visibility
+                        var randomX = Math.max(0, Math.min(viewportWidth, Math.floor(Math.random() * viewportWidth)));
+                        var randomY = Math.max(0, Math.min(viewportHeight, Math.floor(Math.random() * viewportHeight)));
+
+                        // Apply movement with smooth transition
+                        requestAnimationFrame(() => {
+                            noButton.style.left = `${randomX}px`;
+                            noButton.style.top = `${randomY}px`;
+                        });
+                    }
+
+                    document.addEventListener("DOMContentLoaded", function () {
+                        var noButton = document.getElementById("noButton");
+
+                        // Ensure the button starts in the correct position relative to the center
+                        noButton.style.left = "calc(50% + 40px)";  // Positioned to the right
+                        noButton.style.top = "651px";  // Centered vertically
+                        noButton.style.transition = "left 0.5s ease, top 0.5s ease"; // Smooth movement
+                    });
                 </script>
             </div>
         </div>
