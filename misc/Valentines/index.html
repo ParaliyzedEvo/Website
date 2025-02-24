@@ -40,11 +40,20 @@
 
                     document.addEventListener("DOMContentLoaded", function () {
                         var noButton = document.getElementById("noButton");
+                        var yesButton = document.getElementById("yesButton");
 
-                        // Ensure the button starts in the correct position relative to the center
-                        noButton.style.left = "calc(50% + 40px)";  // Positioned to the right
-                        noButton.style.top = "651px";  // Centered vertically
-                        noButton.style.transition = "left 0.5s ease, top 0.5s ease"; // Smooth movement
+                        // Wait for styles to be applied properly
+                        setTimeout(() => {
+                            // Get the exact Y-position of the "Yes" button
+                            var yesButtonRect = yesButton.getBoundingClientRect();
+
+                            // Apply the same Y-position to the "No" button
+                            noButton.style.position = "fixed";
+                            noButton.style.left = "calc(50% + 82px)";  // Offset right
+                            noButton.style.top = `${yesButtonRect.top}px - 4px`; // Perfect match to "Yes" button's Y-position
+                            noButton.style.transform = "translate(-50%, 0)";  
+                            noButton.style.transition = "left 0.5s ease, top 0.5s ease"; // Smooth movement
+                        }, 50); // Small delay to ensure layout is calculated correctly
                     });
                 </script>
             </div>
