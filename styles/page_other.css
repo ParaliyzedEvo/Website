@@ -72,6 +72,10 @@ a {
     border-radius: 5px;
 }
 
+.itemLink {
+    font-size: 16px
+}
+
 .itemLink:link,
 .itemLink:visited {
     color: var(--linkDefault);
