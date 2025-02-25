@@ -309,4 +309,11 @@ function generate() {
 			container.appendChild(nonOsuSpotify);
 		});
 	}
+	{
+		const spacer = document.createElement('div'); 
+		spacer.style.height = '69px';
+		spacer.style.width = '100%';
+		spacer.style.display = 'block';
+		ctn.appendChild(spacer);
+	}
 }
