@@ -443,6 +443,7 @@ function itemsLink(name, elem, items) {
             url.innerHTML = item.name;
             url.href = item.url;
             url.classList.add("itemLink")
+            url.style.fontSize = '16px'
             x.append(url);
         } else {
             x.innerHTML = item.name;
