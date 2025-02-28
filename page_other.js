@@ -327,12 +327,12 @@ const software = {
 const links = [
     {
         name: 'The 5 Stack GC Archive',
-        url: 'misc/link.html',
+        url: 'misc/gc',
         other: '',
     },
 	{
         name: 'My Youtube Playlist :)',
-        url: 'misc/link2.html',
+        url: 'misc/playlist',
         other: ' | For me and for me only lol',
     },
     {
@@ -342,12 +342,17 @@ const links = [
     },
 	{
         name: 'Minecraft 1.8.8 Online',
-        url: 'https://git.paraliyzed.net/Minecraft%201.8.8',
+        url: '/mc',
+        other: '',
+    },
+    {
+        name: 'Slope',
+        url: '/slope',
         other: '',
     },
 	{
         name: 'SAO Easter Egg Website',
-        url: 'https://sao.paraliyzed.net/',
+        url: 'sao',
         other: ' | Archive of the SAO 52.68.96.58 easter egg website',
     },
 	{
