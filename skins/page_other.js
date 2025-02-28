@@ -52,7 +52,7 @@ function generate() {
         modeIcons.className = 'itemModes'
         for (const mode of skin.modes) {
             const img = document.createElement('img');
-            img.src = './img/modes/' + mode + '.png'
+            img.src = '/img/modes/' + mode + '.png'
             img.className = 'itemMode'
             modeIcons.append(img);
         }
@@ -62,5 +62,12 @@ function generate() {
         main.append(a);
     })
     ctn.append(main)
+    {
+		const spacer = document.createElement('div'); 
+		spacer.style.height = "calc(152px + 69px)";
+		spacer.style.width = '100%';
+		spacer.style.display = 'block';
+		ctn.appendChild(spacer);
+	}
 
 }

@@ -413,6 +413,20 @@ function showSkin(id) {
             div.append(sourceCat);
         });
     }
+    {
+        const spacer = document.createElement('div'); 
+        spacer.style.height = "calc(152px + 69px)";
+        spacer.style.width = '100%';
+        spacer.style.display = 'block';
+    
+        // Append the spacer AFTER the #sources section
+        const sourcesSection = document.getElementById('sources');
+        if (sourcesSection && sourcesSection.parentNode) {
+            sourcesSection.parentNode.insertBefore(spacer, sourcesSection.nextSibling);
+        } else {
+            doc.appendChild(spacer); // Fallback if #sources isn't found
+        }
+    }
 }
 
 function genList() {
