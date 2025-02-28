@@ -4,41 +4,39 @@
 <html lang="en">
 
 <head>
-    <title>Skin Preview - Paraliyzed DT V2</title>
+    <title>Search page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="">
     <meta name="keywords" content="Paraliyzed_evo, Paraliyzed, paral, Evo">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Skin Preview - Paraliyzed DT V2" />
+    <meta property="og:title" content="Search page" />
+    <meta property="og:description" content="The home page for Paraliyzed_evo">
     <meta property="og:url" content="https://paraliyzed.net" />
     <meta property="og:image" content="https://paraliyzed.net/image/logo1.png" />
-    <link rel="icon" type="image/x-icon" href="/img/logo.jpg" />
-    <link rel="stylesheet" href="/styles/base.css">
-    <link rel="stylesheet" href="/styles/skinlayout.css">
+    <link rel="icon" type="image/x-icon" href="img/logo.jpg" />
+    <link rel="stylesheet" href="styles/base.css">
 </head>
-
-<script src="/rootnav.js"></script>
-<script src="skin.js"></script>
-<script src="../skins.js"></script>
+<script src="rootnav.js"></script>
+<script src="page_search.js"></script>
 
 <body>
     <nav class="external" id="topbar">
         <div id="hamburger"></div>
-        <div id="socialLinks"></div>
+        <div id="socialLinks">
+        </div>
         <div id="addressBar"></div>
     </nav>
     
         <nav class="external" id="sidebar">
         </nav>
         <main id="content">
-            <section id="skin"></section>
-            <section id="sources"></section>
+
         </main>
 </body>
 <script>
-    genPage(2, 'skins/main', 'skins/main/02.html')
-    showSkin('02')
-    footer(2);
+    genPage(0, null, 'search.html')
+    generate();
+    footer(0);
 </script>
 
 </html>

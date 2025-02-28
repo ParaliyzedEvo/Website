@@ -52,8 +52,6 @@ function generate() {
     }
 	{
         const img = document.createElement('img');
-        img.width = 256;
-        img.height = 256;
         img.src = '/img/russian.png'
         img.classList.add('mainObject')
         ctn.append(img);

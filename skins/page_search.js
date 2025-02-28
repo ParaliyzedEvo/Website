@@ -10,6 +10,7 @@ function generate() {
     ctn.append(textin);
     loadSkins();
 }
+
 /**
  * 
  * @param {string} filter 
@@ -19,7 +20,7 @@ function loadSkins(filter) {
     ctn.innerHTML = ''
     const main = document.createElement('div');
     main.classList.add('itemGrid');
-    let skins = dumpSkins;
+    let skins = allSkins;
     if (true) {
         skins.sort((a, b) => {
             if (a.name.toLowerCase() < b.name.toLowerCase()) {
@@ -54,14 +55,14 @@ function loadSkins(filter) {
         h2.className = 'itemName';
         h2.innerText = skin.name;
         const img = document.createElement('img');
-        img.src = skin.image.includes('http') ? skin.image : skin.image;
+        img.src = skin.image.includes('http') ? skin.image : 'img/dump/' + skin.image;
         img.className = "itemPreviewImage"
 
         const modeIcons = document.createElement('div');
         modeIcons.className = 'itemModes'
         for (const mode of skin.modes) {
             const img = document.createElement('img');
-            img.src = '/img/modes/' + mode + '.png'
+            img.src = './img/modes/' + mode + '.png'
             img.className = 'itemMode'
             modeIcons.append(img);
         }

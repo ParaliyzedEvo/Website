@@ -4,87 +4,116 @@ const defpages = [
         name: 'Home',
         url: 'index.html',
         icon: 'dir.png',
+        description: "Main page"
     },
     {
         name: 'Portfolio',
         url: 'portfolio.html',
         icon: 'page.png',
+        description: "List of projects"
     },
     {
         name: 'Other',
         url: 'other.html',
         icon: 'page.png',
+        description: "Specs, peripherals, etc."
+    },
+    {
+        name: 'Search',
+        url: 'search.html',
+        icon: 'page.png',
+        description: "Access all pages"
     },
     // skins
     {
         name: 'osu! Skins',
         url: 'skins',
         icon: 'dir.png',
+        description: "osu! skins page"
     },
     {
         name: 'Paraliyzed Skins',
         url: 'skins/main',
         icon: 'dir.png',
+        description: "Main skins page"
     },
     {
         name: 'Paraliyzed V24',
         url: 'skins/main/01.html',
         icon: 'page.png',
+        description: "Skin preview"
     },
     {
         name: 'Paraliyzed DT v2',
         url: 'skins/main/02.html',
         icon: 'page.png',
+        description: "Skin preview"
     },
     {
         name: 'Paraliyzed Instafade V5',
         url: 'skins/main/03.html',
         icon: 'page.png',
+        description: "Skin preview"
     },
     {
         name: 'Paraliyzed with Reedkussy Cursor V7',
         url: 'skins/main/04.html',
         icon: 'page.png',
+        description: "Skin preview"
     },
     {
         name: 'Paraliyzed with Whitecat Cursor V7',
         url: 'skins/main/05.html',
         icon: 'page.png',
+        description: "Skin preview"
     },
     {
         name: 'Tuyu Skins',
         url: 'skins/tuyu',
         icon: 'dir.png',
+        description: "Tuyu skins page"
     },
     {
         name: 'Tuyu V2',
         url: 'skins/tuyu/01.html',
         icon: 'page.png',
+        description: "Skin preview"
     },
     {
         name: 'Tuyu Instafade V2',
         url: 'skins/tuyu/02.html',
         icon: 'page.png',
+        description: "Skin preview"
     },
     {
         name: 'Other Skins',
         url: 'skins/other.html',
         icon: 'page.png',
+        description: "Other skin list"
     },
     {
         name: 'Old Skin Versions',
         url: 'https://mega.nz/folder/C90EBYwQ#h06SCVZD9D2SnmYnrjjYjQ',
         icon: 'page.png',
+        description: "Old versions of both skin lines"
     },
     {
         name: 'Misc.zip',
         url: 'https://www.mediafire.com/file/xtbawklwnemgq2f/Misc.zip/file',
         icon: 'page.png',
+        description: "Random stuff for osu!skins"
     },
     {
         name: 'Skin Dump',
         url: 'skins/dump.html',
         icon: 'page.png',
+        description: "Dump of every skin I've ever used"
+    },
+    {
+        name: 'Skin search',
+        url: 'skins/search.html',
+        icon: 'page.png',
+        description: "Skin search page"
     },
     {
         name: 'Skin Websites',
@@ -96,26 +125,31 @@ const defpages = [
         name: 'Projects',
         url: 'projects',
         icon: 'dir.png',
+        description: "Project documentation"
     },
     {
         name: 'Conversions',
         url: 'projects/conversions',
         icon: 'page.png',
+        description: "Website for conversions"
     },
     {
         name: 'SSoB',
         url: 'projects/ssob_docs',
         icon: 'dir.png',
+        description: "SSoB documentation"
     },
     {
         name: 'Commands',
         url: 'projects/ssob_docs/commands.html',
         icon: 'page.png',
+        description: "SSoB command list"
     },
     {
         name: 'Types',
         url: 'projects/ssob_docs/types.html',
         icon: 'page.png',
+        description: "SSoB options"
     },
 ]
 
@@ -262,7 +296,7 @@ function displaySide(show, list, sidebar, isStart) {
     let button = document.getElementById('sidebarButton');
     let big = sidebar.offsetWidth + 3;
     let r = document.querySelector(':root');
-    if(isStart){
+    if (isStart) {
         r.style.setProperty('--sidebarAnim', '0ms ease-in-out');
     } else {
         r.style.setProperty('--sidebarAnim', '500ms ease-in-out');
@@ -388,7 +422,7 @@ function genTitle(level, cur) {
     for (let i = 0; i < level; i++) {
         subs += '../';
     }
-    if (subs == ''){
+    if (subs == '') {
         subs = './'
     }
     let arr = [
@@ -428,4 +462,75 @@ function genTitle(level, cur) {
         main.append(item);
     });
     //main.style.marginLeft = '-20px'
+}
+
+const footerItems = [
+    {
+        name: 'Licensed under the MIT license',
+        url: 'https://github.com/ParaliyzedEvo/Website/blob/main/LICENSE'
+    },
+    {
+        name: 'Email',
+        url: 'mailto:business@paraliyzed.net',
+    },
+    {
+        name: 'Credits',
+        url: 'CREDITS.md',
+    },
+]
+
+function footer(level) {
+    const main = document.querySelector('main');
+    let subs = '';
+    for (let i = 0; i < level; i++) {
+        subs += '../';
+    }
+    if (subs == '') {
+        subs = './'
+    }
+    const footer = document.createElement("footer");
+
+    // gen socials but text format + credits and main pages 
+    // +copyright
+    const ul = document.createElement('ul');
+    ul.id = "footerUl"
+    footerItems.forEach((item) => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = item.url;
+        if(item.url.startsWith("./")){
+            a.href = subs + item.url;
+        }
+        a.innerText = item.name
+        li.append(a);
+        ul.append(li);
+    })
+    footer.append(ul);
+    main.append(footer);
+
+    return;
+
+    // ---
+    // https://stackoverflow.com/a/2146905
+    let hasVScroll = document.body.scrollHeight > document.body.clientHeight;
+
+    // Get the computed style of the body element
+    let cStyle = document.body.currentStyle || window.getComputedStyle(document.body, "");
+
+    // Check the overflow and overflowY properties for "auto" and "visible" values
+    hasVScroll = cStyle.overflow == "visible"
+        || cStyle.overflowY == "visible"
+        || (hasVScroll && cStyle.overflow == "auto")
+        || (hasVScroll && cStyle.overflowY == "auto");
+    // ---
+
+    if (hasVScroll || main.scrollHeight <= main.clientHeight) {
+        main.removeChild(footer)
+        let move = 0;
+        for (let i = 0; i < main.children.length; i++) {
+            move += main.children.item(i).clientHeight
+        }
+        main.append(footer);
+        footer.style.marginTop = (main.clientHeight - move - footer.clientHeight) + 'px';
+    }
 }

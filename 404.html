@@ -4,33 +4,39 @@
 <html lang="en">
 
 <head>
-    <meta http-equiv="refresh" content="727; URL=index.html" />
     <title>Error 404</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="">
     <meta name="keywords" content="Paraliyzed_evo, Paraliyzed, paral, Evo">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Error 404" />
+    <meta property="og:title" content="Error" />
     <meta property="og:url" content="https://paraliyzed.net" />
     <meta property="og:image" content="https://paraliyzed.net/image/logo1.png" />
-    <link rel="icon" type="image/x-icon" href="/img/logo.jpg" />
+    <link rel="icon" type="image/x-icon" href="img/logo.jpg" />
     <link rel="stylesheet" href="/styles/base.css">
-    <link rel="stylesheet" href="/styles/index-style.css">
+    <link rel="stylesheet" href="/styles/page_index.css">
 </head>
-<script src="/rootnav.js"></script>
+<script src="rootnav.js"></script>
 
-<body onload="genPage(0, null, 'Error 404.html')">
+<body onload="genPage(0, null, '404.html')">
     <nav class="external" id="topbar">
         <div id="hamburger"></div>
         <div id="socialLinks">
         </div>
         <div id="addressBar"></div>
     </nav>
-    
-        <nav class="external" id="sidebar">
-        </nav>
-        <main id="content">
-            <h1 style="font-family: monospace; font-size: 48px;">ERROR 404 - The Requested page was not found</h1>
-            <h2 style="font-family: monospace; font-size: 36px;">Use the buttons on the left to find the page you were looking for</h2>
-        </main>
+
+    <nav class="external" id="sidebar">
+    </nav>
+    <main id="content">
+        <h1 style="font-family: monospace; font-size: 48px;">ERROR 404 - The Requested page was not found</h1>
+        <h2 style="font-family: monospace; font-size: 36px;">Use the buttons on the left to find the page you were
+            looking for</h2>
+    </main>
 </body>
+<script>
+    genPage(0, null, '404.html')
+    footer(0);
+</script>
+
 </html>

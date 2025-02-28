@@ -1,220 +1,3 @@
-const skins = [
-    {
-        id: '01',
-        name: 'TUYU V2',
-        modes: ['osu'],
-        date_start: '10-19-2022',
-        date_end: 'Present',
-        description: 'My tuyu skin I made for myself :p',
-        url: 'https://www.mediafire.com/folder/i8dbmo4kji8s6/TUYU+Skins',
-        video_url: 'https://www.youtube.com/embed/_xvM9tE7YoI',
-        images: [
-            // {
-            //     name: 'Song select',
-            //     url: 'url',
-            //     image_url: '15/screenshot1157.jpg',
-            //     isGameplay: false,
-            // },
-            // {
-            //     name: 'Mode select',
-            //     url: 'url',
-            //     image_url: '15/screenshot1158.jpg',
-            //     isGameplay: false,
-            // },
-            // {
-            //     name: 'Ranking panel',
-            //     url: 'url',
-            //     image_url: '15/screenshot1149.jpg',
-            //     isGameplay: false,
-            // },
-            {
-                name: 'Gameplay',
-                url: 'https://www.mediafire.com/file/nnq7lb5g295a6a1/-_%2523_TUYU_%2523_-.osk/file', // url to specific skin version
-                image_url: '../img/06.jpg',
-                isGameplayVariant: false, // if true, previewer download button will say "download \"<name>\"" instead of "download skin"
-            },
-            {
-                name: 'Song select',
-                url: 'null',
-                image_url: '../img/06/3 - T1JamCd.jpg',
-                isGameplayVariant: false,
-            },
-            {
-                name: 'Mod select',
-                url: 'null',
-                image_url: '../img/06/2 - kQ6uUz7.jpg',
-                isGameplayVariant: false,
-            },
-            {
-                name: 'Ranking panel',
-                url: 'null',
-                image_url: '../img/06/5 - JXg00Xs.jpg',
-                isGameplayVariant: false,
-            },
-			{
-                name: 'Pass',
-                url: 'null',
-                image_url: '../img/06/1 - nbQGwiY.jpg',
-                isGameplayVariant: false,
-            },
-			{
-                name: 'Fail',
-                url: 'null',
-                image_url: '../img/06/4 - oV1XqFg.jpg',
-                isGameplayVariant: false,
-            },
-			{
-                name: 'Spinner',
-                url: 'null',
-                image_url: '../img/06/6 - CVFVzjI.jpg',
-                isGameplayVariant: false,
-            },
-			{
-                name: 'Skip',
-                url: 'null',
-                image_url: '../img/06/7 - X5bITvk.jpg',
-                isGameplayVariant: false,
-            },
-        ],
-        sources: [
-            {
-                name: 'Images',
-                items: [
-                    {
-                        name: 'Idk V1',
-                        desc: 'I forgot💀💀💀 V1 (I made the original like 3 years ago)',
-                    },
-                ]
-            },
-            {
-                name: 'Audio',
-                items: [
-                    {
-                        name: 'Idk V2',
-                        desc: 'I forgot💀💀💀 V2 (I made the original like 3 years ago)',
-                    },
-                ]
-            },
-            {
-                name: 'Fonts',
-                items: [
-                    {
-                        name: 'Idk V3',
-                        desc: 'I forgot💀💀💀 V3 (I made the original like 3 years ago)',
-                    },
-                ]
-            }
-        ]
-    },
-    {
-        id: '02',
-        name: 'TUYU Instafade V2',
-        modes: ['osu'],
-        date_start: '10-19-2022',
-        date_end: 'Present',
-        description: 'My tuyu skin I made for myself :p',
-        url: 'https://www.mediafire.com/folder/i8dbmo4kji8s6/TUYU+Skins',
-        video_url: 'https://www.youtube.com/embed/XozH7aJFAKw',
-        images: [
-            // {
-            //     name: 'Song select',
-            //     url: 'url',
-            //     image_url: '15/screenshot1157.jpg',
-            //     isGameplay: false,
-            // },
-            // {
-            //     name: 'Mode select',
-            //     url: 'url',
-            //     image_url: '15/screenshot1158.jpg',
-            //     isGameplay: false,
-            // },
-            // {
-            //     name: 'Ranking panel',
-            //     url: 'url',
-            //     image_url: '15/screenshot1149.jpg',
-            //     isGameplay: false,
-            // },
-            {
-                name: 'Gameplay',
-                url: 'https://www.mediafire.com/file/4grb7htryywi2n6/-_%2523_TUYU_Instafade_%2523_-.osk/file',
-                image_url: '../img/07.jpg',
-                isGameplayVariant: false,
-            },
-            {
-                name: 'Song select',
-                url: 'null',
-                image_url: '../img/07/2 - qww0QNU.jpg',
-                isGameplayVariant: false,
-            },
-            {
-                name: 'Mod select',
-                url: 'null',
-                image_url: '../img/07/1 - MiMPSx6.jpg',
-                isGameplayVariant: false,
-            },
-            {
-                name: 'Ranking panel',
-                url: 'null',
-                image_url: '../img/07/3 - n6LHbP6.jpg',
-                isGameplayVariant: false,
-            },
-			{
-                name: 'Pass',
-                url: 'null',
-                image_url: '../img/07/7 - UWzVVSa.jpg',
-                isGameplayVariant: false,
-            },
-			{
-                name: 'Fail',
-                url: 'null',
-                image_url: '../img/07/8 - oV1XqFg.jpg',
-                isGameplayVariant: false,
-            },
-			{
-                name: 'Spinner',
-                url: 'null',
-                image_url: '../img/07/4 - hG9WKIm.jpg',
-                isGameplayVariant: false,
-            },
-			{
-                name: 'Skip',
-                url: 'null',
-                image_url: '../img/07/5 - RNo0LNr.jpg',
-                isGameplayVariant: false,
-            },
-        ],
-        sources: [
-            {
-                name: 'Images',
-                items: [
-                    {
-                        name: 'Idk V1',
-                        desc: 'I forgot💀💀💀 V1 (I made the original like 3 years ago)',
-                    },
-                ]
-            },
-            {
-                name: 'Audio',
-                items: [
-                    {
-                        name: 'Idk V2',
-                        desc: 'I forgot💀💀💀 V2 (I made the original like 3 years ago)',
-                    },
-                ]
-            },
-            {
-                name: 'Fonts',
-                items: [
-                    {
-                        name: 'Idk V3',
-                        desc: 'I forgot💀💀💀 V3 (I made the original like 3 years ago)',
-                    },
-                ]
-            }
-        ]
-    }
-]
-
 const whFactor = 25
 const width = 16 * whFactor;
 const height = 9 * whFactor;
@@ -222,7 +5,7 @@ const height = 9 * whFactor;
 function showSkin(id) {
 
     let doc = document.getElementById('skin');
-    let skin = skins.find(skin => skin.id === id);
+    let skin = tuyuSkins.find(skin => skin.id === id);
     /*     let header = document.getElementsByTagName('header');
         header.item(0).innerHTML = `
     <h1> ${skin.name}</h1>
@@ -279,8 +62,7 @@ function showSkin(id) {
         p1.className = "itemName";
         p1.innerText = "Youtube Preview";
         const iframe1 = document.createElement('iframe');
-        iframe1.width = width;
-        iframe1.height = height;
+        iframe1.className = "itemPreviewImage"
         iframe1.src = skin.video_url;
         iframe1.title = "Skin video preview";
         // iframe1.frameBorder = "0";
@@ -303,8 +85,7 @@ function showSkin(id) {
         const img1 = document.createElement('img');
         img1.src = `${image.image_url}`;
         img1.alt = "Skin screenshot - " + image.name;
-        img1.width = width;
-        img1.height = height;
+        img1.className = "itemPreviewImage"
         itemImage.append(p1, img1);
 
         img1.addEventListener('click', e => {
@@ -431,7 +212,7 @@ function showSkin(id) {
 
 function genList() {
     let grid = document.getElementsByClassName("itemGrid")[0];
-    let sk = skins
+    let sk = tuyuSkins
     sk.forEach(skin => {
         if (skin.ignore) {
 
@@ -471,8 +252,7 @@ function genList() {
             const previewImg = document.createElement('img');
             previewImg.src = '../img/' + skin.images[0].image_url;
             previewImg.alt = skin.name + ': ' + skin.images[0].name;
-            previewImg.width = width;
-            previewImg.height = height;
+            previewImg.className = "itemPreviewImage"
 
             skPage.append(previewImg)
             div.append(skPage)

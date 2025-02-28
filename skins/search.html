@@ -4,12 +4,12 @@
 <html lang="en">
 
 <head>
-    <title>Skin Preview - Paraliyzed DT V2</title>
+    <title>Skin search</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="">
     <meta name="keywords" content="Paraliyzed_evo, Paraliyzed, paral, Evo">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Skin Preview - Paraliyzed DT V2" />
+    <meta property="og:title" content="skin search" />
     <meta property="og:url" content="https://paraliyzed.net" />
     <meta property="og:image" content="https://paraliyzed.net/image/logo1.png" />
     <link rel="icon" type="image/x-icon" href="/img/logo.jpg" />
@@ -18,8 +18,8 @@
 </head>
 
 <script src="/rootnav.js"></script>
-<script src="skin.js"></script>
-<script src="../skins.js"></script>
+<script src="skins.js"></script>
+<script src="page_search.js"></script>
 
 <body>
     <nav class="external" id="topbar">
@@ -27,18 +27,27 @@
         <div id="socialLinks"></div>
         <div id="addressBar"></div>
     </nav>
-    
-        <nav class="external" id="sidebar">
-        </nav>
-        <main id="content">
-            <section id="skin"></section>
-            <section id="sources"></section>
-        </main>
+
+    <nav class="external" id="sidebar">
+    </nav>
+    <main id="content">
+        <div>
+            <div>
+                <h1 class="pageTitle">Skin search</h1>
+                <p class="pageTitleSubText">Search page for ALL skins on this website
+                </p>
+            </div>
+            <div id="filterinput" style="text-align: center;"></div>
+            <div id="skinshere">
+
+            </div>
+        </div>
+    </main>
 </body>
 <script>
-    genPage(2, 'skins/main', 'skins/main/02.html')
-    showSkin('02')
-    footer(2);
+    genPage(1, 'skins', 'skins/search.html')
+    generate()
+    footer(1);
 </script>
 
 </html>
