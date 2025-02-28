@@ -1,3 +1,5 @@
+Redirect 301 /mc https://git.paraliyzed.net/Minecraft%201.8.8.html
+Redirect 301 /sao https://sao.paraliyzed.net/
 ErrorDocument 404 /404.html
 ErrorDocument 403 /403.html
 Options +Indexes
