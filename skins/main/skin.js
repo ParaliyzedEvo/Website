@@ -236,7 +236,7 @@ function genList() {
                     skin.url;
             skPage.target = '_self';
             const previewImg = document.createElement('img');
-            previewImg.src = '../img/' + skin.images
+            previewImg.src = skin.images[0].image_url
             previewImg.alt = skin.name + ': ' + skin.images[0].name;
             previewImg.className = "itemPreviewImage"
 
