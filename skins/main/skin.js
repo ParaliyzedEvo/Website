@@ -194,16 +194,6 @@ function showSkin(id) {
             div.append(sourceCat);
         });
     }
-    {
-        const spacer = document.createElement('div'); 
-        spacer.style.height = "calc(152px + 69px)";
-        spacer.style.width = '100%';
-        spacer.style.display = 'block';
-        const sourcesSection = document.getElementById('sources');
-        if (sourcesSection && sourcesSection.parentNode) {
-            sourcesSection.parentNode.insertBefore(spacer, sourcesSection.nextSibling);
-        }
-    }
 }
 
 function genList() {
@@ -257,13 +247,6 @@ function genList() {
             grid.append(section);
         }
     })
-    {
-		const spacer = document.createElement('div'); 
-		spacer.style.height = "calc(152px + 69px)";
-		spacer.style.width = '100%';
-		spacer.style.display = 'block';
-		grid.appendChild(spacer);
-	}
 }
 
 function image(text) {
