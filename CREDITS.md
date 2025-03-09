@@ -13,9 +13,9 @@ osu! skin related credits are inside the skins page itself
 
 -   [Hamburger icons created by Lizel Arina - Flaticon](https://www.flaticon.com/free-icon/hamburger_7710488?term=hamburger&page=1&position=2&origin=search&related_id=7710488)
 
-### /img/main.png
+### /img/russian.png
 
--   Drawn by sbrstrkkdwmdr's friend
+-   From the anime [Alya Sometimes Hides Her Feelings in Russian](https://www.crunchyroll.com/series/G1XHJV0XM/alya-sometimes-hides-her-feelings-in-russian?srsltid=AfmBOopeI2gpBNHUWHKsRt5_dJZ5RGl0Q8tXEdHf5B2mqgXyD_JWwoGD)
 
 ### /img/social/
 
