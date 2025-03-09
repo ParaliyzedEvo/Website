@@ -13,7 +13,7 @@ const used = {
         src: bsrc + "python.svg"
     },
     ts: {
-        name: 'Typescript',
+        name: 'TypeScript',
         src: bsrc + "typescript.svg"
     },
 }

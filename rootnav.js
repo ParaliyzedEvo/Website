@@ -1,3 +1,4 @@
+let lightdark = 'dark';
 
 const defpages = [
     {
@@ -256,7 +257,7 @@ function genSideButton(level) {
         const sideButtonImgOffset = document.createElement('span');
         sideButtonImgOffset.id = 'sideButtonImgOffset'
         const sideButtonImg = document.createElement('img');
-        sideButtonImg.src = '/img/icons/sidebarButton.png';
+        sideButtonImg.src = `/img/icons/sidebarButton_${lightdark}.png`;
         sideButtonImg.id = 'sideButtonImg';
         sideButton.append(sideButtonImgOffset, sideButtonImg);
         sideButtonImg.draggable = false;
@@ -269,18 +270,43 @@ function genSideButton(level) {
     const section = document.getElementById('hamburger');
 
     // set up hamburger
-    const item = document.createElement('div');
-    item.className = 'socialItem';
-    const img = document.createElement('img');
-    img.src = subs + '/img/icons/hamburger.png';
-    img.className = 'socialItemImg';
-    item.append(img);
-    item.draggable = false;
-    img.draggable = false;
-    item.addEventListener('click', () => {
-        show = displaySide(show, list, sidenav);
-    });
-    section.append(item);
+    {
+        const item = document.createElement('div');
+        item.className = 'socialItem';
+        const img = document.createElement('img');
+        img.src = `/img/icons/hamburger_${lightdark}.png`;
+        img.className = 'socialItemImg';
+        item.append(img);
+        item.draggable = false;
+        img.draggable = false;
+        item.addEventListener('click', () => {
+            show = displaySide(show, list, sidenav);
+        });
+        section.append(item);
+    }
+    // light dark switch
+    {
+        const item = document.createElement('div');
+        item.className = 'socialItem';
+        const img = document.createElement('img');
+        img.src = `/img/icons/darklight_${lightdark}.png`;
+        img.className = 'socialItemImg';
+        item.append(img);
+        item.draggable = false;
+        img.draggable = false;
+        item.addEventListener('click', () => {
+            const allImages = document.getElementsByTagName('img')
+            if (lightdark == 'light') {
+                lightdark = 'dark';
+                setLightDarkMode('dark', allImages)
+            } else {
+                lightdark = 'light';
+                setLightDarkMode('light', allImages)
+            }
+
+        });
+        section.append(item);
+    }
 }
 
 /**
@@ -299,7 +325,9 @@ function displaySide(show, list, sidebar, isStart) {
     if (isStart) {
         r.style.setProperty('--sidebarAnim', '0ms ease-in-out');
     } else {
-        r.style.setProperty('--sidebarAnim', '500ms ease-in-out');
+        setTimeout(() => {
+            r.style.setProperty('--sidebarAnim', '500ms ease-in-out');
+        }, 600);
     }
     if (show) {
         sidebar.style.transform = `translateX(0)`
@@ -403,7 +431,7 @@ function genSocials(level) {
         item.className = 'socialItem';
         item.href = social.url;
         const img = document.createElement('img');
-        img.src = '/img/social/' + social.icon;
+        img.src = '/img/social/' + social.icon.replace('.png', `_${lightdark}.png`);
         img.className = 'socialItemImg';
         item.append(img)
         item.draggable = false;
@@ -466,16 +494,16 @@ function genTitle(level, cur) {
 
 const footerItems = [
     {
-        name: 'Licensed under the MIT license',
-        url: 'https://github.com/ParaliyzedEvo/Website/blob/main/LICENSE'
-    },
-    {
         name: 'Email',
         url: 'mailto:business@paraliyzed.net',
     },
     {
         name: 'Credits',
-        url: 'CREDITS.md',
+        url: 'CREDITS.html',
+    },
+    {
+        name: 'Licensed under the MIT license',
+        url: 'https://github.com/ParaliyzedEvo/Website/blob/main/LICENSE'
     },
 ]
 
@@ -498,7 +526,7 @@ function footer(level) {
         const li = document.createElement('li');
         const a = document.createElement('a');
         a.href = item.url;
-        if(item.url.startsWith("./")){
+        if (item.url.startsWith("./")) {
             a.href = subs + item.url;
         }
         a.innerText = item.name
@@ -532,5 +560,50 @@ function footer(level) {
         }
         main.append(footer);
         footer.style.marginTop = (main.clientHeight - move - footer.clientHeight) + 'px';
+    }
+}
+
+/**
+ * 
+ * @param {'light'|'dark'} changeTo 
+ * @param {HTMLImageElement[]} images 
+ */
+function setLightDarkMode(changeTo, images) {
+    const root_theme = document.querySelector(':root');
+
+    root_theme.style.setProperty('--bg-main', `var(--${changeTo}-bg-main)`);
+    root_theme.style.setProperty('--bg-title', `var(--${changeTo}-bg-title)`);
+    root_theme.style.setProperty('--bg-aside', `var(--${changeTo}-bg-aside)`);
+    root_theme.style.setProperty('--border', `var(--${changeTo}-border)`);
+    root_theme.style.setProperty('--basic-text', `var(--${changeTo}-basic-text)`);
+    root_theme.style.setProperty('--unimportant-text', `var(--${changeTo}-unimportant-text)`);
+    root_theme.style.setProperty('--highlight', `var(--${changeTo}-highlight)`);
+    root_theme.style.setProperty('--highlightAlt', `var(--${changeTo}-highlightAlt)`);
+
+    root_theme.style.setProperty('--clrs-blue', `var(--${changeTo}-clrs-blue)`);
+    root_theme.style.setProperty('--clrs-cyan', `var(--${changeTo}-clrs-cyan)`);
+    root_theme.style.setProperty('--clrs-green', `var(--${changeTo}-clrs-green)`);
+    root_theme.style.setProperty('--clrs-magenta', `var(--${changeTo}-clrs-magenta)`);
+    root_theme.style.setProperty('--clrs-red', `var(--${changeTo}-clrs-red)`);
+    root_theme.style.setProperty('--clrs-orange', `var(--${changeTo}-clrs-orange)`);
+    root_theme.style.setProperty('--clrs-yellow', `var(--${changeTo}-clrs-yellow)`);
+
+    for (const img of images) {
+        if (img.src.includes('_dark.png')) {
+            console.log(img.src)
+            img.src = img.src.replace('_dark.png', `_${changeTo}.png`)
+        }
+        if (img.src.includes('_light.png')) {
+            console.log(img.src)
+            img.src = img.src.replace('_light.png', `_${changeTo}.png`)
+        }
+        if (img.src.includes('_dark.svg')) {
+            console.log(img.src)
+            img.src = img.src.replace('_dark.svg', `_${changeTo}.svg`)
+        }
+        if (img.src.includes('_light.svg')) {
+            console.log(img.src)
+            img.src = img.src.replace('_light.svg', `_${changeTo}.svg`)
+        }
     }
 }
