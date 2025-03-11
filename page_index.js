@@ -203,11 +203,4 @@ function generate() {
 			container.appendChild(nonOsuSpotify);
 		});
 	}
-	{
-		const spacer = document.createElement('div'); 
-		spacer.style.height = "calc(152px + 69px)";
-		spacer.style.width = '100%';
-		spacer.style.display = 'block';
-		ctn.appendChild(spacer);
-	}
 }
