@@ -42,21 +42,124 @@ function generate() {
 		textElement.appendChild(templateText);
 		ctn.append(textElement);
 	}
-    {
-        const img = document.createElement('img')
-        img.src = '/img/logo_text.svg'
-        img.id = 'mainTitle'
-        img.classList.add('mainObject');
-        ctn.append(img);
-		img.draggable = false;
-    }
 	{
-        const img = document.createElement('img');
-        img.src = '/img/russian.png'
-        img.classList.add('mainObject')
-        ctn.append(img);
-		img.draggable = false;
-    }
+		function fadeOut(element, duration = 500) {
+			element.style.transition = `opacity ${duration}ms ease-out`;
+			element.style.opacity = 0;
+			requestAnimationFrame(() => {
+				setTimeout(() => {
+					element.style.display = 'none';
+				}, duration);
+			});
+		}
+		
+		function fadeIn(element, duration = 500, displayStyle = 'block') {
+			element.style.opacity = 0;
+			element.style.display = displayStyle;
+			element.style.transition = `opacity ${duration}ms ease-in`;
+			requestAnimationFrame(() => {
+				setTimeout(() => {
+					element.style.opacity = 1;
+				});
+			});
+		}
+
+		const contentWrapper = document.createElement('div');
+		contentWrapper.style.display = 'flex';
+		contentWrapper.style.justifyContent = 'center';
+		contentWrapper.style.alignItems = 'center';
+		contentWrapper.style.height = 'auto';
+		contentWrapper.style.position = 'relative';
+		contentWrapper.style.flexDirection = 'column';
+		ctn.appendChild(contentWrapper);
+	
+		const lottietxtPlayer = document.createElement('dotlottie-player');
+		lottietxtPlayer.setAttribute('preload', 'none');
+		lottietxtPlayer.id = 'lottietxtPlayer';
+		lottietxtPlayer.src = "https://git.paraliyzed.net/logotxt.json";
+		lottietxtPlayer.style.width = "auto";
+		lottietxtPlayer.style.height = "auto";
+		lottietxtPlayer.style.background = "transparent";
+		lottietxtPlayer.setAttribute('speed', "1");
+		lottietxtPlayer.setAttribute('direction', "1");
+		lottietxtPlayer.setAttribute('playMode', "normal");
+		lottietxtPlayer.style.opacity = '0';
+		lottietxtPlayer.style.zIndex = '20';
+		contentWrapper.appendChild(lottietxtPlayer);
+	
+		const lottiePlayer = document.createElement('dotlottie-player');
+		lottiePlayer.setAttribute('preload', 'none');
+		lottiePlayer.id = 'lottiePlayer';
+		lottiePlayer.src = "https://git.paraliyzed.net/logo.json";
+		lottiePlayer.style.width = "400px";
+		lottiePlayer.style.height = "400px";
+		lottiePlayer.style.background = "transparent";
+		lottiePlayer.setAttribute('speed', "0.5");
+		lottiePlayer.setAttribute('direction', "1");
+		lottiePlayer.setAttribute('playMode', "normal");
+		lottiePlayer.setAttribute('autoplay', "");
+		contentWrapper.appendChild(lottiePlayer);
+
+		const logotxtImg = document.createElement('img');
+		logotxtImg.src = '/img/logo_text.svg';
+		logotxtImg.id = 'mainTitle';
+		logotxtImg.classList.add('mainObject');
+		logotxtImg.style.display = 'none';
+		logotxtImg.style.zIndex = '20';
+		contentWrapper.appendChild(logotxtImg);
+		logotxtImg.draggable = false;
+	
+		const logoImg = document.createElement('img');
+		logoImg.src = '/img/russian.png';
+		logoImg.width = 256;
+		logoImg.height = 256;
+		logoImg.classList.add('mainObject');
+		logoImg.style.display = 'none';
+		contentWrapper.appendChild(logoImg);
+		logoImg.draggable = false;
+
+		const skipButton = document.createElement('button');
+		skipButton.classList.add('skipbutton');
+		skipButton.innerText = 'Skip';
+		skipButton.style.position = 'absolute';
+		skipButton.style.top = '20px';
+		skipButton.style.right = '20px';
+		skipButton.style.padding = '10px 20px';
+		skipButton.style.fontSize = '16px';
+		skipButton.style.cursor = 'pointer';
+		contentWrapper.appendChild(skipButton);
+
+		function skipAnimations() {
+			lottiePlayer.style.display = 'none';
+			lottietxtPlayer.style.display = 'none';
+			logoImg.style.display = 'block';
+			logoImg.style.opacity = '1';
+			logotxtImg.style.display = 'block';
+			logotxtImg.style.opacity = '1';
+			skipButton.remove();
+		}
+
+		skipButton.addEventListener('click', skipAnimations);
+
+		lottiePlayer.addEventListener('complete', () => {
+			fadeOut(lottiePlayer, 500);
+			setTimeout(() => {
+				fadeIn(logoImg, 500);
+			}, 500);
+			setTimeout(() => {
+				fadeIn(lottietxtPlayer, 1000);
+			}, 1500);
+			setTimeout(() => {
+				lottietxtPlayer.play();
+			}, 1200);
+			skipButton.style.display = 'none';
+			lottiePlayer.removeEventListener('complete', handleComplete);
+		});
+		lottietxtPlayer.addEventListener('complete', () => {
+			lottietxtPlayer.freeze();
+			lottietxtPlayer.removeEventListener('complete', handleComplete);
+		});
+	}
 	{
 		const textElement = document.createElement('div');
 		textElement.style.justifyContent = 'center';
