@@ -324,7 +324,6 @@ function displaySide(show, list, sidebar, isStart) {
     let r = document.querySelector(':root');
     if (isStart) {
         r.style.setProperty('--sidebarAnim', '0ms ease-in-out');
-    } else {
         setTimeout(() => {
             r.style.setProperty('--sidebarAnim', '500ms ease-in-out');
         }, 600);
