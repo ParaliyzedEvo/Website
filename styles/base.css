@@ -494,3 +494,12 @@ footer {
 	color: var(--linkHighlight);
 	text-decoration: none
 }
+
+.skipbutton {
+    background-color: var(--bg-main);
+    color: var(--basic-text);
+    border: 1px solid var(--clrs-blue);
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: var(--sidebarAnim);
+}

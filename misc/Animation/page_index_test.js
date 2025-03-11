@@ -86,8 +86,8 @@ function generate() {
 		const lottiePlayer = document.createElement('dotlottie-player');
 		lottiePlayer.id = 'lottiePlayer';
 		lottiePlayer.src = "https://git.paraliyzed.net/logo.json";
-		lottiePlayer.style.width = "auto";
-		lottiePlayer.style.height = "auto";
+		lottiePlayer.style.width = "400px";
+		lottiePlayer.style.height = "400px";
 		lottiePlayer.style.background = "transparent";
 		lottiePlayer.setAttribute('speed', "0.5");
 		lottiePlayer.setAttribute('direction', "1");
@@ -95,7 +95,7 @@ function generate() {
 		lottiePlayer.setAttribute('autoplay', "");
 		lottiePlayer.setAttribute('controls', "");
 		contentWrapper.appendChild(lottiePlayer);
-	
+
 		const logotxtImg = document.createElement('img');
 		logotxtImg.src = '/img/logo_text.svg';
 		logotxtImg.id = 'mainTitle';
@@ -104,7 +104,7 @@ function generate() {
 		logotxtImg.style.zIndex = '20';
 		contentWrapper.appendChild(logotxtImg);
 		logotxtImg.draggable = false;
-	
+		
 		const logoImg = document.createElement('img');
 		logoImg.src = '/img/russian.png';
 		logoImg.width = 256;

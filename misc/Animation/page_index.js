@@ -86,8 +86,8 @@ function generate() {
 		const lottiePlayer = document.createElement('dotlottie-player');
 		lottiePlayer.id = 'lottiePlayer';
 		lottiePlayer.src = "https://git.paraliyzed.net/logo.json";
-		lottiePlayer.style.width = "auto";
-		lottiePlayer.style.height = "auto";
+		lottiePlayer.style.width = "400px";
+		lottiePlayer.style.height = "400px";
 		lottiePlayer.style.background = "transparent";
 		lottiePlayer.setAttribute('speed', "0.5");
 		lottiePlayer.setAttribute('direction', "1");
@@ -95,7 +95,7 @@ function generate() {
 		lottiePlayer.setAttribute('autoplay', "");
 		//lottiePlayer.setAttribute('controls', "");
 		contentWrapper.appendChild(lottiePlayer);
-	
+
 		const logotxtImg = document.createElement('img');
 		logotxtImg.src = '/img/logo_text.svg';
 		logotxtImg.id = 'mainTitle';
@@ -143,26 +143,47 @@ function generate() {
 		//	skiptxtButton.remove();
 		//});
 		//contentWrapper.appendChild(skiptxtButton);
-	
+
+		const skipButton = document.createElement('button');
+		skipButton.classList.add('skipbutton');
+		skipButton.innerText = 'Skip';
+		skipButton.style.position = 'absolute';
+		skipButton.style.top = '20px';
+		skipButton.style.right = '20px';
+		skipButton.style.padding = '10px 20px';
+		skipButton.style.fontSize = '16px';
+		skipButton.style.cursor = 'pointer';
+		contentWrapper.appendChild(skipButton);
+
+		function skipAnimations() {
+			lottiePlayer.style.display = 'none';
+			lottietxtPlayer.style.display = 'none';
+			logoImg.style.display = 'block';
+			logoImg.style.opacity = '1';
+			logotxtImg.style.display = 'block';
+			logotxtImg.style.opacity = '1';
+			skipButton.remove();
+		}
+
+		skipButton.addEventListener('click', skipAnimations);
+
 		lottiePlayer.addEventListener('complete', () => {
 			fadeOut(lottiePlayer, 500);
 			setTimeout(() => {
 				fadeIn(logoImg, 500);
-			  }, 500);
+			}, 500);
 			setTimeout(() => {
 				fadeIn(lottietxtPlayer, 1000);
 			}, 1500);
 			setTimeout(() => {
 				lottietxtPlayer.play();
 			}, 1200);
-			skiptxtButton.style.display = 'block';
-			//skipButton.remove();
+			skipButton.style.display = 'none';
 		});
-	
 		lottietxtPlayer.addEventListener('complete', () => {
 			lottietxtPlayer.freeze();
 		});
-	}	
+	}
 	{
 		const textElement = document.createElement('div');
 		textElement.style.justifyContent = 'center';
