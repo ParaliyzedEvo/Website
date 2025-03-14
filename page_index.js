@@ -79,6 +79,7 @@ function generate() {
 		lottietxtPlayer.src = "https://git.paraliyzed.net/logotxt.json";
 		lottietxtPlayer.style.width = "auto";
 		lottietxtPlayer.style.height = "auto";
+		lottietxtPlayer.classList.add('mainObject');
 		lottietxtPlayer.style.background = "transparent";
 		lottietxtPlayer.setAttribute('speed', "1");
 		lottietxtPlayer.setAttribute('direction', "1");
@@ -93,6 +94,7 @@ function generate() {
 		lottiePlayer.src = "https://git.paraliyzed.net/logo.json";
 		lottiePlayer.style.width = "400px";
 		lottiePlayer.style.height = "400px";
+		lottiePlayer.classList.add('mainObject');
 		lottiePlayer.style.background = "transparent";
 		lottiePlayer.setAttribute('speed', "0.5");
 		lottiePlayer.setAttribute('direction', "1");
