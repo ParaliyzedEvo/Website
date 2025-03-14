@@ -19,10 +19,21 @@ osu! skin related credits are inside the skins page itself
 
 ### /img/social/
 
--   [github logo](https://github.com/logos)
 -   [Email icon by Freepik - Flaticon](https://www.flaticon.com/free-icon/email_542638?term=mail&page=1&position=4&origin=search&related_id=542638)
--   [osu logo](https://osu.ppy.sh/wiki/en/Brand_identity_guidelines)
--   [youtube logo](https://www.youtube.com/intl/ALL_au/howyoutubeworks/resources/brand-resources/#logos-icons-and-colors)
+-   [osu! logo](https://osu.ppy.sh/wiki/en/Brand_identity_guidelines)
+-   [Github logo](https://github.com/logos)
+-   [Youtube logo](https://www.youtube.com/intl/ALL_au/howyoutubeworks/resources/brand-resources/#logos-icons-and-colors)
+-   [Discord Logo](https://discord.com/branding)
+-   [Instagram Logo](https://www.freepik.com/free-psd/instagram-application-logo_206467811.htm#fromView=keyword&page=1&position=26&uuid=95b671d1-3b5a-4c00-b917-641a39ef1319&query=Instagram+Logo+Png)
+-   [Musescore Logo](https://musescore.org/sites/musescore.org/files/2018-03/musescore_mu_mark.svg)
+-   [Reddit Logo](https://www.shareicon.net/reddit-black-606926)
+-   [Soundcloud Logo](https://press.soundcloud.com/media_kits/228462/)
+-   [Spotify Logo](https://newsroom.spotify.com/media-kit/logo-and-brand-assets/)
+-   [Steam Logo](https://freebiesupply.com/logos/steam-logo/)
+-   [Tiktok Logo](https://www.svgrepo.com/svg/365821/tiktok-logo-thin)
+-   [Tips Logo](https://github.com/sbrstrkkdwmdr/sbrstrkkdwmdr.github.io/blob/archive-v2/image/tip.png)
+-   [Twitch Logo](https://www.pngegg.com/en/png-fnwds)
+-   [Twitter Logo](https://www.stickpng.com/img/icons-logos-emojis/tech-companies/twitter-logo)
 
 ### /img/used/
 
