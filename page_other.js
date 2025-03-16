@@ -342,7 +342,12 @@ const links = [
     },
 	{
         name: 'Minecraft 1.8.8 Online',
-        url: '/mc',
+        url: '/mc_1.8',
+        other: '',
+    },
+    {
+        name: 'Minecraft 1.12.2 Online',
+        url: '/mc_1.12',
         other: '',
     },
     {
