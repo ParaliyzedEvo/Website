@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    scrollbar-color: #808080 #15171B;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    font-family: 'Oxanium';
+    scroll-behavior: smooth;
+}
+p {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h2 {
+    font-family: 'Russo One', sans-serif;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+header {
+    background: linear-gradient(to right bottom, #26262C, #15171B);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    cursor: default;
+}
+
+header img {
+    max-width: 50px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: -8px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3.6em;
+    cursor: default;
+    display: hidden;
+    color: white;
+    margin-bottom: 15px;
+}
+
+
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+    text-decoration-color: #8000ff;
+}
+
+nav {
+    background-color: #272727cc;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #8000ff;
+    text-decoration: underline;
+    text-decoration-color: #8000ff;
+}
+
+nav ul li a.activeNavLink {
+    color: #8000ff;
+	text-decoration: underline;
+}
+
+nav ul li a.subActiveNavLink {
+    color: #8000ff;
+	text-decoration: underline;
+}
+
+#linkDiscord:hover {
+    color: #6d7bf8;
+	text-decoration: underline;
+    text-decoration-color: #6d7bf8
+}
+#linkEmail:hover {
+	color: #fab7af;
+	text-decoration: underline;
+    text-decoration-color: #fab7af
+}
+#linkGithub:hover {
+    color: #8000ff;
+	text-decoration: underline;
+    text-decoration-color: #8000ff
+}
+#linkInstagram:hover {
+	color: #c182e3;
+	text-decoration: underline;
+    text-decoration-color: #c182e3
+}
+#linkMusescore:hover {
+	color: #1f73ba;
+	text-decoration: underline;
+    text-decoration-color: #1f73ba
+}
+#linkOsu:hover {
+    color: #ff66ab;
+	text-decoration: underline;
+    text-decoration-color: #ff66ab
+}
+#linkReddit:hover {
+	color: #cc4515;
+	text-decoration: underline;
+    text-decoration-color: #cc4515
+}
+#linkOther {
+    color: white;
+    position: relative;
+    text-decoration: none;
+}
+#linkOther:hover {
+    background: linear-gradient(to right, #00ffff, #00ff00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#linkOther::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+#linkOther:hover::after {
+    background: linear-gradient(to right, #00ffff, #00ff00);
+    height: 1px;
+}
+#linkSteam:hover {
+	color: #1d94e8;
+	text-decoration: underline;
+    text-decoration-color: #1d94e8
+}
+#linkTips:hover {
+	color: #ffd800;
+	text-decoration: underline;
+    text-decoration-color: #ffd800
+}
+#linkYoutube:hover {
+    color: #ff6666;
+	text-decoration: underline;
+    text-decoration-color: #ff6666
+}

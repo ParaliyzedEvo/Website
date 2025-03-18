@@ -1,0 +1,35 @@
+# Allow access to specific IPs
+<Files "hushhush GC.html">
+    Require ip 209.122.54.245 67.167.249.153 67.162.74.230 172.59.185.94
+</Files>
+
+<Files "hushhush.html">
+    Require ip 209.122.54.245 67.167.249.153 67.162.74.230 172.59.185.94
+</Files>
+
+<Files "May 7th only.html">
+    Require ip 209.122.54.245 67.167.249.153 67.162.74.230 172.59.185.94
+</Files>
+
+<Files "original.html">
+    Require ip 209.122.54.245 67.167.249.153 67.162.74.230 172.59.185.94
+</Files>
+
+<Files "idek.html">
+    Require ip 209.122.54.245 67.167.249.153 67.162.74.230 172.59.185.94
+</Files>
+
+<Files "idek GC.html">
+    Require ip 209.122.54.245 67.167.249.153 67.162.74.230 172.59.185.94
+</Files>
+
+<Files "yes.html">
+    Require ip 209.122.54.245 67.167.249.153 67.162.74.230 172.59.185.94
+</Files>
+
+<Files "no.html">
+    Require ip 209.122.54.245 67.167.249.153 67.162.74.230 172.59.185.94
+</Files>
+
+ErrorDocument 404 /error.html
+ErrorDocument 403 /error1.html
