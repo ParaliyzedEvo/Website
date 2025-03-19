@@ -1,8 +1,6 @@
 Redirect 301 /mc_1.8 https://git.paraliyzed.net/Minecraft%201.8.8.html
 Redirect 301 /mc_1.12 https://git.paraliyzed.net/Minecraft%201.12.2.html
 Redirect 301 /sao https://sao.paraliyzed.net/
-RewriteCond %{QUERY_STRING} ^i= [NC]
-RewriteRule ^(.*)$ /$1? [R=301,L]
 ErrorDocument 404 /404.html
 ErrorDocument 403 /403.html
 Options +Indexes
