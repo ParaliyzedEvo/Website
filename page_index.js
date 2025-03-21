@@ -283,6 +283,7 @@ function generate() {
 
 		const nonOsuSpotifyTracks = [
 			'https://open.spotify.com/embed/track/5tqZJUHEuqdN12RZVq2l9p?utm_source=generator',
+			'https://open.spotify.com/embed/track/74X2u8JMVooG2QbjRxXwR8?utm_source=generator',
 			'https://open.spotify.com/embed/track/0RYHqnmtNRfbYxP6Dn8Vse?utm_source=generator',
 			'https://open.spotify.com/embed/track/1M6VHCglQ2PLWeAsyhgEUH?utm_source=generator',
 			'https://open.spotify.com/embed/track/6SjxVgMjH3b3AI4wVviZfi?utm_source=generator',
