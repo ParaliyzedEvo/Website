@@ -41,6 +41,13 @@ const portfolioItems = [
         pixelArt: false,
     },
     {
+        name: 'Train Routes',
+        img: 'https://avatars.githubusercontent.com/u/107338855?v=4',
+        url: 'https://github.com/ParaliyzedEvo/Train-Routes',
+        used: [used.py],
+        pixelArt: false,
+    },
+    {
         name: 'Simulation',
         img: 'https://avatars.githubusercontent.com/u/107338855?v=4',
         url: 'https://github.com/ParaliyzedEvo/simulation',
