@@ -2,12 +2,14 @@ let lightdark = 'dark';
 
 const defpages = [
     {
+        img: '/img/logo.jpg',
         name: 'Home',
         url: 'index.html',
         icon: 'dir.png',
         description: "Main page"
     },
     {
+        img: '/img/icons/page.png',
         name: 'Portfolio',
         url: 'portfolio.html',
         icon: 'page.png',
@@ -20,6 +22,7 @@ const defpages = [
         description: "Specs, peripherals, etc."
     },
     {
+        img: '/img/icons/search_dark.png',
         name: 'Search',
         url: 'search.html',
         icon: 'page.png',
@@ -27,66 +30,77 @@ const defpages = [
     },
     // skins
     {
+        img: '/skins/img/main.jpg',
         name: 'osu! Skins',
         url: 'skins',
         icon: 'dir.png',
         description: "osu! skins page"
     },
     {
+        img: '/skins/img/main.jpg',
         name: 'Paraliyzed Skins',
         url: 'skins/main',
         icon: 'dir.png',
         description: "Main skins page"
     },
     {
+        img: '/skins/img/01.png',
         name: 'Paraliyzed V24',
         url: 'skins/main/01.html',
         icon: 'page.png',
         description: "Skin preview"
     },
     {
+        img: '/skins/img/02.png',
         name: 'Paraliyzed DT v2',
         url: 'skins/main/02.html',
         icon: 'page.png',
         description: "Skin preview"
     },
     {
+        img: '/skins/img/03.png',
         name: 'Paraliyzed Instafade V5',
         url: 'skins/main/03.html',
         icon: 'page.png',
         description: "Skin preview"
     },
     {
+        img: '/skins/img/04.png',
         name: 'Paraliyzed with Reedkussy Cursor V7',
         url: 'skins/main/04.html',
         icon: 'page.png',
         description: "Skin preview"
     },
     {
+        img: '/skins/img/05.png',
         name: 'Paraliyzed with Whitecat Cursor V7',
         url: 'skins/main/05.html',
         icon: 'page.png',
         description: "Skin preview"
     },
     {
+        img: '/skins/img/tuyu.jpg',
         name: 'Tuyu Skins',
         url: 'skins/tuyu',
         icon: 'dir.png',
         description: "Tuyu skins page"
     },
     {
+        img: '/skins/img/06.jpg',
         name: 'Tuyu V2',
         url: 'skins/tuyu/01.html',
         icon: 'page.png',
         description: "Skin preview"
     },
     {
+        img: '/skins/img/07.jpg',
         name: 'Tuyu Instafade V2',
         url: 'skins/tuyu/02.html',
         icon: 'page.png',
         description: "Skin preview"
     },
     {
+        img: '/skins/img/other.jpg',
         name: 'Other Skins',
         url: 'skins/other.html',
         icon: 'page.png',
@@ -105,6 +119,7 @@ const defpages = [
         description: "Random stuff for osu!skins"
     },
     {
+        img: '/skins/img/mixed.jpg',
         name: 'Skin Dump',
         url: 'skins/dump.html',
         icon: 'page.png',
@@ -135,12 +150,14 @@ const defpages = [
         description: "Website for conversions"
     },
     {
+        img: '/img/logo.jpg',
         name: 'SSoB',
         url: 'projects/ssob_docs',
         icon: 'dir.png',
         description: "SSoB documentation"
     },
     {
+        img: '/projects/ssob_docs/img/cmdlist.png',
         name: 'Commands',
         url: 'projects/ssob_docs/commands.html',
         icon: 'page.png',
