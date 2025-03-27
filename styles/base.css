@@ -579,7 +579,6 @@ footer {
 #niger {
 	font-family: 'Ubuntu', sans-serif;
 	color: var(--linkDefault);
-    font-size: 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -588,9 +587,17 @@ footer {
 #niger:hover,
 #niger:active {
 	font-family: 'Ubuntu', sans-serif;
-    font-size: 20px;
 	color: var(--linkHighlight);
 	text-decoration: none
+}
+
+.birthdays {
+    text-align: center;
+}
+
+.birthdays ol {
+    display: inline-block;
+    text-align: left;
 }
 
 .skipbutton {
