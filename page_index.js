@@ -297,6 +297,7 @@ function generate() {
 		const osuSpotifyTracks = [
 			'https://open.spotify.com/embed/track/47lKHyMERKqbCwYVw4ytTz?utm_source=generator',
 			'https://open.spotify.com/embed/track/2nKzhen7U2hJqZSKJcg8Ei?utm_source=generator',
+			'https://open.spotify.com/embed/track/3Un2d5mEp5yLqaITkb1mS8?utm_source=generator'
 		];
 
 		osuSpotifyTracks.forEach(src => {
