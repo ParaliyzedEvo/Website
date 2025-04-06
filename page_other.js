@@ -350,11 +350,6 @@ const links = [
         url: '/mc_1.12',
         other: '',
     },
-    {
-        name: 'Slope',
-        url: '/slope',
-        other: '',
-    },
 	{
         name: 'SAO Easter Egg Website',
         url: 'sao',
