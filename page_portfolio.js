@@ -34,6 +34,20 @@ const portfolioItems = [
         pixelArt: false,
     },
     {
+        name: 'osu!Radio',
+        img: 'https://raw.githubusercontent.com/ParaliyzedEvo/osu-Radio/refs/heads/main/Osu!RadioIcon.png',
+        url: 'https://github.com/ParaliyzedEvo/osu-Radio',
+        used: [used.py],
+        pixelArt: false,
+    },
+    {
+        name: 'Video to ASCII',
+        img: 'https://avatars.githubusercontent.com/u/107338855?v=4',
+        url: 'https://github.com/ParaliyzedEvo/Video-to-ASCII',
+        used: [used.py],
+        pixelArt: false,
+    },
+    {
         name: 'Crush',
         img: 'https://avatars.githubusercontent.com/u/107338855?v=4',
         url: 'https://github.com/ParaliyzedEvo/crush',
@@ -42,7 +56,7 @@ const portfolioItems = [
     },
     {
         name: 'Train Routes',
-        img: 'https://avatars.githubusercontent.com/u/107338855?v=4',
+        img: 'https://static.wikia.nocookie.net/scr-unofficial-main/images/f/f8/V1.9.5_SCR_GameLogo.jpg',
         url: 'https://github.com/ParaliyzedEvo/Train-Routes',
         used: [used.py],
         pixelArt: false,
