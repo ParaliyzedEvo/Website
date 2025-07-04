@@ -2,26 +2,6 @@ function generate() {
     const ctn = document.getElementById('content');
 	{
 		const textElement = document.createElement('div');
-		textElement.innerHTML = '<span style="color: var(--clrs-red);">(IMPORTANT)</span>';
-		textElement.style.display = 'flex';
-		textElement.style.justifyContent = 'center';
-		textElement.style.alignItems = 'center';
-		textElement.style.fontSize = '25px';
-		textElement.style.fontFamily = 'Ubuntu, sans-serif';
-		ctn.append(textElement);
-	}
-	{
-		const textElement = document.createElement('div');
-		textElement.innerHTML = 'Any issues regarding on the pages content or things not loading in properly or the styling is js off, I already know as I\'m redoing my entire website. Please bear with me.';
-		textElement.style.display = 'flex';
-		textElement.style.justifyContent = 'center';
-		textElement.style.alignItems = 'center';
-		textElement.style.fontSize = '18px';
-		textElement.style.fontFamily = 'Ubuntu, sans-serif';
-		ctn.append(textElement);
-	}
-	{
-		const textElement = document.createElement('div');
 		textElement.style.justifyContent = 'center';
 		textElement.style.alignItems = 'center';
 		textElement.style.fontSize = '12px';
@@ -112,7 +92,7 @@ function generate() {
 		logotxtImg.draggable = false;
 	
 		const logoImg = document.createElement('img');
-		logoImg.src = '/img/russian.png';
+		logoImg.src = '/img/lara.png';
 		logoImg.width = 256;
 		logoImg.height = 256;
 		logoImg.classList.add('mainObject');
@@ -236,6 +216,13 @@ function generate() {
                 url: '/search.html',
                 keepRatio: true,
                 pixel: false,
+            },
+			{
+                name: 'Song Dump',
+                img: '/img/social/spotify_dark.png',
+                url: 'miscc/song_dump.html',
+                keepRatio: true,
+                pixel: true,
             }
         ]
         const pagesDiv = document.createElement('div');
@@ -265,107 +252,78 @@ function generate() {
         margin.style.marginTop = '250px';
         ctn.append(margin, pagesDiv)
     }
-	{
-		const container = document.getElementById('content');
+}
 
-		const osuHeading = document.createElement('div');
-		osuHeading.innerHTML = 'Random osu! songs<br>';
-		osuHeading.style.marginTop = '100px';
-		osuHeading.style.textAlign = 'left';
-		container.appendChild(osuHeading);
-		
-		const osuSongs = [
-			{ src: '/img/DECO＊27 - 初嵐 feat. 初音ミク [L7BxD7HHWl4].mp3', type: 'audio/mpeg' },
-			{ src: '/img/Rabbit Hole ⧸ Pure Pure ＂ラビットホール＂ 4K Edit Full Version feat. @channelcaststation [zVRDUtJXCrQ].mp3', type: 'audio/mpeg' },
-			{ src: '/img/mesmerizer 25 people.mp3', type: 'audio/mpeg' },
-		];
+async function insertSongOfTheDay() {
+	const response = await fetch('https://git.paraliyzed.net/music.txt');
+	const text = await response.text();
 
-		osuSongs.forEach(song => {
-			const audioElement = document.createElement('audio');
-			audioElement.controls = true;
+	const links = text.split('\n').map(line => line.trim()).filter(Boolean);
+	const tried = new Set();
 
-			const sourceElement = document.createElement('source');
-			sourceElement.src = song.src;
-			sourceElement.type = song.type;
+	const itemGrid = document.querySelector('.itemGrid');
+	const itemYoutubePreview = document.createElement('section');
+	itemYoutubePreview.className = "item";
 
-			audioElement.appendChild(sourceElement);
-			audioElement.style.display = 'block';
-			audioElement.style.marginLeft = '0';
-			container.appendChild(audioElement);
-		});
+	const p1 = document.createElement("p");
+	p1.id = "youtubePreview";
+	p1.className = "itemName";
+	p1.innerText = "Song of the Day";
 
-		const osuSpotifyTracks = [
-			'https://open.spotify.com/embed/track/47lKHyMERKqbCwYVw4ytTz?utm_source=generator',
-			'https://open.spotify.com/embed/track/2nKzhen7U2hJqZSKJcg8Ei?utm_source=generator',
-			'https://open.spotify.com/embed/track/3Un2d5mEp5yLqaITkb1mS8?utm_source=generator'
-		];
+	itemYoutubePreview.appendChild(p1);
+	content.appendChild(itemYoutubePreview);
 
-		osuSpotifyTracks.forEach(src => {
-			const osuSpotify = document.createElement('iframe');
-			osuSpotify.style.borderRadius = '12px';
-			osuSpotify.src = src;
-			osuSpotify.width = '300';
-			osuSpotify.height = '152';
-			osuSpotify.frameBorder = '0';
-			osuSpotify.allowFullscreen = true;
-			osuSpotify.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
-			osuSpotify.loading = 'lazy';
-			osuSpotify.style.display = 'block';
-			osuSpotify.style.marginLeft = '0';
-			container.appendChild(osuSpotify);
-		});
-		container.appendChild(document.createElement('br'));
-		container.appendChild(document.createElement('br'));
-
-		const nonOsuHeading = document.createElement('div');
-		nonOsuHeading.innerHTML = 'Random non-osu! songs<br>';
-		nonOsuHeading.style.textAlign = 'left';
-		container.appendChild(nonOsuHeading);
-
-		const nonOsuSongs = [
-			{ src: '/img/CRAZY (feat. PinkPantheress) English Ver.).mp3', type: 'audio/mpeg' },
-		];
-
-		nonOsuSongs.forEach(song => {
-			const audioElement = document.createElement('audio');
-			audioElement.controls = true;
-
-			const sourceElement = document.createElement('source');
-			sourceElement.src = song.src;
-			sourceElement.type = song.type;
-
-			audioElement.appendChild(sourceElement);
-			audioElement.style.display = 'block';
-			audioElement.style.marginLeft = '0';
-			container.appendChild(audioElement);
-		});
-
-		const nonOsuSpotifyTracks = [
-			'https://open.spotify.com/embed/track/5tqZJUHEuqdN12RZVq2l9p?utm_source=generator',
-			'https://open.spotify.com/embed/track/74X2u8JMVooG2QbjRxXwR8?utm_source=generator',
-			'https://open.spotify.com/embed/track/0RYHqnmtNRfbYxP6Dn8Vse?utm_source=generator',
-			'https://open.spotify.com/embed/track/1M6VHCglQ2PLWeAsyhgEUH?utm_source=generator',
-			'https://open.spotify.com/embed/track/6SjxVgMjH3b3AI4wVviZfi?utm_source=generator',
-			'https://open.spotify.com/embed/track/3PM4cZMctdMliKHEFLXgLH?utm_source=generator',
-			'https://open.spotify.com/embed/track/7GX5flRQZVHRAGd6B4TmDO?utm_source=generator',
-			'https://open.spotify.com/embed/track/3WattXYKPa1N4sDqTvSrLS?utm_source=generator'
-
-		];
-
-		nonOsuSpotifyTracks.forEach(src => {
-			const nonOsuSpotify = document.createElement('iframe');
-			nonOsuSpotify.style.borderRadius = '12px';
-			nonOsuSpotify.src = src;
-			nonOsuSpotify.width = '300';
-			nonOsuSpotify.height = '152';
-			nonOsuSpotify.frameBorder = '0';
-			nonOsuSpotify.allowFullscreen = true;
-			nonOsuSpotify.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
-			nonOsuSpotify.loading = 'lazy';
-			nonOsuSpotify.style.textAlign = 'left';
-			nonOsuSpotify.style.display = 'block';
-			nonOsuSpotify.style.marginLeft = '0';
-			container.appendChild(nonOsuSpotify);
-		});
+	function seededRandom(seed) {
+		let x = Math.sin(seed) * 10000;
+		return x - Math.floor(x);
 	}
+
+	function getTodaySeed() {
+		const today = new Date();
+		const yyyy = today.getFullYear();
+		const mm = today.getMonth() + 1;
+		const dd = today.getDate();
+		return Number(`${yyyy}${mm.toString().padStart(2, '0')}${dd.toString().padStart(2, '0')}`);
+	}
+
+	async function tryEmbed() {
+		if (tried.size === links.length) {
+			p1.innerText = "No embeddable YouTube videos available today 😢";
+			return;
+		}
+
+		const available = links.filter(link => !tried.has(link));
+		const seed = getTodaySeed();
+		const randIndex = Math.floor(seededRandom(seed + tried.size) * available.length);
+		const randomLink = available[randIndex];
+		tried.add(randomLink);
+
+		const match = randomLink.match(/(?:youtu\.be\/|v=)([\w-]{11})/);
+		if (!match) {
+			tryEmbed();
+			return;
+		}
+		const embedUrl = `https://www.youtube.com/embed/${match[1]}`;
+
+		const iframe1 = document.createElement('iframe');
+		iframe1.className = "itemPreviewImage";
+		iframe1.src = embedUrl;
+		iframe1.title = "Song preview";
+		iframe1.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+		iframe1.allowFullscreen = true;
+
+		iframe1.onerror = () => {
+			console.warn(`Blocked video: ${randomLink}`);
+			iframe1.remove();
+			tryEmbed();
+		};
+
+		const oldIframe = itemYoutubePreview.querySelector('iframe');
+		if (oldIframe) oldIframe.remove();
+
+		itemYoutubePreview.appendChild(iframe1);
+	}
+
+	await tryEmbed();
+	itemGrid.appendChild(itemYoutubePreview);
 }

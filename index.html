@@ -40,7 +40,10 @@
 <script>
     genPage(0, null, 'index.html')
     generate();
-    footer(0);
+    (async () => {
+		await insertSongOfTheDay();
+		footer(0);
+	})();
 </script>
 
 </html>
