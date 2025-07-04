@@ -97,7 +97,15 @@ function renderSongs(filter = '') {
 }
 
 function createSongCard(song) {
-    const isSpotify = song.url && song.url.includes("open.spotify.com");
+    const isSpotify = song.url && (() => {
+        try {
+            const url = new URL(song.url);
+            const allowedHosts = ['open.spotify.com', 'embed.open.spotify.com'];
+            return allowedHosts.includes(url.host);
+        } catch (e) {
+            return false;
+        }
+    })();
     const isAudio = song.type && song.src;
 
     let card;
