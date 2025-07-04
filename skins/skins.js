@@ -1384,37 +1384,37 @@ const dumpSkins = [
 const allSkins = [];
 
 (() => {
-let usedNames = [];
-mainSkins.forEach(skin => {
-    if (!skin.ignore && !usedNames.includes(skin.name)) {
-        let newSkin = {
-            name: skin.name,
-            id: 'main_' + skin.id,
-            url: 'main/' + skin.id + '.html',
-            image: '../' + skin.images[0].image_url,
-            modes: skin.modes
-        };
-        allSkins.push(newSkin);
-        usedNames.push(skin.name);
-    } else {
-        console.log(skin.name);
-    }
-});
-tuyuSkins.forEach(skin => {
-    if (!skin.ignore && !usedNames.includes(skin.name)) {
-        let newSkin = {
-            name: skin.name,
-            id: 'main_' + skin.id,
-            url: 'tuyu/' + skin.id + '.html',
-            image: '../' + skin.images[0].image_url,
-            modes: skin.modes
-        };
-        allSkins.push(newSkin);
-        usedNames.push(skin.name);
-    } else {
-        console.log(skin.name);
-    }
-});
+    let usedNames = [];
+    mainSkins.forEach(skin => {
+        if (!skin.ignore && !usedNames.includes(skin.name)) {
+            let newSkin = {
+                name: skin.name,
+                id: 'main_' + skin.id,
+                url: 'main/' + skin.id + '.html',
+                image: '../' + skin.images[0].image_url,
+                modes: skin.modes
+            };
+            allSkins.push(newSkin);
+            usedNames.push(skin.name);
+        } else {
+            console.log(skin.name);
+        }
+    });
+    tuyuSkins.forEach(skin => {
+        if (!skin.ignore && !usedNames.includes(skin.name)) {
+            let newSkin = {
+                name: skin.name,
+                id: 'main_' + skin.id,
+                url: 'tuyu/' + skin.id + '.html',
+                image: '../' + skin.images[0].image_url,
+                modes: skin.modes
+            };
+            allSkins.push(newSkin);
+            usedNames.push(skin.name);
+        } else {
+            console.log(skin.name);
+        }
+    });
     otherSkins.forEach(skin => {
         if (!usedNames.includes(skin.name)) {
             let newSkin =

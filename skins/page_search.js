@@ -55,7 +55,7 @@ function loadSkins(filter) {
         h2.className = 'itemName';
         h2.innerText = skin.name;
         const img = document.createElement('img');
-        img.src = skin.image.includes('http') ? skin.image : 'img/' + skin.image;
+        img.src = skin.image.includes('http') ? skin.image : skin.image.replace(/^(\.\.\/)+/, '');
         img.className = "itemPreviewImage"
 
         const modeIcons = document.createElement('div');
