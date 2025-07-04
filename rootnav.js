@@ -16,6 +16,7 @@ const defpages = [
         description: "List of projects"
     },
     {
+        img: '/img/stuff/20250112_215407.jpg',
         name: 'Other',
         url: 'other.html',
         icon: 'page.png',
@@ -107,12 +108,14 @@ const defpages = [
         description: "Other skin list"
     },
     {
+        img: '/skins/img/main.jpg',
         name: 'Old Skin Versions',
         url: 'https://mega.nz/folder/C90EBYwQ#h06SCVZD9D2SnmYnrjjYjQ',
         icon: 'page.png',
         description: "Old versions of both skin lines"
     },
     {
+        img: '/skins/img/other.jpg',
         name: 'Misc.zip',
         url: 'https://www.mediafire.com/file/xtbawklwnemgq2f/Misc.zip/file',
         icon: 'page.png',
@@ -136,39 +139,19 @@ const defpages = [
         url: 'skins/skin-sites.html',
         icon: 'page.png',
     },
-    // projects
+    // Misc
     {
-        name: 'Projects',
-        url: 'projects',
+        name: 'Misc',
+        url: 'miscc',
         icon: 'dir.png',
-        description: "Project documentation"
+        description: ":P"
     },
     {
-        name: 'Conversions',
-        url: 'projects/conversions',
+        name: 'Song Dump',
+        url: 'miscc/song_dump.html',
         icon: 'page.png',
-        description: "Website for conversions"
-    },
-    {
-        img: '/img/logo.jpg',
-        name: 'SSoB',
-        url: 'projects/ssob_docs',
-        icon: 'dir.png',
-        description: "SSoB documentation"
-    },
-    {
-        img: '/projects/ssob_docs/img/cmdlist.png',
-        name: 'Commands',
-        url: 'projects/ssob_docs/commands.html',
-        icon: 'page.png',
-        description: "SSoB command list"
-    },
-    {
-        name: 'Types',
-        url: 'projects/ssob_docs/types.html',
-        icon: 'page.png',
-        description: "SSoB options"
-    },
+        description: "Song dump from my spotify playlist"
+    }
 ]
 
 /**
