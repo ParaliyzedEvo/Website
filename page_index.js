@@ -6,6 +6,23 @@ function generate() {
 		textElement.style.alignItems = 'center';
 		textElement.style.fontSize = '12px';
 		textElement.style.fontFamily = 'Ubuntu, sans-serif';
+
+		const adLink = document.createElement('a');
+		adLink.href = 'https://discord.gg/rkURq6wVTU';
+		adLink.target = '_blank';
+
+		const adImg = document.createElement('img');
+		adImg.src = '/img/horizontalbannerA.webp';
+		adImg.classList.add('mainObject');
+		adImg.style.width = '872px';
+		adImg.style.height = '108px';
+		adImg.style.maxWidth = 'none';
+		adImg.style.objectFit = 'unset';
+		adImg.style.display = 'block';
+		adImg.draggable = false;
+
+		adLink.appendChild(adImg);
+		ctn.appendChild(adLink);
 		
 		const usedText = document.createTextNode('Used ');
 		textElement.appendChild(usedText);
@@ -18,7 +35,7 @@ function generate() {
 		textElement.appendChild(anchor);
 		
 		const templateText = document.createTextNode(' as a template for mine');
-		textElement.style.marginTop = '23px';
+		textElement.style.marginTop = '7px';
 		textElement.appendChild(templateText);
 		ctn.append(textElement);
 	}
