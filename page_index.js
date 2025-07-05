@@ -256,7 +256,8 @@ function generate() {
             img.src = page.img;
             img.className = "itemPreviewImage"
             if (page.keepRatio) {
-                img.style.width = 'auto';
+                img.style.width = '256px';
+				img.style.height = '256px'
             }
             if (page.pixel) {
                 img.style.imageRendering = 'pixelated'
