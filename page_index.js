@@ -12,7 +12,7 @@ function generate() {
 		adLink.target = '_blank';
 
 		const adImg = document.createElement('img');
-		adImg.src = '/img/horizontalbannerA.webp';
+		adImg.src = '/img/horizontalbannerA.png';
 		adImg.classList.add('mainObject');
 		adImg.style.width = '872px';
 		adImg.style.height = '108px';
