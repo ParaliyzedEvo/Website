@@ -273,75 +273,85 @@ function generate() {
 }
 
 async function insertSongOfTheDay() {
-	const response = await fetch('https://git.paraliyzed.net/music.txt');
-	const text = await response.text();
+  const response = await fetch('https://git.paraliyzed.net/music.txt');
+  const text = await response.text();
 
-	const links = text.split('\n').map(line => line.trim()).filter(Boolean);
-	const tried = new Set();
+  const links = text.split('\n').map(line => line.trim()).filter(Boolean);
+  const tried = new Set();
 
-	const itemGrid = document.querySelector('.itemGrid');
-	const itemYoutubePreview = document.createElement('section');
-	itemYoutubePreview.className = "item";
+  const itemGrid = document.querySelector('.itemGrid');
+  const itemYoutubePreview = document.createElement('section');
+  itemYoutubePreview.className = "item";
 
-	const p1 = document.createElement("p");
-	p1.id = "youtubePreview";
-	p1.className = "itemName";
-	p1.innerText = "Song of the Day";
+  const p1 = document.createElement("p");
+  p1.id = "youtubePreview";
+  p1.className = "itemName";
+  p1.innerText = "Song of the Day";
 
-	itemYoutubePreview.appendChild(p1);
-	content.appendChild(itemYoutubePreview);
+  itemYoutubePreview.appendChild(p1);
+  itemGrid.appendChild(itemYoutubePreview);
 
-	function seededRandom(seed) {
-		let x = Math.sin(seed) * 10000;
-		return x - Math.floor(x);
-	}
+  function seededRandom(seed) {
+    let x = Math.sin(seed) * 10000;
+    return x - Math.floor(x);
+  }
 
-	function getTodaySeed() {
-		const today = new Date();
-		const yyyy = today.getFullYear();
-		const mm = today.getMonth() + 1;
-		const dd = today.getDate();
-		return Number(`${yyyy}${mm.toString().padStart(2, '0')}${dd.toString().padStart(2, '0')}`);
-	}
+  function getTodaySeed() {
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    const mm = today.getMonth() + 1;
+    const dd = today.getDate();
+    return Number(`${yyyy}${mm.toString().padStart(2, '0')}${dd.toString().padStart(2, '0')}`);
+  }
 
-	async function tryEmbed() {
-		if (tried.size === links.length) {
-			p1.innerText = "No embeddable YouTube videos available today 😢";
-			return;
-		}
+  async function canEmbed(videoId) {
+    const url = `https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${videoId}&format=json`;
+    try {
+      const res = await fetch(url, { method: "GET" });
+      return res.ok;
+    } catch {
+      return false;
+    }
+  }
 
-		const available = links.filter(link => !tried.has(link));
-		const seed = getTodaySeed();
-		const randIndex = Math.floor(seededRandom(seed + tried.size) * available.length);
-		const randomLink = available[randIndex];
-		tried.add(randomLink);
+  async function tryEmbed() {
+    if (tried.size === links.length) {
+      p1.innerText = "No embeddable YouTube videos available today 😢";
+      return;
+    }
 
-		const match = randomLink.match(/(?:youtu\.be\/|v=)([\w-]{11})/);
-		if (!match) {
-			tryEmbed();
-			return;
-		}
-		const embedUrl = `https://www.youtube.com/embed/${match[1]}`;
+    const available = links.filter(link => !tried.has(link));
+    const seed = getTodaySeed();
+    const randIndex = Math.floor(seededRandom(seed + tried.size) * available.length);
+    const randomLink = available[randIndex];
+    tried.add(randomLink);
 
-		const iframe1 = document.createElement('iframe');
-		iframe1.className = "itemPreviewImage";
-		iframe1.src = embedUrl;
-		iframe1.title = "Song preview";
-		iframe1.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-		iframe1.allowFullscreen = true;
+    const match = randomLink.match(/(?:youtu\.be\/|v=|embed\/)([\w-]{11})/);
+    if (!match) {
+      await tryEmbed();
+      return;
+    }
 
-		iframe1.onerror = () => {
-			console.warn(`Blocked video: ${randomLink}`);
-			iframe1.remove();
-			tryEmbed();
-		};
+    const videoId = match[1];
+    const embedUrl = `https://www.youtube.com/embed/${videoId}`;
 
-		const oldIframe = itemYoutubePreview.querySelector('iframe');
-		if (oldIframe) oldIframe.remove();
+    if (await canEmbed(videoId)) {
+      const iframe = document.createElement('iframe');
+      iframe.className = "itemPreviewImage";
+      iframe.src = embedUrl;
+      iframe.title = "Song preview";
+      iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+      iframe.allowFullscreen = true;
 
-		itemYoutubePreview.appendChild(iframe1);
-	}
+      const oldIframe = itemYoutubePreview.querySelector('iframe');
+      if (oldIframe) oldIframe.remove();
 
-	await tryEmbed();
-	itemGrid.appendChild(itemYoutubePreview);
+      itemYoutubePreview.appendChild(iframe);
+    } else {
+      console.warn(`Embedding disabled: ${randomLink}`);
+      await tryEmbed();
+    }
+  }
+
+  await tryEmbed();
 }
