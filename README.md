@@ -1,6 +1,6 @@
 # Actual Website
 [![CodeFactor](https://www.codefactor.io/repository/github/paraliyzedevo/website/badge)](https://www.codefactor.io/repository/github/paraliyzedevo/website)
-![Website](https://img.shields.io/badge/-Website-6a0dad?style=flat&logo=osu&logoColor=FFFFFF&labelColor=ff1493&color=6a0dad)
+[![Website](https://img.shields.io/badge/-Website-6a0dad?style=flat&logo=osu&logoColor=FFFFFF&labelColor=ff1493&color=6a0dad)](https://paraliyzed.net/)
 
 If there are any bugs/issues on my website, please open a new issue [here](https://github.com/ParaliyzedEvo/Website/issues) and I will help you a soon as I can.
 
