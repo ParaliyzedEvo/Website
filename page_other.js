@@ -341,11 +341,6 @@ const links = [
         other: ' | Js vibe ig',
     },
     {
-        name: 'osu!Challengers Card Generator API',
-        url: 'https://api.paraliyzed.net',
-        other: ' | Something for osu!Challengers aka the team I\'m working with',
-    },
-    {
         name: 'Dream PC',
         url: 'https://pcpartpicker.com/list/LjBBv4',
         other: ' | PC I\'m wanting to upgrade too but I\'m broke (pls donate money by using the tip link at the homepage)',
