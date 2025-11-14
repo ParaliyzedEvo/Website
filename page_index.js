@@ -324,15 +324,32 @@ async function insertSongOfTheDay() {
 	}
 	}
 
+  function waitForIframeError(iframe, onError) {
+    window.addEventListener("message", (event) => {
+      if (event.origin !== "https://www.youtube.com") return;
+
+      if (event.data?.event === "onError") {
+        const code = event.data.info;
+
+        // 150 / 151 / 153 = embed disabled
+        if ([150, 151, 153].includes(code)) {
+          onError(code);
+        }
+      }
+    });
+  }
+
   async function tryEmbed() {
     if (tried.size === links.length) {
       p1.innerText = "No embeddable YouTube videos available today 😢";
       return;
     }
 
-    const available = links.filter(link => !tried.has(link));
+    const available = links.filter((link) => !tried.has(link));
     const seed = getTodaySeed();
-    const randIndex = Math.floor(seededRandom(seed + tried.size) * available.length);
+    const randIndex = Math.floor(
+      seededRandom(seed + tried.size) * available.length
+    );
     const randomLink = available[randIndex];
     tried.add(randomLink);
 
@@ -343,25 +360,28 @@ async function insertSongOfTheDay() {
     }
 
     const videoId = match[1];
-    const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+    const embedUrl = `https://www.youtube.com/embed/${videoId}?enablejsapi=1`;
 
-    if (await canEmbed(videoId)) {
-      const iframe = document.createElement('iframe');
-      iframe.className = "itemPreviewImage";
-      iframe.src = embedUrl;
-      iframe.title = "Song preview";
-      iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-      iframe.allowFullscreen = true;
+    // Remove old iframe if exists
+    const oldIframe = itemYoutubePreview.querySelector("iframe");
+    if (oldIframe) oldIframe.remove();
 
-      const oldIframe = itemYoutubePreview.querySelector('iframe');
-      if (oldIframe) oldIframe.remove();
+    // Create iframe
+    const iframe = document.createElement("iframe");
+    iframe.className = "itemPreviewImage";
+    iframe.src = embedUrl;
+    iframe.title = "Song preview";
+    iframe.allow =
+      "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+    iframe.allowFullscreen = true;
 
-      itemYoutubePreview.appendChild(iframe);
-    } else {
-      console.warn(`Embedding disabled: ${randomLink}`);
+    itemYoutubePreview.appendChild(iframe);
+
+    waitForIframeError(iframe, async (err) => {
+      console.warn("YouTube embed failed with error", err);
+      iframe.remove();
       await tryEmbed();
-    }
+    });
   }
-
   await tryEmbed();
 }
