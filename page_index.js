@@ -304,44 +304,18 @@ async function insertSongOfTheDay() {
     return Number(`${yyyy}${mm.toString().padStart(2, '0')}${dd.toString().padStart(2, '0')}`);
   }
 
-  async function canEmbed(videoId) {
-	const url = `https://www.youtube.com/get_video_info?video_id=${videoId}&el=detailpage`;
+  let player;
+  const tag = document.createElement("script");
+  tag.src = "https://www.youtube.com/iframe_api";
+  document.head.appendChild(tag);
 
-	try {
-		const res = await fetch(url);
-		if (!res.ok) return false;
-
-		const text = await res.text();
-		const params = new URLSearchParams(text);
-
-		const playerResponse = JSON.parse(params.get("player_response"));
-		const status = playerResponse.playabilityStatus;
-
-		return status.status === "OK";
-	} catch (e) {
-		console.warn("Embed check failed:", e);
-		return false;
-	}
-	}
-
-  function waitForIframeError(iframe, onError) {
-    window.addEventListener("message", (event) => {
-      if (event.origin !== "https://www.youtube.com") return;
-
-      if (event.data?.event === "onError") {
-        const code = event.data.info;
-
-        // 150 / 151 / 153 = embed disabled
-        if ([150, 151, 153].includes(code)) {
-          onError(code);
-        }
-      }
-    });
-  }
+  window.onYouTubeIframeAPIReady = async function() {
+    await tryEmbed();
+  };
 
   async function tryEmbed() {
     if (tried.size === links.length) {
-      p1.innerText = "No embeddable YouTube videos available today 😢";
+      p1.innerText = "No embeddable YouTube videos available today";
       return;
     }
 
@@ -360,28 +334,45 @@ async function insertSongOfTheDay() {
     }
 
     const videoId = match[1];
-    const embedUrl = `https://www.youtube.com/embed/${videoId}?enablejsapi=1`;
 
-    // Remove old iframe if exists
-    const oldIframe = itemYoutubePreview.querySelector("iframe");
-    if (oldIframe) oldIframe.remove();
+    if (player && player.getIframe) {
+      player.getIframe().remove();
+    }
 
-    // Create iframe
-    const iframe = document.createElement("iframe");
-    iframe.className = "itemPreviewImage";
-    iframe.src = embedUrl;
-    iframe.title = "Song preview";
-    iframe.allow =
-      "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-    iframe.allowFullscreen = true;
+    const oldContainer = document.getElementById("youtubePlayerContainer");
+    if (oldContainer) {
+      oldContainer.remove();
+    }
 
-    itemYoutubePreview.appendChild(iframe);
+    const div = document.createElement("div");
+    div.id = "youtubePlayerContainer";
+    itemYoutubePreview.appendChild(div);
 
-    waitForIframeError(iframe, async (err) => {
-      console.warn("YouTube embed failed with error", err);
-      iframe.remove();
-      await tryEmbed();
+    player = new YT.Player("youtubePlayerContainer", {
+      height: "256",
+      width: "420",
+      videoId,
+      events: {
+        onError: async (event) => {
+          const code = event.data;
+          console.warn("YouTube API error:", code, "for video:", videoId);
+
+          if ([2, 5, 100, 101, 150, 151].includes(code)) {
+            if (player && player.getIframe()) {
+              player.getIframe().remove();
+            }
+            await tryEmbed();
+          }
+        },
+      },
+      playerVars: {
+        modestbranding: 1,
+        rel: 0,
+      },
     });
   }
-  await tryEmbed();
+
+  if (window.YT && window.YT.Player) {
+    await tryEmbed();
+  }
 }
