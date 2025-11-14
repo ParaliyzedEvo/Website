@@ -305,14 +305,24 @@ async function insertSongOfTheDay() {
   }
 
   async function canEmbed(videoId) {
-    const url = `https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${videoId}&format=json`;
-    try {
-      const res = await fetch(url, { method: "GET" });
-      return res.ok;
-    } catch {
-      return false;
-    }
-  }
+	const url = `https://www.youtube.com/get_video_info?video_id=${videoId}&el=detailpage`;
+
+	try {
+		const res = await fetch(url);
+		if (!res.ok) return false;
+
+		const text = await res.text();
+		const params = new URLSearchParams(text);
+
+		const playerResponse = JSON.parse(params.get("player_response"));
+		const status = playerResponse.playabilityStatus;
+
+		return status.status === "OK";
+	} catch (e) {
+		console.warn("Embed check failed:", e);
+		return false;
+	}
+	}
 
   async function tryEmbed() {
     if (tried.size === links.length) {
