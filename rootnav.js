@@ -151,6 +151,12 @@ const defpages = [
         url: 'miscc/song_dump.html',
         icon: 'page.png',
         description: "Song dump from my spotify playlist"
+    },
+    {
+        name: 'osu!Rank Guesser',
+        url: 'miscc/osuGuesser.html',
+        icon: 'page.png',
+        description: "osu!Rank Guesser (original by Thunderbirdo)"
     }
 ]
 
