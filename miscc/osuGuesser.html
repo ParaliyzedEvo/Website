@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Guess the osu! Rank</title>
+
+  <!-- …your existing meta tags… -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    body, h1, input, button {
+      font-family: 'Patrick Hand', cursive;
+    }
+
+    /* Base styles */
+    body {
+
+
+      /* replace or augment your background */
+      background: #fdfcf5;
+      background-image:
+        radial-gradient(circle, #ccc 1px, transparent 1px),
+        radial-gradient(circle, #ccc 1px, transparent 1px);
+      background-size: 40px 40px;
+      background-position: 0 0, 20px 20px;
+    
+      /* keep your existing transitions, colors, etc */
+      text-align: center;
+      padding: 2rem;
+      margin: 0;
+      color: #000;
+      transition: background 0.3s, color 0.3s;
+    }
+    h1 { margin-top: 0; }
+
+    /* Video player capped at 720p */
+    video {
+      width: 100%;
+      max-width: 1280px;
+      max-height: 720px;
+      height: auto;
+      border: 1px solid #ccc;
+      margin: 1rem 0;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+        /* Sketchy paper cut-out look */
+    video,
+    #guess-section,
+    #reload,
+    #guess-form {
+      border: 2px dashed #888;
+      border-radius: 8px;
+      box-shadow: 4px 4px 0 rgba(0,0,0,0.15);
+      background: #fff;
+      padding: 0.5rem;
+    }
+
+
+    /* Guess UI */
+    #guess-section {
+      margin-top: 1rem;
+    }
+    #guess-form input {
+      font-size: 1rem;
+      padding: 0.25rem;
+      width: 6rem;
+    }
+    #guess-form button {
+      font-size: 1rem;
+      margin-left: 0.5rem;
+    }
+    /* Hand-cut label style */
+    button {
+      border: 2px dotted #444;
+      background: #f8f8f0;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      transition: transform 0.1s;
+    }
+    button:active {
+      transform: translate(2px, 2px);
+    }
+
+    
+    #guess-result {
+      margin-top: 0.5rem;
+      font-weight: bold;
+    }
+    /* Sticky-note hint box */
+    #hints {
+      list-style: none;
+      padding: 0.5rem;
+      border: 2px solid #aaa;
+      background: #ffffd0;
+      max-width: 300px;
+      margin: 1rem auto;
+      text-align: left;
+    }
+    #hints li {
+      margin-bottom: 0.5rem;
+    }
+
+
+    /* Next replay button */
+    #reload {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+    }
+
+    /* Dark mode styles */
+    body.dark {
+      /* dark "paper" dots */
+      background: #121212;
+      background-image:
+        radial-gradient(circle, #444 1px, transparent 1px),
+        radial-gradient(circle, #444 1px, transparent 1px);
+      background-size: 40px 40px;
+      background-position: 0 0, 20px 20px;
+    
+      color: #e0e0e0;
+    }
+    
+
+    body.dark video,
+    body.dark #guess-section,
+    body.dark #reload,
+    body.dark #guess-form {
+      border-color: #bbb;          /* lighter dashed line on dark */
+      box-shadow: 4px 4px 0 rgba(255,255,255,0.15); /* subtle light shadow */
+      background: #1e1e1e;       /* a dark grey instead of white */
+    }
+    body.dark video {
+      border-color: #444;
+    }
+    body.dark input,
+    body.dark button {
+      background: #333;
+      color: #eee;
+      border: 1px solid #555;
+    }
+    body.dark #hints {
+      background: #4a3f1b;        /* darker "note" color */
+      border-color: #666;         /* softer border */
+    }
+    #hints li {
+      color: #ddd;                /* lighten the text a bit */
+    }
+
+
+    /* Dark mode toggle */
+    #dark-toggle {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: transparent;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button id="dark-toggle">🌙</button>
+  <h1>🎲 Guess the osu! Global Rank!</h1>
+  <div id="info">Loading… 🔄</div>
+  <video id="replay" controls></video>
+  <div id="link"></div>
+
+  <div id="guess-section">
+    <div id="guess-form">
+      <input id="guess-input" type="number" placeholder="Your guess" />
+      <button id="guess-btn">Submit</button>
+    </div>
+    <div id="guess-result"></div>
+    <ul id="hints"></ul>
+  </div>
+
+  <button id="reload" style="display:none;">Next Replay</button>
+
+  <script>
+    // ── CONFIG ─────────────────────────────────────────────────────────
+    const OSU_API_KEY = '3502d68845b1806d5ec8734605c838ed28682459';
+    const PROXY       = 'https://yes.paraliyzedevo.workers.dev/?url=';
+    const PAGE_SIZE   = 50;
+    const MAX_PAGES   = 10;
+    const MAX_TRIES   = 10;
+
+    // ── STATE ──────────────────────────────────────────────────────────
+    let actualRank, countryRank, playTimeHrs, topPlayPP;
+    let guessAttempts;
+
+    // ── DARK MODE ──────────────────────────────────────────────────────
+    const toggle = document.getElementById('dark-toggle');
+    function applyDarkMode() {
+      const on = localStorage.getItem('darkMode') === 'enabled';
+      document.body.classList.toggle('dark', on);
+      toggle.textContent = on ? '☀️' : '🌙';
+    }
+    toggle.addEventListener('click', () => {
+      const on = localStorage.getItem('darkMode') === 'enabled';
+      localStorage.setItem('darkMode', on ? 'disabled' : 'enabled');
+      applyDarkMode();
+    });
+    applyDarkMode();
+
+    // ── HELPERS ────────────────────────────────────────────────────────
+    async function fetchJson(url) {
+	  const res = await fetch(PROXY + encodeURIComponent(url));
+	  if (!res.ok) throw new Error('Proxy error ' + res.status);
+	  return JSON.parse(await res.text());
+	}
+    async function getDirectLink(id) {
+      try {
+        const res = await fetch(PROXY + encodeURIComponent(`https://apis.issou.best/dynlink/ordr/gen?id=${id}`));
+        if (!res.ok) return null;
+        return JSON.parse(await res.text()).url || null;
+      } catch {
+        return null;
+      }
+    }
+    function toleranceFor(rank) {
+      const length = String(rank).length;
+      switch (length) {
+        case 1: return 0;
+        case 2: return 10;
+        case 3: return 100;
+        case 4: return 1000;
+        case 5: return 10000;
+        case 6: return 100000;
+        default: return 500000;
+      }
+    }
+
+    // ── LOAD A NEW REPLAY ──────────────────────────────────────────────
+    async function loadRandom() {
+      guessAttempts = 0;
+      document.getElementById('info').textContent = 'Loading… 🔄';
+      document.getElementById('replay').src = '';
+      document.getElementById('link').innerHTML = '';
+      document.getElementById('guess-form').style.display = 'block';
+      document.getElementById('reload').style.display = 'none';
+      document.getElementById('guess-input').value = '';
+      document.getElementById('guess-result').textContent = '';
+      document.getElementById('hints').innerHTML = '';
+
+      try {
+        let meta, vidUrl;
+        for (let i = 0; i < MAX_TRIES; i++) {
+          const page = Math.floor(Math.random() * MAX_PAGES) + 1;
+          const data = await fetchJson(
+            `https://apis.issou.best/ordr/renders?` +
+            `pageSize=${PAGE_SIZE}&page=${page}&nobots`
+          );
+          const done = data.renders.filter(r => r.errorCode === 0 && r.progress === 'Done.');
+          if (!done.length) continue;
+          const pick = done[Math.floor(Math.random() * done.length)];
+          const link = await getDirectLink(pick.renderID);
+          if (link) { meta = pick; vidUrl = link; break; }
+        }
+        if (!meta) throw new Error('No playable replay found');
+
+        document.getElementById('info').textContent = `${meta.username} – ${meta.title}`;
+        document.getElementById('link').innerHTML = `<a href=\"${vidUrl}\" target=\"_blank\">🔗 Raw video</a>`;
+        
+        const videoEl = document.getElementById('replay');
+        videoEl.src = vidUrl;
+        
+        // Handle video load errors
+        videoEl.onerror = () => {
+          console.warn('Video failed to load, but continuing with game');
+          document.getElementById('info').textContent += ' (Video may not load)';
+        };
+
+        const u = await fetchJson(
+          `https://osu.ppy.sh/api/get_user?k=${OSU_API_KEY}&u=${encodeURIComponent(meta.username)}`
+        );
+        actualRank = parseInt(u[0].pp_rank, 10);
+        countryRank = parseInt(u[0].pp_country_rank, 10);
+        playTimeHrs = Math.round(parseInt(u[0].total_seconds_played, 10)/3600);
+        const best = await fetchJson(
+          `https://osu.ppy.sh/api/get_user_best?k=${OSU_API_KEY}&u=${encodeURIComponent(meta.username)}&limit=1`
+        );
+        topPlayPP = best.length ? Math.round(parseFloat(best[0].pp)) : null;
+
+        document.getElementById('guess-form').style.display = 'block';
+      } catch (err) {
+        console.error(err);
+        document.getElementById('info').textContent = 'Error, retrying…';
+        setTimeout(loadRandom, 3000);
+      }
+    }
+
+    // ── GUESS HANDLER ─────────────────────────────────────────────────
+    document.getElementById('guess-btn').onclick = () => {
+      const guess = parseInt(document.getElementById('guess-input').value.replace(/,/g, ''), 10);
+      const resEl = document.getElementById('guess-result');
+      const hintsEl = document.getElementById('hints');
+      if (isNaN(guess)) { resEl.textContent = 'Please enter a valid number!'; return; }
+
+      guessAttempts++;
+      const diff = Math.abs(guess - actualRank);
+      const tol = toleranceFor(actualRank);
+
+      if (diff <= tol) {
+        resEl.textContent = `✅ Correct! The actual rank was #${actualRank.toLocaleString()}`;
+        document.getElementById('reload').style.display = 'inline-block';
+        document.getElementById('guess-form').style.display = 'none';
+        return;
+      } else {
+        resEl.textContent = '❌ Wrong!';
+      }
+
+      const allHints = [
+        `Country Rank: #${countryRank.toLocaleString()}`,
+        `Total Play Time: ${playTimeHrs.toLocaleString()} hr${playTimeHrs > 1 ? 's' : ''}`,
+        topPlayPP != null ? `Top Play PP: ${topPlayPP.toLocaleString()} pp` : `Top play data unavailable`
+      ];
+      hintsEl.innerHTML = '';
+      for (let i = 0; i < Math.min(guessAttempts, allHints.length); i++) {
+        const li = document.createElement('li'); li.textContent = allHints[i]; hintsEl.appendChild(li);
+      }
+
+      if (guessAttempts > allHints.length) {
+        resEl.textContent = `💥 Out of hints! The actual rank was #${actualRank.toLocaleString()}`;
+        document.getElementById('reload').style.display = 'inline-block';
+        document.getElementById('guess-form').style.display = 'none';
+      }
+    };
+
+    // ── NEXT REPLAY ─────────────────────────────────────────────────────
+    document.getElementById('reload').onclick = loadRandom;
+
+    // ── INITIAL LOAD ───────────────────────────────────────────────────
+    loadRandom();
+  </script>
+</body>
+</html>
