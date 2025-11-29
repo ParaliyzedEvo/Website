@@ -277,13 +277,13 @@
         };
 
         const u = await fetchJson(
-          `https://paraliyzed.net/proxy.php?user=${encodeURIComponent(meta.username)}`
+          `proxy.php?user=${encodeURIComponent(meta.username)}`
         );
         actualRank = parseInt(u[0].pp_rank, 10);
         countryRank = parseInt(u[0].pp_country_rank, 10);
         playTimeHrs = Math.round(parseInt(u[0].total_seconds_played, 10)/3600);
         const best = await fetchJson(
-          `https://paraliyzed.net/proxy.php?user=${encodeURIComponent(meta.username)}&endpoint=get_user_best&limit=1`
+          `proxy.php?user=${encodeURIComponent(meta.username)}&endpoint=get_user_best&limit=1`
         );
         topPlayPP = best.length ? Math.round(parseFloat(best[0].pp)) : null;
 
