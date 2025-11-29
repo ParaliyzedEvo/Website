@@ -184,7 +184,6 @@
 
   <script>
     // ── CONFIG ─────────────────────────────────────────────────────────
-    const OSU_API_KEY = '';
     const PROXY       = 'https://yes.paraliyzedevo.workers.dev/?url=';
     const PAGE_SIZE   = 50;
     const MAX_PAGES   = 10;
@@ -210,13 +209,19 @@
 
     // ── HELPERS ────────────────────────────────────────────────────────
     async function fetchJson(url) {
-	  const res = await fetch(PROXY + encodeURIComponent(url));
-	  if (!res.ok) throw new Error('Proxy error ' + res.status);
-	  return JSON.parse(await res.text());
-	}
+      const res = await fetch(PROXY + encodeURIComponent(url));
+      if (!res.ok) throw new Error('Proxy error ' + res.status);
+      return JSON.parse(await res.text());
+    }
+    async function fetchOsu(params) {
+      const res = await fetch('proxy.php?' + params);
+      if (!res.ok) throw new Error('PHP proxy error ' + res.status);
+      return res.json();
+    }
     async function getDirectLink(id) {
       try {
-        const res = await fetch(PROXY + encodeURIComponent(`https://apis.issou.best/dynlink/ordr/gen?id=${id}`));
+        const url = `https://apis.issou.best/dynlink/ordr/gen?id=${id}`;
+        const res = await fetch(PROXY + encodeURIComponent(url));
         if (!res.ok) return null;
         return JSON.parse(await res.text()).url || null;
       } catch {
@@ -253,37 +258,39 @@
         for (let i = 0; i < MAX_TRIES; i++) {
           const page = Math.floor(Math.random() * MAX_PAGES) + 1;
           const data = await fetchJson(
-            `https://apis.issou.best/ordr/renders?` +
-            `pageSize=${PAGE_SIZE}&page=${page}&nobots`
+            `https://apis.issou.best/ordr/renders?pageSize=${PAGE_SIZE}&page=${page}&nobots`
           );
           const done = data.renders.filter(r => r.errorCode === 0 && r.progress === 'Done.');
           if (!done.length) continue;
           const pick = done[Math.floor(Math.random() * done.length)];
           const link = await getDirectLink(pick.renderID);
-          if (link) { meta = pick; vidUrl = link; break; }
+          if (link) {
+            meta = pick;
+            vidUrl = link;
+            break;
+          }
         }
         if (!meta) throw new Error('No playable replay found');
 
-        document.getElementById('info').textContent = `${meta.username} – ${meta.title}`;
-        document.getElementById('link').innerHTML = `<a href=\"${vidUrl}\" target=\"_blank\">🔗 Raw video</a>`;
-        
+        document.getElementById('info').textContent =
+          `${meta.username} – ${meta.title}`;
+        document.getElementById('link').innerHTML =
+          `<a href="${vidUrl}" target="_blank">🔗 Raw video</a>`;
         const videoEl = document.getElementById('replay');
         videoEl.src = vidUrl;
         
-        // Handle video load errors
         videoEl.onerror = () => {
-          console.warn('Video failed to load, but continuing with game');
+          console.warn('Video failed to load');
           document.getElementById('info').textContent += ' (Video may not load)';
         };
 
-        const u = await fetchJson(
-          `proxy.php?user=${encodeURIComponent(meta.username)}`
-        );
+        const u = await fetchOsu(`user=${encodeURIComponent(meta.username)}`);
         actualRank = parseInt(u[0].pp_rank, 10);
         countryRank = parseInt(u[0].pp_country_rank, 10);
-        playTimeHrs = Math.round(parseInt(u[0].total_seconds_played, 10)/3600);
-        const best = await fetchJson(
-          `proxy.php?user=${encodeURIComponent(meta.username)}&endpoint=get_user_best&limit=1`
+        playTimeHrs = Math.round(parseInt(u[0].total_seconds_played, 10) / 3600);
+
+        const best = await fetchOsu(
+          `user=${encodeURIComponent(meta.username)}&endpoint=get_user_best&limit=1`
         );
         topPlayPP = best.length ? Math.round(parseFloat(best[0].pp)) : null;
 
@@ -297,17 +304,26 @@
 
     // ── GUESS HANDLER ─────────────────────────────────────────────────
     document.getElementById('guess-btn').onclick = () => {
-      const guess = parseInt(document.getElementById('guess-input').value.replace(/,/g, ''), 10);
+      const guess = parseInt(
+        document.getElementById('guess-input').value.replace(/,/g, ''),
+        10
+      );
+
       const resEl = document.getElementById('guess-result');
       const hintsEl = document.getElementById('hints');
-      if (isNaN(guess)) { resEl.textContent = 'Please enter a valid number!'; return; }
+
+      if (isNaN(guess)) {
+        resEl.textContent = 'Please enter a valid number!';
+        return;
+      }
 
       guessAttempts++;
       const diff = Math.abs(guess - actualRank);
-      const tol = toleranceFor(actualRank);
+      const tol  = toleranceFor(actualRank);
 
       if (diff <= tol) {
-        resEl.textContent = `✅ Correct! The actual rank was #${actualRank.toLocaleString()}`;
+        resEl.textContent =
+          `✅ Correct! The actual rank was #${actualRank.toLocaleString()}`;
         document.getElementById('reload').style.display = 'inline-block';
         document.getElementById('guess-form').style.display = 'none';
         return;
@@ -318,15 +334,20 @@
       const allHints = [
         `Country Rank: #${countryRank.toLocaleString()}`,
         `Total Play Time: ${playTimeHrs.toLocaleString()} hr${playTimeHrs > 1 ? 's' : ''}`,
-        topPlayPP != null ? `Top Play PP: ${topPlayPP.toLocaleString()} pp` : `Top play data unavailable`
+        topPlayPP != null
+          ? `Top Play PP: ${topPlayPP.toLocaleString()} pp`
+          : `Top play data unavailable`
       ];
       hintsEl.innerHTML = '';
       for (let i = 0; i < Math.min(guessAttempts, allHints.length); i++) {
-        const li = document.createElement('li'); li.textContent = allHints[i]; hintsEl.appendChild(li);
+        const li = document.createElement('li');
+        li.textContent = allHints[i];
+        hintsEl.appendChild(li);
       }
 
       if (guessAttempts > allHints.length) {
-        resEl.textContent = `💥 Out of hints! The actual rank was #${actualRank.toLocaleString()}`;
+        resEl.textContent =
+          `💥 Out of hints! The actual rank was #${actualRank.toLocaleString()}`;
         document.getElementById('reload').style.display = 'inline-block';
         document.getElementById('guess-form').style.display = 'none';
       }
