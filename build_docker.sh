@@ -4,12 +4,12 @@
 docker build --no-cache -t website .
 
 # Check if the container exists
-if docker ps -a -q --filter "name=website-container" | grep -q .; then
+if [ "$(docker ps -aq -f name=website-container)" ]; then
     echo "Stopping and removing 'website-container'..."
-    docker stop website-container > /dev/null 2>&1
-    docker rm website-container > /dev/null 2>&1
+    docker stop website-container
+    docker rm website-container
 fi
 
 # Run the container
 echo "Running the container..."
-docker run -d -p 8080:80 --name website-container -v "$(pwd):/usr/local/apache2/htdocs" website:latest
+docker run -d -p 8080:80 --name website-container -v "$PWD:/var/www/html" website:latest
