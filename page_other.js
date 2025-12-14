@@ -355,6 +355,11 @@ const links = [
         url: '/mc_1.12',
         other: '',
     },
+    {
+        name: 'Unblocked Games',
+        url: 'learning.manutec.co',
+        other: ' | Link to unblocked games to play at school',
+    },
 	{
         name: 'SAO Easter Egg Website',
         url: 'sao',
