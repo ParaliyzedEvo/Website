@@ -10,6 +10,7 @@ function generate() {
 		const adLink = document.createElement('a');
 		adLink.href = 'https://discord.gg/rkURq6wVTU';
 		adLink.target = '_blank';
+    adLink.style.display = 'inline-block';
 
 		const adImg = document.createElement('img');
 		adImg.src = '/img/horizontalbannerA.png';
@@ -78,7 +79,7 @@ function generate() {
 		lottietxtPlayer.style.height = "auto";
 		lottietxtPlayer.classList.add('mainObject');
 		lottietxtPlayer.style.background = "transparent";
-		lottietxtPlayer.setAttribute('speed', "1");
+		lottietxtPlayer.setAttribute('speed', "2");
 		lottietxtPlayer.setAttribute('direction', "1");
 		lottietxtPlayer.setAttribute('playMode', "normal");
 		lottietxtPlayer.style.opacity = '0';
@@ -109,7 +110,7 @@ function generate() {
 		logotxtImg.draggable = false;
 	
 		const logoImg = document.createElement('img');
-		logoImg.src = '/img/lara.png';
+		logoImg.src = '/img/yoonchae.png';
 		logoImg.width = 256;
 		logoImg.height = 256;
 		logoImg.classList.add('mainObject');
@@ -141,17 +142,14 @@ function generate() {
 		skipButton.addEventListener('click', skipAnimations);
 
 		lottiePlayer.addEventListener('complete', () => {
-			fadeOut(lottiePlayer, 500);
 			setTimeout(() => {
-				fadeIn(logoImg, 500);
-			}, 500);
-			setTimeout(() => {
-				fadeIn(lottietxtPlayer, 1000);
-			}, 1500);
+				fadeIn(lottietxtPlayer, 500);
+			}, 0);
 			setTimeout(() => {
 				lottietxtPlayer.play();
-			}, 1200);
+			}, 10);
 			skipButton.style.display = 'none';
+      lottiePlayer.freeze();
 			lottiePlayer.removeEventListener('complete', handleComplete);
 		});
 		lottietxtPlayer.addEventListener('complete', () => {
