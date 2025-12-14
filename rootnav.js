@@ -384,6 +384,10 @@ const socials = [
         icon: 'osu.png',
         url: 'https://osu.ppy.sh/users/19637339',
     },
+    {
+        icon: 'challengers.png',
+        url: 'https://www.challengersnexus.com/profile/20186',
+    },
 	{
         icon: 'reddit.png',
         url: 'https://www.reddit.com/user/Paraliyzed_evo/',
