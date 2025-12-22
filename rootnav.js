@@ -16,6 +16,13 @@ const defpages = [
         description: "List of projects"
     },
     {
+        img: '/img/icons/page.png',
+        name: 'Collabs',
+        url: 'collabs.html',
+        icon: 'page.png',
+        description: "List of different osu!collabs I've been in"
+    },
+    {
         img: '/img/stuff/20250112_215407.jpg',
         name: 'Other',
         url: 'other.html',
