@@ -345,6 +345,11 @@ const links = [
         url: 'https://pcpartpicker.com/list/LjBBv4',
         other: ' | PC I\'m wanting to upgrade too but I\'m broke (pls donate money by using the tip link at the homepage)',
     },
+    {
+        name: 'Wishlisted PCs (Photocards)',
+        url: 'https://biasroom.com/users/paraliyzed_evo?tab=wishlist',
+        other: ' | PCs I\'m wanting to get too but I\'m broke (pls donate money by using the tip link at the homepage, or js deliver them to me for free lol)',
+    },
 	{
         name: 'Minecraft 1.8.8 Online',
         url: '/mc_1.8',
