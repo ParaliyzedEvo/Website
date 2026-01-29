@@ -368,6 +368,10 @@ function genPage(level, cd, cur) {
 
 const socials = [
     {
+        icon: 'biasroom.png',
+        url: 'https://biasroom.com/users/paraliyzed_evo'
+    },
+    {
         icon: 'discord.png',
         url: 'https://discord.gg/XVhf65BvUT'
     },
