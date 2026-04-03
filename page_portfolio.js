@@ -27,6 +27,13 @@ const portfolioItems = [
         pixelArt: false,
     },
     {
+        name: 'EvosOverlay',
+        img: 'https://github.com/ParaliyzedEvo/counters/blob/master/.github/images/sonataoverlay%20by%20paraliyzed_evo.png?raw=true',
+        url: 'https://github.com/ParaliyzedEvo/EvosOverlay',
+        used: [used.ts],
+        pixelArt: false,
+    },
+    {
         name: 'Website',
         img: 'img/portfolio/website.png',
         url: 'https://github.com/ParaliyzedEvo/website',
