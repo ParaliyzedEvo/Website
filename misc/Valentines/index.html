@@ -17,10 +17,23 @@
                 <button class="btn" id="noButton" onMouseOver="nextNoPage()">No</button>
                 <script>
                     function nextYesPage() {
+                        fetch('https://connect.paraliyzed.net/yes', { method: 'POST' });
                         window.location.href = "yes.html";
                     }
 
                     function nextNoPage() {
+                        const now = Date.now();
+                        // Reset counter if 10 seconds have passed
+                        if (now - noMessageWindowStart > 10000) {
+                            noMessageCount = 0;
+                            noMessageWindowStart = now;
+                        }
+                        
+                        if (noMessageCount < 5) {
+                            fetch('https://connect.paraliyzed.net/no', { method: 'POST' });
+                            noMessageCount++;
+                        }
+                        
                         var noButton = document.getElementById("noButton");
 
                         // Get viewport dimensions while considering button size
