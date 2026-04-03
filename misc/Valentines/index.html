@@ -16,8 +16,10 @@
                 <button class="btn" id="yesButton" onclick="nextYesPage()">Yes</button>
                 <button class="btn" id="noButton" onMouseOver="nextNoPage()">No</button>
                 <script>
-                    function nextYesPage() {
-                        fetch('https://connect.paraliyzed.net/yes', { method: 'POST' });
+                    async function nextYesPage() {
+                        try {
+                            await fetch('https://connect.paraliyzed.net/yes', { method: 'POST' });
+                        } catch (e) {}
                         window.location.href = "yes.html";
                     }
 
