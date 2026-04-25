@@ -21,7 +21,7 @@ const used = {
 const portfolioItems = [
     {
         name: 'Flowabot (fork)',
-        img: 'https://camo.githubusercontent.com/379986162bc5e11f493fdedf42a999c9171dcee108a5aa1d1abe35e7375d9be2/68747470733a2f2f692e696d6775722e636f6d2f576f4a344476652e706e67',
+        img: 'https://i.imgur.com/LJjnN1r.png',
         url: 'https://github.com/ParaliyzedEvo/flowabot',
         used: [used.ts, used.njs],
         pixelArt: false,
@@ -42,7 +42,7 @@ const portfolioItems = [
     },
     {
         name: 'osu!Radio',
-        img: 'https://raw.githubusercontent.com/ParaliyzedEvo/osu-Radio/refs/heads/main/Osu!RadioIcon.png',
+        img: 'https://raw.githubusercontent.com/ParaliyzedEvo/osu-Radio/refs/heads/main/osuRadio/Osu!RadioIcon.png',
         url: 'https://github.com/ParaliyzedEvo/osu-Radio',
         used: [used.py],
         pixelArt: false,
