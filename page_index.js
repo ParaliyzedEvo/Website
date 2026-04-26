@@ -374,3 +374,109 @@ async function insertSongOfTheDay() {
     await tryEmbed();
   }
 }
+
+async function insertAliveWidget() {
+    const STATUS_URL = 'https://connect.paraliyzed.net/status';
+    const OWNER_NAME = 'Paraliyzed_evo';
+
+    const widget = document.createElement('div');
+    widget.style.textAlign = 'center';
+    widget.style.fontFamily = 'Ubuntu, sans-serif';
+    widget.style.marginTop = '30px';
+    widget.style.marginBottom = '10px';
+
+    const title = document.createElement('h2');
+    title.style.fontSize = '1.2em';
+    title.style.fontWeight = 'normal';
+    title.style.marginBottom = '4px';
+    title.innerText = `Is ${OWNER_NAME} alive?`;
+    widget.appendChild(title);
+
+    const label = document.createElement('p');
+    label.style.fontSize = '12px';
+    label.style.marginBottom = '4px';
+    label.style.opacity = '0.7';
+    label.innerText = 'Last Check-in:';
+    widget.appendChild(label);
+
+    const dateEl = document.createElement('h1');
+    dateEl.style.fontSize = '2em';
+    dateEl.style.margin = '8px 0 4px';
+    widget.appendChild(dateEl);
+
+    const relEl = document.createElement('h2');
+    relEl.style.fontSize = '1em';
+    relEl.style.fontWeight = 'normal';
+    relEl.style.marginBottom = '10px';
+    widget.appendChild(relEl);
+
+    const statusEl = document.createElement('div');
+    statusEl.style.fontWeight = 'bold';
+    widget.appendChild(statusEl);
+
+    // Insert before the socialSection
+    const itemGrid = document.getElementById('socialSection');
+    if (itemGrid) {
+        itemGrid.parentElement.insertBefore(widget, itemGrid);
+    } else {
+        document.getElementById('content').appendChild(widget);
+    }
+
+    function formatDate(isoString) {
+        // isoString is UTC from the bot, convert to local time
+        const d = new Date(isoString + 'Z');
+        return d.toLocaleString();
+    }
+
+    function formatRelativeTime(isoString) {
+        const d = new Date(isoString + 'Z');
+        const diffMs = Date.now() - d;
+        const diffMins = Math.floor(diffMs / 60000);
+        const diffHours = Math.floor(diffMins / 60);
+        const diffDays = Math.floor(diffHours / 24);
+        const diffWeeks = Math.floor(diffDays / 7);
+
+        if (diffMins < 1) return 'just now';
+        if (diffMins < 60) return `${diffMins} minute${diffMins !== 1 ? 's' : ''} ago`;
+        if (diffHours < 24) return `${diffHours} hour${diffHours !== 1 ? 's' : ''} ago`;
+        if (diffDays < 7) return `${diffDays} day${diffDays !== 1 ? 's' : ''} ago`;
+        return `${diffWeeks} week${diffWeeks !== 1 ? 's' : ''} ago`;
+    }
+
+    function getStatus(isoString) {
+        const diffDays = (Date.now() - new Date(isoString + 'Z')) / 86400000;
+        if (diffDays > 28) return 'dead';
+        if (diffDays > 3) return 'warning';
+        return 'alive';
+    }
+
+    try {
+        const res = await fetch(STATUS_URL);
+        const data = await res.json();
+        const checkIn = data.last_online;
+
+        if (!checkIn) {
+            dateEl.innerText = 'No data yet';
+            return;
+        }
+
+        const status = getStatus(checkIn);
+        dateEl.innerText = formatDate(checkIn);
+        relEl.innerText = `(${formatRelativeTime(checkIn)})`;
+
+        if (status === 'alive') {
+            statusEl.style.color = 'var(--color-text-highlight, #7fff7f)';
+            statusEl.innerText = `${OWNER_NAME} is probably alive :D`;
+        } else if (status === 'warning') {
+            statusEl.style.color = 'orange';
+            statusEl.innerText = `Warning: ${OWNER_NAME} has not checked in for over 3 days ;w; try contact?`;
+        } else {
+            statusEl.style.color = 'red';
+            statusEl.innerText = `${OWNER_NAME} has not checked in for over 4 weeks and is probably dead TwT`;
+        }
+
+    } catch (e) {
+        dateEl.innerText = 'Could not fetch status';
+        console.error('Alive widget error:', e);
+    }
+}
