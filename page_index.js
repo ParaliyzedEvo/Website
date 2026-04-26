@@ -110,7 +110,7 @@ function generate() {
 		logotxtImg.draggable = false;
 	
 		const logoImg = document.createElement('img');
-		logoImg.src = '/img/yoonchae.png';
+		logoImg.src = '/img/aespa-ningning-lifes-too-short-phone-wallpaper-4k-uhdpaper.com-796@1@g.png';
 		logoImg.width = 256;
 		logoImg.height = 256;
 		logoImg.classList.add('mainObject');
