@@ -15,7 +15,7 @@ function generate() {
 		const adImg = document.createElement('img');
 		adImg.src = '/img/horizontalbannerA.png';
 		adImg.classList.add('mainObject');
-		adImg.style.width = '872px';
+		adImg.style.maxWidth = '872px';
 		adImg.style.height = '108px';
 		adImg.style.maxWidth = 'none';
 		adImg.style.objectFit = 'unset';

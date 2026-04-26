@@ -331,6 +331,15 @@ function genSideButton(level) {
  * @returns 
  */
 function displaySide(show, list, sidebar, isStart) {
+    if (window.innerWidth <= 700) {
+        if (show) {
+            sidebar.style.transform = 'translateX(0)';
+        } else {
+            sidebar.style.transform = `translateX(-${list.clientWidth}px)`;
+        }
+        return !show;
+    }   
+
     let ctn = document.getElementById('content');
     let button = document.getElementById('sidebarButton');
     let big = sidebar.offsetWidth + 3;

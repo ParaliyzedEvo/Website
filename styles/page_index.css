@@ -56,16 +56,71 @@
     }
 }
 
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {
+@media only screen and (max-width: 700px) {
     .mainObject {
-        width: 200px;
-        height: 200px;
+        width: min(200px, 90vw) !important;
+        height: min(200px, 90vw) !important;
+        max-width: 90vw !important;
     }
+
     #mainTitle {
-        width: 250px;
+        width: min(250px, 90vw) !important;
+        height: auto !important;
+    }
+
+    #lottiePlayer {
+        width: min(200px, 90vw) !important;
+        height: min(200px, 90vw) !important;
+    }
+
+    #lottietxtPlayer {
+        width: min(200px, 90vw) !important;
+        height: auto !important;
+    }
+
+    img.mainObject {
+        width: min(200px, 90vw) !important;
+        height: min(200px, 90vw) !important;
+    }
+
+    a[href*="discord"] > img.mainObject {
+        width: 100% !important;
+        height: auto !important;
+        max-width: calc(100vw - 30px) !important;
+    }
+
+    .skipbutton {
+        position: fixed !important;
+        top: 80px !important;
+        right: 15px !important;
+        z-index: 9999 !important;
+    }
+
+    .item:has(#youtubePlayerContainer) {
+        width: calc(100vw - 40px) !important;
+        padding: 5px !important;
+    }
+
+    #youtubePlayerContainer {
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 16 / 9 !important;
+        overflow: hidden !important;
+    }
+
+    #youtubePlayerContainer iframe {
+        width: 100% !important;
+        height: 100% !important;
+        position: relative !important;
+    }
+
+    .indexSocialItem {
+        margin: 0 10px !important;
+        height: 60px !important;
+        width: 60px !important;
+    }
+
+    .indexSocialItem img {
+        width: 60px !important;
     }
 }
