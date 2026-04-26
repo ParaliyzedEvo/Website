@@ -433,13 +433,12 @@ async function insertAliveWidget() {
     }
 
     function formatDate(isoString) {
-        // isoString is UTC from the bot, convert to local time
-        const d = new Date(isoString + 'Z');
+        const d = new Date(isoString);
         return d.toLocaleString();
     }
 
     function formatRelativeTime(isoString) {
-        const d = new Date(isoString + 'Z');
+        const d = new Date(isoString);
         const diffMs = Date.now() - d;
         const diffMins = Math.floor(diffMs / 60000);
         const diffHours = Math.floor(diffMins / 60);
@@ -454,7 +453,7 @@ async function insertAliveWidget() {
     }
 
     function getStatus(isoString) {
-        const diffDays = (Date.now() - new Date(isoString + 'Z')) / 86400000;
+        const diffDays = (Date.now() - new Date(isoString)) / 86400000;
         if (diffDays > 28) return 'dead';
         if (diffDays > 3) return 'warning';
         return 'alive';
