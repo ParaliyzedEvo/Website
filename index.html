@@ -41,6 +41,7 @@
     genPage(0, null, 'index.html')
     generate();
     (async () => {
+        await insertAliveWidget();
 		await insertSongOfTheDay();
 		footer(0);
 	})();
