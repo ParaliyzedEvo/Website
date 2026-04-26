@@ -159,6 +159,7 @@ function generate() {
 	}
 	{
 		const textElement = document.createElement('div');
+    textElement.id = 'bugReportText';
 		textElement.style.justifyContent = 'center';
 		textElement.style.alignItems = 'center';
 		textElement.style.fontSize = '14px';
@@ -176,7 +177,7 @@ function generate() {
 		
 		const templateText = document.createTextNode(' and I will reply as soon as I can');
 		textElement.style.marginTop = '15px';
-		textElement.style.marginBottom = '25px';
+		textElement.style.marginBottom = '5px';
 		textElement.appendChild(templateText);
 		ctn.append(textElement);
 	}
@@ -382,44 +383,53 @@ async function insertAliveWidget() {
     const widget = document.createElement('div');
     widget.style.textAlign = 'center';
     widget.style.fontFamily = 'Ubuntu, sans-serif';
-    widget.style.marginTop = '30px';
-    widget.style.marginBottom = '10px';
+    widget.style.marginBottom = '25px';
+    widget.style.marginTop = '10px';
+    widget.style.padding = '0px 24px';
+    widget.style.border = '1px solid var(--dark-border)';
+    widget.style.borderRadius = '12px';
+    widget.style.display = 'inline-block';
+    widget.style.minWidth = '260px';
+
+    const widgetWrapper = document.createElement('div');
+    widgetWrapper.style.textAlign = 'center';
+    widgetWrapper.appendChild(widget);
 
     const title = document.createElement('h2');
-    title.style.fontSize = '1.2em';
+    title.style.fontSize = '16px';
     title.style.fontWeight = 'normal';
-    title.style.marginBottom = '4px';
     title.innerText = `Is ${OWNER_NAME} alive?`;
     widget.appendChild(title);
 
     const label = document.createElement('p');
-    label.style.fontSize = '12px';
+    label.style.fontSize = '14px';
     label.style.marginBottom = '4px';
     label.style.opacity = '0.7';
     label.innerText = 'Last Check-in:';
     widget.appendChild(label);
 
     const dateEl = document.createElement('h1');
-    dateEl.style.fontSize = '2em';
-    dateEl.style.margin = '8px 0 4px';
+    dateEl.style.fontSize = '16px';
+    dateEl.style.margin = '8px 0 0';
     widget.appendChild(dateEl);
 
     const relEl = document.createElement('h2');
-    relEl.style.fontSize = '1em';
+    relEl.style.fontSize = '12px';
     relEl.style.fontWeight = 'normal';
-    relEl.style.marginBottom = '10px';
+    relEl.style.marginBottom = '4px';
     widget.appendChild(relEl);
 
     const statusEl = document.createElement('div');
     statusEl.style.fontWeight = 'bold';
+    statusEl.style.marginBottom = '12px';
     widget.appendChild(statusEl);
 
-    // Insert before the socialSection
-    const itemGrid = document.getElementById('socialSection');
-    if (itemGrid) {
-        itemGrid.parentElement.insertBefore(widget, itemGrid);
+    // Insert after the bugReportText
+    const bugReportText = document.getElementById('bugReportText');
+    if (bugReportText) {
+        bugReportText.insertAdjacentElement('afterend', widgetWrapper);
     } else {
-        document.getElementById('content').appendChild(widget);
+        document.getElementById('content').appendChild(widgetWrapper);
     }
 
     function formatDate(isoString) {
@@ -465,13 +475,13 @@ async function insertAliveWidget() {
         relEl.innerText = `(${formatRelativeTime(checkIn)})`;
 
         if (status === 'alive') {
-            statusEl.style.color = 'var(--color-text-highlight, #7fff7f)';
+            statusEl.style.color = 'var(--dark-clrs-green)';
             statusEl.innerText = `${OWNER_NAME} is probably alive :D`;
         } else if (status === 'warning') {
-            statusEl.style.color = 'orange';
+            statusEl.style.color = 'var(--dark-clrs-orange)';
             statusEl.innerText = `Warning: ${OWNER_NAME} has not checked in for over 3 days ;w; try contact?`;
         } else {
-            statusEl.style.color = 'red';
+            statusEl.style.color = 'var(--dark-clrs-red)';
             statusEl.innerText = `${OWNER_NAME} has not checked in for over 4 weeks and is probably dead TwT`;
         }
 
