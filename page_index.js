@@ -10,14 +10,12 @@ function generate() {
 		const adLink = document.createElement('a');
 		adLink.href = 'https://discord.gg/rkURq6wVTU';
 		adLink.target = '_blank';
-    adLink.style.display = 'inline-block';
+    adLink.style.display = 'block';
 
 		const adImg = document.createElement('img');
 		adImg.src = '/img/horizontalbannerA.png';
-		adImg.classList.add('mainObject');
-		adImg.style.maxWidth = '872px';
 		adImg.style.height = '108px';
-		adImg.style.maxWidth = 'none';
+		adImg.style.maxWidth = '100%';
 		adImg.style.objectFit = 'unset';
 		adImg.style.display = 'block';
 		adImg.draggable = false;

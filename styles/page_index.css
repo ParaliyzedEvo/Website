@@ -83,12 +83,6 @@
         height: min(200px, 90vw) !important;
     }
 
-    a[href*="discord"] > img.mainObject {
-        width: 100% !important;
-        height: auto !important;
-        max-width: calc(100vw - 30px) !important;
-    }
-
     .skipbutton {
         position: fixed !important;
         top: 80px !important;
