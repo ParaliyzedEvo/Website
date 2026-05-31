@@ -17,6 +17,13 @@
     height: 400px;
 }
 
+a:has(#bannerImg) {
+    display: block;
+    width: 100%;
+    max-width: 872px;
+    margin: 0 auto;
+}
+
 #mainTitle {
     width: 500px;
     height: auto;
@@ -61,6 +68,18 @@
         width: min(200px, 90vw) !important;
         height: min(200px, 90vw) !important;
         max-width: 90vw !important;
+    }
+
+    #bannerImg {
+        width: 100% !important;
+        max-width: calc(100vw - 33px) !important;
+        height: auto !important;
+    }
+
+    #bannerImg + * ,
+    a:has(#bannerImg) {
+        display: block !important;
+        width: 100% !important;
     }
 
     #mainTitle {

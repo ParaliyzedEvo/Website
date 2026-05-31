@@ -14,6 +14,7 @@ function generate() {
 
 		const adImg = document.createElement('img');
 		adImg.src = '/img/horizontalbannerA.png';
+    adImg.id = 'bannerImg';
 		adImg.style.height = '108px';
 		adImg.style.maxWidth = '100%';
 		adImg.style.objectFit = 'unset';
