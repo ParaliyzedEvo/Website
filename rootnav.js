@@ -148,7 +148,7 @@ const defpages = [
     },
     // Misc
     {
-        name: 'Misc',
+        name: 'Stuff',
         url: 'miscc',
         icon: 'dir.png',
         description: ":P"
