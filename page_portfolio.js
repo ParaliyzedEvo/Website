@@ -12,6 +12,10 @@ const used = {
         name: 'Python',
         src: bsrc + "python.svg"
     },
+    js: {
+        name: 'JavaScript',
+        src: bsrc + "javascript.svg"
+    },
     ts: {
         name: 'TypeScript',
         src: bsrc + "typescript.svg"
@@ -23,21 +27,21 @@ const portfolioItems = [
         name: 'Flowabot (fork)',
         img: 'https://i.imgur.com/LJjnN1r.png',
         url: 'https://github.com/ParaliyzedEvo/flowabot',
-        used: [used.ts, used.njs],
+        used: [used.js, used.njs],
         pixelArt: false,
     },
     {
         name: 'EvosOverlay',
         img: 'https://github.com/ParaliyzedEvo/counters/blob/master/.github/images/sonataoverlay%20by%20paraliyzed_evo.png?raw=true',
         url: 'https://github.com/ParaliyzedEvo/EvosOverlay',
-        used: [used.ts],
+        used: [used.js],
         pixelArt: false,
     },
     {
         name: 'Website',
         img: 'img/portfolio/website.png',
         url: 'https://github.com/ParaliyzedEvo/website',
-        used: [used.ts],
+        used: [used.js],
         pixelArt: false,
     },
     {
@@ -49,14 +53,14 @@ const portfolioItems = [
     },
     {
         name: 'Video to ASCII',
-        img: 'https://avatars.githubusercontent.com/u/107338855?v=4',
+        img: 'img/na.png',
         url: 'https://github.com/ParaliyzedEvo/Video-to-ASCII',
         used: [used.py],
         pixelArt: false,
     },
     {
         name: 'Crush',
-        img: 'https://avatars.githubusercontent.com/u/107338855?v=4',
+        img: 'img/na.png',
         url: 'https://github.com/ParaliyzedEvo/crush',
         used: [used.py],
         pixelArt: false,
@@ -70,14 +74,14 @@ const portfolioItems = [
     },
     {
         name: 'Simulation',
-        img: 'https://avatars.githubusercontent.com/u/107338855?v=4',
+        img: 'img/na.png',
         url: 'https://github.com/ParaliyzedEvo/simulation',
         used: [used.py],
         pixelArt: false,
     },
     {
         name: 'Full Stack AI Image Generator',
-        img: 'https://avatars.githubusercontent.com/u/107338855?v=4',
+        img: 'img/na.png',
         url: 'https://github.com/ParaliyzedEvo/Full-Stack-AI-Image-Generator',
         used: [used.py],
         pixelArt: false,
