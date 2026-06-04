@@ -53,14 +53,14 @@ const portfolioItems = [
     },
     {
         name: 'Video to ASCII',
-        img: 'img/na.png',
+        img: 'img/na_dark.png',
         url: 'https://github.com/ParaliyzedEvo/Video-to-ASCII',
         used: [used.py],
         pixelArt: false,
     },
     {
         name: 'Crush',
-        img: 'img/na.png',
+        img: 'img/na_dark.png',
         url: 'https://github.com/ParaliyzedEvo/crush',
         used: [used.py],
         pixelArt: false,
@@ -74,14 +74,14 @@ const portfolioItems = [
     },
     {
         name: 'Simulation',
-        img: 'img/na.png',
+        img: 'img/na_dark.png',
         url: 'https://github.com/ParaliyzedEvo/simulation',
         used: [used.py],
         pixelArt: false,
     },
     {
         name: 'Full Stack AI Image Generator',
-        img: 'img/na.png',
+        img: 'img/na_dark.png',
         url: 'https://github.com/ParaliyzedEvo/Full-Stack-AI-Image-Generator',
         used: [used.py],
         pixelArt: false,
