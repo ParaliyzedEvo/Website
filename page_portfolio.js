@@ -4,6 +4,14 @@ const used = {
         name: 'C#',
         src: bsrc + "cs.svg"
     },
+    jv: {
+        name: 'Java',
+        src: bsrc + "java.svg"
+    },
+    kt: {
+        name: 'Kotlin',
+        src: bsrc + "kotlin.svg"
+    },
     njs: {
         name: 'NodeJS',
         src: bsrc + "nodejs.svg"
@@ -24,10 +32,17 @@ const used = {
 
 const portfolioItems = [
     {
-        name: 'Flowabot (fork)',
+        name: 'Flowabot',
         img: 'https://i.imgur.com/LJjnN1r.png',
         url: 'https://github.com/ParaliyzedEvo/flowabot',
         used: [used.js, used.njs],
+        pixelArt: false,
+    },
+    {
+        name: 'osu!Radio',
+        img: 'https://raw.githubusercontent.com/ParaliyzedEvo/osu-Radio/refs/heads/main/osuRadio/Osu!RadioIcon.png',
+        url: 'https://github.com/ParaliyzedEvo/osu-Radio',
+        used: [used.py],
         pixelArt: false,
     },
     {
@@ -38,6 +53,13 @@ const portfolioItems = [
         pixelArt: false,
     },
     {
+        name: 'Stash',
+        img: 'https://raw.githubusercontent.com/ParaliyzedEvo/Stash/refs/heads/master/design/logo-concepts/01-refined-vinyl.svg',
+        url: 'https://github.com/ParaliyzedEvo/Stash',
+        used: [used.kt],
+        pixelArt: false,
+    },
+    {
         name: 'Website',
         img: 'img/portfolio/website.png',
         url: 'https://github.com/ParaliyzedEvo/website',
@@ -45,9 +67,16 @@ const portfolioItems = [
         pixelArt: false,
     },
     {
-        name: 'osu!Radio',
-        img: 'https://raw.githubusercontent.com/ParaliyzedEvo/osu-Radio/refs/heads/main/osuRadio/Osu!RadioIcon.png',
-        url: 'https://github.com/ParaliyzedEvo/osu-Radio',
+        name: 'Java Projects',
+        img: 'img/na_dark.png',
+        url: 'https://github.com/ParaliyzedEvo/website',
+        used: [used.jv],
+        pixelArt: false,
+    },
+    {
+        name: 'Train Routes',
+        img: 'https://static.wikia.nocookie.net/scr-unofficial-main/images/f/f8/V1.9.5_SCR_GameLogo.jpg',
+        url: 'https://github.com/ParaliyzedEvo/Train-Routes',
         used: [used.py],
         pixelArt: false,
     },
@@ -59,23 +88,16 @@ const portfolioItems = [
         pixelArt: false,
     },
     {
-        name: 'Crush',
-        img: 'img/na_dark.png',
-        url: 'https://github.com/ParaliyzedEvo/crush',
-        used: [used.py],
-        pixelArt: false,
-    },
-    {
-        name: 'Train Routes',
-        img: 'https://static.wikia.nocookie.net/scr-unofficial-main/images/f/f8/V1.9.5_SCR_GameLogo.jpg',
-        url: 'https://github.com/ParaliyzedEvo/Train-Routes',
-        used: [used.py],
-        pixelArt: false,
-    },
-    {
         name: 'Simulation',
         img: 'img/na_dark.png',
         url: 'https://github.com/ParaliyzedEvo/simulation',
+        used: [used.py],
+        pixelArt: false,
+    },
+    {
+        name: 'Crush',
+        img: 'img/na_dark.png',
+        url: 'https://github.com/ParaliyzedEvo/crush',
         used: [used.py],
         pixelArt: false,
     },
