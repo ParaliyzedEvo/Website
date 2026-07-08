@@ -54,7 +54,7 @@ const portfolioItems = [
     },
     {
         name: 'Stash',
-        img: 'https://raw.githubusercontent.com/ParaliyzedEvo/Stash/refs/heads/master/design/logo-concepts/01-refined-vinyl.svg',
+        img: 'https://raw.githubusercontent.com/rawnaldclark/Stash/refs/heads/master/app/src/main/res/drawable/ic_launcher_foreground.png',
         url: 'https://github.com/ParaliyzedEvo/Stash',
         used: [used.kt],
         pixelArt: false,
