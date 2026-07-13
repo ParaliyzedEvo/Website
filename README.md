@@ -13,10 +13,10 @@ If you have docker installed on your OS, consider running either build_docker.ba
 
 ## Star History
 
-<a href="https://www.star-history.com/#ParaliyzedEvo/Website&Date">
+<a href="https://www.star-history.com/?repos=Paraliyzedevo%2FWebsite&type=date&legend=top-left">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=ParaliyzedEvo/Website&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=ParaliyzedEvo/Website&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=ParaliyzedEvo/Website&type=Date" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=Paraliyzedevo/Website&type=date&theme=dark&legend=top-left&sealed_token=YMtaNqDGcB02FItt6GQDohG_AmQmhwnE2uG8LDSYWSqwBUZx9QdW4-6avCD5D4OB1D_YXrvNW4WXpo8m84VIB3U_IHtb34YQfTLwo81zwRP9H-tCCXNENQ" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=Paraliyzedevo/Website&type=date&legend=top-left&sealed_token=YMtaNqDGcB02FItt6GQDohG_AmQmhwnE2uG8LDSYWSqwBUZx9QdW4-6avCD5D4OB1D_YXrvNW4WXpo8m84VIB3U_IHtb34YQfTLwo81zwRP9H-tCCXNENQ" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=Paraliyzedevo/Website&type=date&legend=top-left&sealed_token=YMtaNqDGcB02FItt6GQDohG_AmQmhwnE2uG8LDSYWSqwBUZx9QdW4-6avCD5D4OB1D_YXrvNW4WXpo8m84VIB3U_IHtb34YQfTLwo81zwRP9H-tCCXNENQ" />
  </picture>
 </a>
