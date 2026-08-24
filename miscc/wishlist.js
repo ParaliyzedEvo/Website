@@ -1,5 +1,11 @@
-const WISHLIST_API = 'https://biasroom.com/api/wishlist?userId=cmicqgr910000jp04siot2kuw&page=1&sortBy=newest';
-const PRICE_API = (id, status) => `https://biasroom.com/api/photocards/${id}/listings?status=${status}`;
+const PROXY = 'https://yes.paraliyzedevo.workers.dev/?url=';
+
+const WISHLIST_API = PROXY + encodeURIComponent(
+    'https://biasroom.com/api/wishlist?userId=cmicqgr910000jp04siot2kuw&page=1&sortBy=newest'
+);
+const PRICE_API = (id, status) => PROXY + encodeURIComponent(
+    `https://biasroom.com/api/photocards/${id}/listings?status=${status}`
+);
 
 const PAGE_SIZE = 30;
 const PRICE_CACHE_KEY = 'wishlistPriceCache';
