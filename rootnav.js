@@ -154,6 +154,12 @@ const defpages = [
         description: ":P"
     },
     {
+        name: 'Photocard Wishlist',
+        url: 'miscc/wishlist.html',
+        icon: 'page.png',
+        description: "My photocard wishlist!"
+    },
+    {
         name: 'Song Dump',
         url: 'miscc/song_dump.html',
         icon: 'page.png',
