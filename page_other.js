@@ -96,13 +96,13 @@ const peripherals = {
     Monitor: [
         {
             name: 'ASUS TUF Gaming VG249QM1A',
-            url: 'https://www.viewsonic.com/au/products/lcd/VX2458-P-MHD.php',
+            url: 'https://www.asus.com/us/displays-desktops/monitors/tuf-gaming/tuf-gaming-vg249qm1a/',
             other: ' | Main, 270hz, IPS Panel, 23.8"/60.452cm',
         },
         {
             name: 'LG 22MN430M-23ML44B',
-            url: 'https://www.lg.com/us/monitors/lg-24ml44b-b-led-monitor',
-            other: ' | Secondary, 144Hz, TN Panel, 27"/68.58cm',
+            url: 'https://www.asus.com/us/displays-desktops/monitors/tuf-gaming/tuf-gaming-vg249qm1a/',
+            other: ' | Secondary, 144Hz, IPS Panel, 23.8"/60.452cm',
         },
     ],
     Webcam: [
@@ -347,7 +347,7 @@ const links = [
     },
     {
         name: 'Wishlisted PCs (Photocards)',
-        url: 'https://biasroom.com/users/paraliyzed_evo?tab=wishlist',
+        url: 'miscc/wishlist.html',
         other: ' | PCs I\'m wanting to get too but I\'m broke (pls donate money by using the tip link at the homepage, or js deliver them to me for free lol)',
     },
 	{
