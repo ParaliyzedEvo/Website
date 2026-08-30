@@ -20,8 +20,15 @@ const filters = { group: '', member: '', album: '', event: '', other: '' };
 function generate() {
     injectStyles();
     fetch(WISHLIST_API)
-        .then(r => r.json())
-        .then(data => {
+        .then(r => r.text())
+        .then(text => {
+            let data;
+            try {
+                data = JSON.parse(text);
+            } catch (e) {
+                console.error('wishlist response was not JSON:', text);
+                throw e;
+            }
             allItems = (data.wishlistItems || [])
                 .map(w => w.photocard)
                 .filter(Boolean);
@@ -189,7 +196,7 @@ function buildCard(p) {
     link.rel = 'noopener';
 
     const img = document.createElement('img');
-    img.className = 'itemPreviewImage';
+    img.className = 'pcImage';
     img.loading = 'lazy';
     img.src = p.watermarked_image_url || p.image_url || '';
     img.alt = p.name || '';
@@ -311,6 +318,8 @@ function writeCache(cache) {
     }
 }
 
+/* ---------- styles for the filter row (matches base.css vars) ---------- */
+
 function injectStyles() {
     const style = document.createElement('style');
     style.textContent = `
@@ -327,6 +336,12 @@ function injectStyles() {
         }
         .filterSelect:hover {
             border-color: var(--highlightAlt);
+        }
+        .pcImage {
+            width: 100%;
+            aspect-ratio: 5 / 7;
+            object-fit: cover;
+            border-radius: 8px;
         }
     `;
     document.head.appendChild(style);
