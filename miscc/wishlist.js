@@ -1,4 +1,4 @@
-const PROXY = 'https://yes.paraliyzedevo.workers.dev/?url=';
+const PROXY = 'https://proxy.paraliyzed.net/?url=';
 
 const WISHLIST_API = PROXY + encodeURIComponent(
     'https://biasroom.com/api/wishlist?userId=cmicqgr910000jp04siot2kuw&page=1&sortBy=newest'
