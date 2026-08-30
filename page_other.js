@@ -100,8 +100,8 @@ const peripherals = {
             other: ' | Main, 270hz, IPS Panel, 23.8"/60.452cm',
         },
         {
-            name: 'LG 22MN430M-23ML44B',
-            url: 'https://www.asus.com/us/displays-desktops/monitors/tuf-gaming/tuf-gaming-vg249qm1a/',
+            name: 'ASUS TUF Gaming VG249Q',
+            url: 'https://www.asus.com/us/displays-desktops/monitors/tuf-gaming/tuf-gaming-vg249q/',
             other: ' | Secondary, 144Hz, IPS Panel, 23.8"/60.452cm',
         },
     ],
