@@ -171,7 +171,7 @@ function renderPage() {
     const pageItems = filteredItems.slice(start, start + PAGE_SIZE);
 
     const grid = document.createElement('div');
-    grid.className = 'itemGrid itemHomeGrid';
+    grid.className = 'pcGrid';
     container.appendChild(grid);
 
     if (!pageItems.length) {
@@ -187,7 +187,7 @@ function renderPage() {
 
 function buildCard(p) {
     const card = document.createElement('div');
-    card.className = 'item itemHomeWidth';
+    card.className = 'item pcCard';
 
     const link = document.createElement('a');
     link.className = 'itemAsLink';
@@ -342,6 +342,30 @@ function injectStyles() {
             aspect-ratio: 5 / 7;
             object-fit: cover;
             border-radius: 8px;
+        }
+        .pcGrid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .pcCard {
+            width: auto;
+            margin: 0;
+            padding: 8px;
+        }
+        .pcCard .itemName {
+            font-size: 16px;
+        }
+        .pcCard p {
+            font-size: 13px;
+        }
+        @media only screen and (max-width: 900px) {
+            .pcGrid { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media only screen and (max-width: 600px) {
+            .pcGrid { grid-template-columns: repeat(2, 1fr); }
         }
     `;
     document.head.appendChild(style);
