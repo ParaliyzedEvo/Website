@@ -266,8 +266,7 @@ function renderPagination(container, totalPages) {
 /* ---------- prices ---------- */
 
 function getPrice(photocardId) {
-    const cache = readCache();
-    const cached = cache[photocardId];
+    const cached = readCache()[photocardId];
     if (cached && Date.now() - cached.ts < PRICE_CACHE_TTL) {
         return Promise.resolve(cached.data);
     }
@@ -276,6 +275,7 @@ function getPrice(photocardId) {
         .then(listings => (listings.length ? listings : fetchListings(photocardId, 'listed')))
         .then(listings => {
             const result = computeMedian(listings);
+            const cache = readCache(); // re-read so concurrent cards don't overwrite each other
             cache[photocardId] = { ts: Date.now(), data: result };
             writeCache(cache);
             return result;
@@ -283,10 +283,28 @@ function getPrice(photocardId) {
         .catch(() => ({ median: null, formatted: 'N/A' }));
 }
 
+let inflight = 0;
+const queue = [];
+function limited(fn, max = 4) {
+    return new Promise((resolve, reject) => {
+        const run = () => {
+            inflight++;
+            fn().then(resolve, reject).finally(() => {
+                inflight--;
+                const next = queue.shift();
+                if (next) next();
+            });
+        };
+        inflight < max ? run() : queue.push(run);
+    });
+}
+
 function fetchListings(photocardId, status) {
-    return fetch(PRICE_API(photocardId, status))
-        .then(r => r.json())
-        .then(d => d.listings || []);
+    return limited(() =>
+        fetch(PRICE_API(photocardId, status))
+            .then(r => r.json())
+            .then(d => d.listings || [])
+    );
 }
 
 function computeMedian(listings) {
