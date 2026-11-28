@@ -432,7 +432,7 @@ const socials = [
     },
 	{
         icon: 'tiktok.png',
-        url: 'https://www.tiktok.com/@worstosuplayer',
+        url: 'https://www.tiktok.com/@worsthdplayer',
     },
 	{
         icon: 'tip.png',
